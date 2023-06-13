@@ -5,20 +5,20 @@
           {{ sectionDescription }}<br/>
       </div>
     </div>
-    <div id="whoWeare" class="home-content-wrap">
-      <div *ngFor="let items of sectionsItems">
-        <div class="ms-layout-grid {{items.class}}">
-          <div id="ms-section-{{items.id}}">
+    <div class="home-content-wrap">
+      <div *ngFor="let item of sectionsItems">
+        <div  id="{{item.id}}"  class="ms-layout-grid {{item.class}}">
+          <div id="ms-section-{{item.direction}}">
             <div class="ms-home-section-wrap">
-              <h2 id="whoWeare" class="ms-section-heading">{{items.title}}</h2>
+              <h2 class="ms-section-heading">{{item.title}}</h2>
               <p class="ms-paragraph-light">
-                  {{items.description}}
+                  {{item.description}}
               </p>
             </div>
           </div>
           <img
-              src="{{items.img}}"
-              class="ms-section-image-{{items.id}}"
+              src="{{item.img}}"
+              class="ms-section-image-{{item.direction}}"
           />
         </div>
       </div>

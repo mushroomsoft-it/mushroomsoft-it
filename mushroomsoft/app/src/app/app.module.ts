@@ -16,7 +16,7 @@ import {ServiceComponent} from './components/service/service.component';
 import {ArticleComponent} from './components/article/article.component';
 import {TechnologyComponent} from './components/technology/technology.component';
 import {FooterComponent} from './components/footer/footer.component';
-import {MianLibModule} from '@mushroomsoft-lib';
+import {MainLibModule} from '@mushroomsoft-lib';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import {MianLibModule} from '@mushroomsoft-lib';
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyBootstrapModule,
-    MianLibModule,
+    MainLibModule,
     HttpClientModule
   ],
   providers: [HttpClientModule],

@@ -1,19 +1,19 @@
 import {HttpClient} from '@angular/common/http';
 import {getTestBed, TestBed} from '@angular/core/testing';
 
-import {MianLibService} from './lib.service';
+import {MainLibService} from './lib.service';
 import {of} from 'rxjs';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 
-describe('MianLibService', () => {
-  let service: MianLibService;
+describe('MainLibService', () => {
+  let service: MainLibService;
   let httpClient: HttpClient;
   let injector;
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule]
     });
-    service = TestBed.inject(MianLibService);
+    service = TestBed.inject(MainLibService);
     injector = getTestBed();
     httpClient = injector.get(HttpClient);
   });

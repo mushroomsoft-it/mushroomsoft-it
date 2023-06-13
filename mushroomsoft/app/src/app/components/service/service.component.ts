@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {MianLibService} from '@mushroomsoft-lib';
-
+import {MainLibService} from '@mushroomsoft-lib';
+const jsonData = require('./data.json')
 @Component({
   selector: 'app-service',
   templateUrl: './service.component.html',
@@ -12,36 +12,12 @@ export class ServiceComponent implements OnInit {
   public serviceItems: any = '';
   public servicesItems: any = '';
 
-  constructor(private libService: MianLibService) {}
+  constructor(private libService: MainLibService) {}
 
   ngOnInit() {
-    this.getForm('service');
-    this.getServices('service');
-    this.getTitle('service');
-    this.getClass('service');
-  }
-
-  getForm(type: string) {
-    this.libService.getForm(type).subscribe((data: any) => {
-      this.serviceItems = data.data?.[0].attributes.structure;
-    });
-  }
-
-  getServices(type: string) {
-    this.libService.getForm(type).subscribe((data: any) => {
-      this.servicesItems = data.data[0].attributes.structure.services;
-    });
-  }
-
-  getTitle(type: string) {
-    this.libService.getForm(type).subscribe((data: any) => {
-      this.serviceTitle = data.data[0].attributes.structure.service.title;
-    });
-  }
-
-  getClass(type: string) {
-    this.libService.getForm(type).subscribe((data: any) => {
-      this.serviceClass = data.data[0].attributes.structure.service.class;
-    });
+    this.serviceItems = jsonData.structure;
+    this.servicesItems =jsonData.structure.services;
+    this.serviceTitle =jsonData.structure.service.title;
+    this.serviceClass =jsonData.structure.service.class;
   }
 }

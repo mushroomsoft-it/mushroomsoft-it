@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MianLibService} from '@mushroomsoft-lib';
-
+const jsonData = require('./data.json')
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',
@@ -12,21 +11,15 @@ export class TechnologyComponent implements OnInit {
   public technologyItemsService: any = '';
   public technologyItemsImage = [];
   public technologyItems: any = '';
-  constructor(private libService: MianLibService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.getForm();
-  }
-
-  getForm() {
-    this.libService.getForm('technology').subscribe((data: any) => {
-      this.technologyItems = data.data?.[0].attributes.structure;
-      this.titleTechnology = this.technologyItems.title.title;
-      this.descriptionTechnology = this.technologyItems.title.description;
-      this.technologyItemsService = this.technologyItems.service;
-      this.technologyItemsService.map((res: any) => {
-        this.technologyItemsImage = res.images as [];
-      });
+    this.technologyItems = jsonData.structure;
+    this.titleTechnology = this.technologyItems.title.title;
+    this.descriptionTechnology = this.technologyItems.title.description;
+    this.technologyItemsService = this.technologyItems.service;
+    this.technologyItemsService.map((res: any) => {
+      this.technologyItemsImage = res.images as [];
     });
   }
 }

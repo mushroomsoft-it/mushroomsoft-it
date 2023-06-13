@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {FormlyFormOptions, FormlyFieldConfig} from '@ngx-formly/core';
-import {MianLibService} from '@mushroomsoft-lib';
-
+const jsonData = require('./data.json')
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -13,18 +12,11 @@ export class ContactComponent implements OnInit {
   model: {} = {};
   options: FormlyFormOptions = {};
   fields: FormlyFieldConfig[] = [];
-  constructor(private libService: MianLibService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.getForm();
+    this.fields = jsonData.structure;
   }
-
-  getForm() {
-    this.libService.getForm('contact').subscribe((data: any) => {
-      this.fields = data.data?.[0].attributes.structure;
-    });
-  }
-
   submit() {
     alert(JSON.stringify(this.model));
   }

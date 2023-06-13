@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MianLibService} from '@mushroomsoft-lib';
+const jsonData = require('./data.json')
 
 @Component({
   selector: 'app-article',
@@ -9,15 +9,9 @@ import {MianLibService} from '@mushroomsoft-lib';
 export class ArticleComponent implements OnInit {
   public commitmentItems: any = '';
 
-  constructor(private libService: MianLibService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.getForm('article');
-  }
-
-  getForm(type: string) {
-    this.libService.getForm(type).subscribe((items: any) => {
-      this.commitmentItems = items.data?.[0].attributes.structure.items;
-    });
+    this.commitmentItems = jsonData.structure.items;
   }
 }

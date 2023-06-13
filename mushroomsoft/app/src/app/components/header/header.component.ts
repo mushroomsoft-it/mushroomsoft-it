@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {logoMushroomSoft, menuIcon} from '../../constants';
-import {MianLibService} from '@mushroomsoft-lib';
+import {MainLibService} from '@mushroomsoft-lib';
+const jsonData = require('./data.json')
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,16 +13,14 @@ export class HeaderComponent implements OnInit {
   public logo = logoMushroomSoft;
   public menuIcon = menuIcon;
 
-  constructor(private libService: MianLibService) {}
+  constructor(private libService: MainLibService) {}
 
   ngOnInit() {
     this.getForm();
   }
 
   getForm() {
-    this.libService.getForm('menu').subscribe((data: any) => {
-      this.menuItems = data.data?.[0].attributes.structure.menu;
-    });
+      this.menuItems = jsonData
   }
 
   checked() {

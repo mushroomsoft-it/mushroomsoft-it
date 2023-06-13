@@ -5,7 +5,7 @@ import {API_STRAPI} from '../shared/constants/constants';
 @Injectable({
   providedIn: 'root'
 })
-export class MianLibService {
+export class MainLibService {
   private apiStrapi: string;
 
   constructor(private http: HttpClient) {

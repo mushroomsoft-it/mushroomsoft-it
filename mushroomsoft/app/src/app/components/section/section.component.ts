@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MianLibService} from '@mushroomsoft-lib';
-
+const jsonData = require('./data.json')
 @Component({
   selector: 'app-section',
   templateUrl: './section.component.html',
@@ -11,29 +10,11 @@ export class SectionComponent implements OnInit {
   public sectionItems: any = '';
   public sectionsItems: any = '';
 
-  constructor(private libService: MianLibService) {}
+  constructor() {}
 
   ngOnInit() {
-    this.getForm('section');
-    this.getSections('section');
-    this.getDescription('section');
-  }
-
-  getForm(type: string) {
-    this.libService.getForm(type).subscribe((data: any) => {
-      this.sectionItems = data.data?.[0].attributes.structure;
-    });
-  }
-
-  getSections(type: string) {
-    this.libService.getForm(type).subscribe((data: any) => {
-      this.sectionsItems = data.data?.[0].attributes.structure.sections;
-    });
-  }
-
-  getDescription(type: string) {
-    this.libService.getForm(type).subscribe((data: any) => {
-      this.sectionDescription = data.data?.[0].attributes.structure.section.description;
-    });
+    this.sectionItems = jsonData.structure;
+    this.sectionsItems = jsonData.structure.sections;
+    this.sectionDescription = jsonData.structure.section.description;
   }
 }
