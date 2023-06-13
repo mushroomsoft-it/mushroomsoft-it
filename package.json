@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /mushroomsoft-ws/",
+    "build": "ng build",
     "build:lib": "ng build lib",
     "serve" : "http-server ./dist/app",
     "test": "ng test --codeCoverage=true --watch=false",
