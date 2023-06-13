@@ -1,4 +1,4 @@
-name: Mushroomsoft - Build
+name: MushroomSoft Release and Deploy
 
 on:
   push:

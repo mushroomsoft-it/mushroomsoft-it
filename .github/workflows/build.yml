@@ -1,4 +1,4 @@
-name: Mushroomsoft CI Tests
+name: MushroomSoft Build and Tests
 on:
   push:
     branches:
