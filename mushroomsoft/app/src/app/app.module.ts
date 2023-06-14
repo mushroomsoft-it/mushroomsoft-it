@@ -9,7 +9,6 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/header/header.component';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {HomeComponent} from './components/home/home.component';
-import {ContactComponent} from './components/contact/contact.component';
 import {BannerComponent} from './components/banner/banner.component';
 import {SectionComponent} from './components/section/section.component';
 import {ServiceComponent} from './components/service/service.component';
@@ -23,7 +22,6 @@ import {MainLibModule} from '@mushroomsoft-lib';
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    ContactComponent,
     BannerComponent,
     SectionComponent,
     ServiceComponent,
