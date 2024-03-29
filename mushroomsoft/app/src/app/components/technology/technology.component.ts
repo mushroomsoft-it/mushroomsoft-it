@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-const jsonData = require('./data.json')
+const jsonData = require('./data.json');
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',

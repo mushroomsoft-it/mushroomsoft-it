@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MainLibService} from '@mushroomsoft-lib';
-const jsonData = require('./data.json')
+const jsonData = require('./data.json');
 @Component({
   selector: 'app-service',
   templateUrl: './service.component.html',
@@ -16,8 +16,8 @@ export class ServiceComponent implements OnInit {
 
   ngOnInit() {
     this.serviceItems = jsonData.structure;
-    this.servicesItems =jsonData.structure.services;
-    this.serviceTitle =jsonData.structure.service.title;
-    this.serviceClass =jsonData.structure.service.class;
+    this.servicesItems = jsonData.structure.services;
+    this.serviceTitle = jsonData.structure.service.title;
+    this.serviceClass = jsonData.structure.service.class;
   }
 }

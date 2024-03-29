@@ -31,5 +31,4 @@ describe('ServiceComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
- 
 });

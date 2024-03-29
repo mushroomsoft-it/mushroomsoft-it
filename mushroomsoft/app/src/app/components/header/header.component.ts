@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {logoMushroomSoft, menuIcon} from '../../constants';
 import {MainLibService} from '@mushroomsoft-lib';
-const jsonData = require('./data.json')
+const jsonData = require('./data.json');
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   }
 
   getForm() {
-      this.menuItems = jsonData
+    this.menuItems = jsonData;
   }
 
   checked() {
