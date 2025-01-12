@@ -1,0 +1,12 @@
+@import "scss/constants";
+@import "bootstrap/scss/bootstrap";
+@import "scss/custom";
+@import 'ngx-toastr/toastr';
+
+.custom-toast {
+    border-radius: 0.5em;
+    background-color: $m-color-toastr !important;
+    width: 18.75em;
+    padding:  1.25em;
+    color: white
+  }

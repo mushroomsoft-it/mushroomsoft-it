@@ -1,169 +1,110 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "eb960e67-b6b1-400e-bee2-65fb2772b8de"
-  },
   "version": 1,
-  "newProjectRoot": "mushroomsoft",
+  "newProjectRoot": "projects",
   "projects": {
     "app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
-      "root": "mushroomsoft/app",
-      "sourceRoot": "mushroomsoft/app/src",
+      "root": "",
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@ngx-env/builder:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/app",
-            "index": "mushroomsoft/app/src/index.html",
-            "main": "mushroomsoft/app/src/main.ts",
-            "polyfills": "mushroomsoft/app/src/polyfills.ts",
-            "tsConfig": "mushroomsoft/app/tsconfig.app.json",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "mushroomsoft/app/src/favicon.ico",
-              "mushroomsoft/app/src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
-              "mushroomsoft/app/src/styles.scss",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "4mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4mb",
-                  "maximumError": "5mb"
-                }
-              ],
-              "fileReplacements": [
-                {
-                  "replace": "mushroomsoft/app/src/environments/environment.ts",
-                  "with": "mushroomsoft/app/src/environments/environment.prod.ts"
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
                 }
               ],
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@ngx-env/builder:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "app:build:production"
+              "buildTarget": "app:build:production"
             },
             "development": {
-              "browserTarget": "app:build:development"
+              "buildTarget": "app:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@ngx-env/builde:extract-i18n",
-          "options": {
-            "browserTarget": "app:build"
-          }
+          "builder": "@angular-devkit/build-angular:extract-i18n"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "mushroomsoft/app/src/test.ts",
-            "polyfills": "mushroomsoft/app/src/polyfills.ts",
-            "tsConfig": "mushroomsoft/app/tsconfig.spec.json",
-            "karmaConfig": "mushroomsoft/app/karma.conf.js",
+            "codeCoverage": true,
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "mushroomsoft/app/src/favicon.ico",
-              "mushroomsoft/app/src/assets"
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
             ],
             "styles": [
-              "mushroomsoft/app/src/styles.scss",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+              "src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "mushroomsoft/app/src/**/*.ts",
-              "mushroomsoft/app/src/**/*.html"
-            ]
-          }
-        }
-      }
-    },
-    "lib": {
-      "projectType": "library",
-      "root": "mushroomsoft/lib",
-      "sourceRoot": "mushroomsoft/lib/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "mushroomsoft/lib/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "mushroomsoft/lib/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "mushroomsoft/lib/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "mushroomsoft/lib/src/test.ts",
-            "tsConfig": "mushroomsoft/lib/tsconfig.spec.json",
-            "karmaConfig": "mushroomsoft/lib/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "mushroomsoft/lib/src/**/*.ts",
-              "mushroomsoft/lib/src/**/*.html"
-            ]
           }
         }
       }
     }
   },
-  "defaultProject": "app"
+  "cli": {
+    "analytics": false
+  }
 }

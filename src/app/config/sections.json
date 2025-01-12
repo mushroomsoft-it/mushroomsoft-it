@@ -1,0 +1,498 @@
+{
+  "textData": [
+    {
+      "language": "en",
+      "data": [
+        {
+          "id": "home",
+          "name": "home",
+          "title": "Delivering tech expertise and transformative solutions for your business.",
+          "subtitle": "Solutions Beyond Code",
+          "actionText": "Get in touch!",
+          "isMenu": true
+        },
+        {
+          "id": "what-we-do",
+          "name": "what we do",
+          "description": "<p> At <b>MushroomSoft</b>, we specialize in providing cutting-edge solutions that drive businesses forward. Our true distinction lies in our ability to harness the potential of advanced technologies.</p> <p> Whether it's the agility of <b>Node.js</b>, the robustness of <b>Angular</b>, the efficiency of <b>Nx</b>, or the transformative power of <b>DevOps</b>, we are fully equipped to tackle any challenge and deliver exceptional results.</p>",
+          "isMenu": true
+        },
+        {
+          "id": "who-trust-us",
+          "name": "who trust us"
+        },
+        {
+          "id": "statistics",
+          "name": "statistics",
+          "catalog": [
+            {
+              "title": "10+",
+              "subtitle": "Complex projects delivered"
+            },
+            {
+              "title": "3+",
+              "subtitle": "Global presence"
+            },
+            {
+              "title": "12+",
+              "subtitle": "Years in business"
+            }
+          ]
+        },
+        {
+          "id": "services",
+          "name": "services",
+          "actionText": "Get in touch!",
+          "isMenu": true,
+          "catalog": [
+            {
+              "id": "software-development",
+              "icon": "software.svg",
+              "name": "Software Development",
+              "description": "We offer customized software development solutions tailored to meet your business's specific needs, utilizing the latest technologies and agile methodologies.",
+              "isQueryParam": true
+            },
+            {
+              "id": "outsourcing",
+              "icon": "outsourcing.svg",
+              "name": "Technological Resource Outsourcing",
+              "description": "We offer customized software development solutions tailored to meet your business's specific needs, utilizing the latest technologies and agile methodologies.",
+              "isQueryParam": true
+            },
+            {
+              "id": "cloud",
+              "icon": "cloud.svg",
+              "name": "Cloud",
+              "description": "We implement and manage cloud solutions that guarantee scalability, security, and availability, optimizing the performance of your applications and data.",
+              "isQueryParam": true
+            },
+            {
+              "id": "devops",
+              "icon": "dev-ops.svg",
+              "name": "DevOps/MLops",
+              "description": "We integrate DevOps and MLops practices to automate and optimize the software development lifecycle and machine learning models, accelerating value delivery.",
+              "isQueryParam": true
+            },
+            {
+              "id": "ai",
+              "icon": "ai.svg",
+              "name": "Artificial Intelligence and Data Analysis",
+              "description": "We develop and implement AI and data analysissolutions that provide valuable insights and enhance decision-making in your business.",
+              "isQueryParam": true
+            },
+            {
+              "id": "low-codes",
+              "icon": "low-code.svg",
+              "name": "Low-Code/No-Code",
+              "description": "We offer low-code/no-code development platforms that enable rapid and efficient application creation, reducing development time and cost.",
+              "isQueryParam": true
+            }
+          ]
+        },
+        {
+          "id": "about",
+          "name": "about us",
+          "isMenu": true,
+          "catalog": [
+            {
+              "id": "who-we-are",
+              "name": "who we are",
+              "description": "<p>At Mushroomsoft IT, we’re not just a <b>software company</b>—we’re pioneers in <b>cutting-edge technologies</b> and <b>high-performance teams</b>. Our focus is on innovation, crafting solutions that meet today’s needs and anticipate future challenges.</p><p> Our <b>dynamic team</b> of developers drives our success, embracing creativity and excellence. We empower them to push boundaries and utilize the latest advancements to bring <b>clients' visions</b> to life.</p><p>Join us as we shape the future of <b>technology</b>, one breakthrough at a time.</p>"
+            },
+            {
+              "id": "our-story",
+              "name": "our story",
+              "description": "<p>In 2019, Jamil and Leonardo saw an opportunity to develop products in Ecuador and offer outsourcing to the U.S. They launched a pilot project with two <b>FullStack developers</b>, delivering the product in December. By March 2020, their quality led to new projects and a growing team.</p><p>The 2020 pandemic allowed them to hire remote talent, overcoming language and coordination challenges. Today, MushroomSoft thrives as a <b>close-knit team</b>, driven by excellence and <b>innovation</b>. Each year, we set new goals, committed to growth and making a difference.</p>"
+            },
+            {
+              "id": "our-team",
+              "name": "our team",
+              "catalog": [
+                {
+                  "title": "Leonardo Riofrio",
+                  "subtitle": "Co-Founder & CTO",
+                  "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering & Master of Business Administration (MBA)</p> <p> <b>Expert in:</b> Angular, Sql Server </p> <p> <b>Hobby:</b> Squash </p>",
+                  "image": "Leo.png",
+                  "actionText": "See more"
+                },
+                {
+                  "title": "Hector H. Falconi",
+                  "subtitle": "Co-Founder & General Manager",
+                  "description": "<h4>BIO</h4> <p> <b>Career:</b> Law, Doctorate in Jurisprudence </p> <p> <b>Expert in:</b> Immigration and corporate matters </p> <p> <b>Hobby:</b> Gardening </p>",
+                  "image": "Hector.png",
+                  "actionText": "See more"
+                },
+                {
+                  "title": "Alba Aguirre",
+                  "subtitle": "Co-Founder & Office Manager",
+                  "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Employee Relationships </p> <p> <b>Hobby:</b> Event Planning </p>",
+                  "image": "Alba.png",
+                  "actionText": "See more"
+                }
+              ]
+            },
+            {
+              "id": "location",
+              "name": "location",
+              "description": "<p> Av. Río Amazonas y Roca <br /> Edificio Río Amazonas <br /> 3er. Piso, Of. 319 <br /> <b>Quito, Ecuador</b> <br /> (+593) 2 2551 030 </p>"
+            }
+          ]
+        },
+        {
+          "id": "dreams",
+          "description": "<p>Turning dreams into <span>code.</span> Let's <span>build</span> your vision.</p>",
+          "actionText": "Get in touch!"
+        },
+        {
+          "id": "get-in-touch",
+          "title": "let's talk",
+          "subtitle": "How can we help your business thrive? Complete the form below and let us know!",
+          "formFields": [
+            {
+              "id": "name",
+              "name": "Name",
+              "type": "input-text",
+              "required": true
+            },
+            {
+              "id": "email",
+              "name": "Email",
+              "type": "input-text",
+              "inputType": "email",
+              "required": true
+            },
+            {
+              "id": "message",
+              "name": "Message",
+              "type": "textarea",
+              "required": true
+            }
+          ],
+          "catalog": [
+            {
+              "name": "location",
+              "description": "<p> Av. Río Amazonas y Roca <br /> Edificio Río Amazonas <br /> 3er. Piso, Of. 319 <br /> <b>Quito, Ecuador</b> <br /> (+593) 2 2551 030 </p>",
+              "links": [
+                {
+                  "icon": "linkedin.svg",
+                  "link": "https://www.linkedin.com/company/mushroomsoft-it/"
+                },
+                {
+                  "icon": "github.svg",
+                  "link": "https://github.com/mushroomsoft-it"
+                }
+              ]
+            }
+          ],
+          "actionText": "Send message",
+          "email": 
+          {
+              "subject": "New opportunity! Someone reached out from the Mushroomsoft website",
+              "success_message": "Thank you for your interest! We will get in touch with you soon.",
+              "error_message": "Error submitting the form. Please check your connection or try again",
+              "warning_message": "Please complete all required fields"
+            }
+        },
+        {
+          "id": "info-footer",
+          "catalog": [
+            {
+              "id": "services",
+              "name": "Services",
+              "catalog": [
+                {
+                  "name": "Software Development"
+                },
+                {
+                  "name": "Technological Resource Outsourcing"
+                },
+                {
+                  "name": "Cloud"
+                },
+                {
+                  "name": "DevOps/MLops"
+                },
+                {
+                  "name": "Low-Code/No-Code"
+                }
+              ]
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "description": "<p> Av. Río Amazonas y Roca <br /> Edificio Río Amazonas <br /> 3er. Piso, Of. 319 <br /> <b>Quito, Ecuador</b> <br /> (+593) 2 2551 030 </p>",
+              "links": [
+                {
+                  "icon": "linkedin.svg",
+                  "link": "https://www.linkedin.com/company/mushroomsoft-it/"
+                },
+                {
+                  "icon": "github.svg",
+                  "link": "https://github.com/mushroomsoft-it"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cookies",
+          "name": "welcome",
+          "description": "Lorem ipsum dolor sit amet consectetur. Vulputate sit ullamcorper sodales hendrerit enim. Tristique tincidunt ornare vestibulum laoreet urna nulla congue. Ac ultricies erat adipiscing lacinia rhoncus id a. Elit pellentesque arcu aliquam et in congue mattis.",
+          "actionText": "Accept",
+          "secondaryActionText": "Only necessary cookies"
+        },
+        {
+          "id": "get-in-touch-nav-link",
+          "actionText": "Get in touch!"
+        }
+      ]
+    },
+    {
+      "language": "es",
+      "data": [
+        {
+          "id": "home",
+          "name": "inicio",
+          "title": "Ofrecemos soluciones tecnológicas de vanguardia para transformar tu negocio.",
+          "subtitle": "Soluciones Más Allá del Código",
+          "actionText": "Contáctanos!",
+          "isMenu": true
+        },
+        {
+          "id": "what-we-do",
+          "name": "lo que hacemos",
+          "description": "<p> En <b>MushroomSoft</b>, nos especializamos en proporcionar soluciones innovadoras que impulsan a las empresas hacia adelante. Nuestra verdadera distinción radica en nuestra capacidad para aprovechar el potencial de tecnologías avanzadas. </p> <p> Ya sea la agilidad de <b>Node.js</b>, la solidez de <b>Angular</b>, la eficiencia de <b>Nx</b> o el poder transformador de <b>DevOps</b>, estamos totalmente equipados para enfrentar cualquier desafío y ofrecer resultados excepcionales. </p>",
+          "isMenu": true
+        },
+        {
+          "id": "who-trust-us",
+          "name": "nuestros clientes"
+        },
+        {
+          "id": "statistics",
+          "name": "estadísticas",
+          "catalog": [
+            {
+              "title": "10+",
+              "subtitle": "Proyectos Entregados"
+            },
+            {
+              "title": "3+",
+              "subtitle": "Presencia Global"
+            },
+            {
+              "title": "12+",
+              "subtitle": "Años de Operación"
+            }
+          ]
+        },
+        {
+          "id": "services",
+          "name": "servicios",
+          "actionText": "Contáctanos!",
+          "isMenu": true,
+          "catalog": [
+            {
+              "id": "software-development",
+              "icon": "software.svg",
+              "name": "Desarrollo de Software",
+              "description": "Ofrecemos soluciones de desarrollo de software personalizadas para satisfacer las necesidades específicas de tu negocio, utilizando las últimas tecnologías y metodologías ágiles.",
+              "isQueryParam": true
+            },
+            {
+              "id": "outsourcing",
+              "icon": "outsourcing.svg",
+              "name": "Outsourcing de Recursos Tecnológicos",
+              "description": "Proveemos talento tecnológico especializado para impulsar tus proyectos, garantizando eficiencia y calidad en cada etapa del desarrollo.",
+              "isQueryParam": true
+            },
+            {
+              "id": "cloud",
+              "icon": "cloud.svg",
+              "name": "Nube",
+              "description": "Implementamos y gestionamos soluciones en la nube que garantizan escalabilidad, seguridad y disponibilidad, optimizando el rendimiento de tus aplicaciones y datos.",
+              "isQueryParam": true
+            },
+            {
+              "id": "devops",
+              "icon": "dev-ops.svg",
+              "name": "DevOps/MLops",
+              "description": "Integramos prácticas de DevOps y MLops para automatizar y optimizar el ciclo de vida del desarrollo de software y modelos de aprendizaje automático, acelerando la entregade valor.",
+              "isQueryParam": true
+            },
+            {
+              "id": "ai",
+              "icon": "ai.svg",
+              "name": "Inteligencia Artificial y Análisis de Datos",
+              "description": "Desarrollamos e implementamos soluciones de inteligencia artificial y análisis de datos que brindan información valiosa y mejoran la toma de decisiones en tu empresa.",
+              "isQueryParam": true
+            },
+            {
+              "id": "low-codes",
+              "icon": "low-code.svg",
+              "name": "Desarrollo Low-Code/No-Code",
+              "description": "Ofrecemos plataformas de desarrollo low-code/no-code que permiten la creación rápida y eficiente de aplicaciones, reduciendo el tiempo y costo de desarrollo.",
+              "isQueryParam": true
+            }
+          ]
+        },
+        {
+          "id": "about",
+          "name": "nosotros",
+          "isMenu": true,
+          "catalog": [
+            {
+              "id": "who-we-are",
+              "name": "quiénes somos",
+              "description": "<p> En <b>MushroomSoft IT</b>, somos más que una empresa de software: somos pioneros en aprovechar tecnologías de vanguardia y en fomentar equipos de alto rendimiento para redefinir los estándares de la industria. </p> <p> Nuestro motor es la <b>innovación</b>, y nuestra misión es <b>crear soluciones</b> que no solo respondan a las demandas actuales, sino que también anticipen y enfrenten los desafíos del mañana. </p> <p> El éxito de nuestra empresa se debe a nuestro <b>equipo dinámico de desarrolladores</b>, quienes simbolizan nuestra filosofía de creatividad y excelencia. Los empoderamos para romper barreras, pensar más allá de lo convencional y aprovechar los últimos avances para transformar las visiones de nuestros clientes en realidad. </p> <p> Juntos, estamos aportando al <b>futuro de la tecnología</b>, un avance a la vez. </p>"
+            },
+            {
+              "id": "our-story",
+              "name": "nuestra historia",
+              "description": "<p> En 2019, Jamil y Leonardo vieron una oportunidad para desarrollar productos en Ecuador y ofrecer servicios de outsourcing a los Estados Unidos. Lanzaron un proyecto piloto con dos <b>desarrolladores Full Stack</b>, entregando el producto en diciembre. Para marzo de 2020, el cliente elogió su calidad, lo que llevó a nuevos proyectos y a un equipo en crecimiento. </p> <p> La pandemia de 2020 les permitió contratar talento remoto, superando los desafíos de idioma y coordinación. Hoy, MushroomSoft prospera como un <b>equipo unido</b>, impulsado por la excelencia y la <b>innovación</b>. Cada año nos fijamos nuevas metas, con el objetivo de crecer y marcar la diferencia. </p>"
+            },
+            {
+              "id": "our-team",
+              "name": "nuestro equipo",
+              "catalog": [
+                {
+                  "title": "Leonardo Riofrio",
+                  "subtitle": "Co-Fundador & CTO",
+                  "description": "<h4>BIO</h4> <p> <b>Carrera:</b> Ingeniería de Sistemas & Máster en Administración de Empresas (MBA) </p> <p><b>Experto en:</b> Angular, Sql Server</p> <p><b>Pasatiempo:</b> Squash</p>",
+                  "image": "Leo.png",
+                  "actionText": "Ver mas"
+                },
+                {
+                  "title": "Hector H. Falconi",
+                  "subtitle": "Co-Fundador & Gerente General",
+                  "description": "<h4>BIO</h4> <p><b>Carrera:</b> Derecho, Doctorado en Jurisprudencia (MBA)</p> <p><b>Experto en:</b> Asuntos migratorios y corporativos</p> <p><b>Pasatiempo:</b> Jardinería</p>",
+                  "image": "Hector.png",
+                  "actionText": "Ver mas"
+                },
+                {
+                  "title": "Alba Aguirre",
+                  "subtitle": "Co-Founder & Gerente de Oficina",
+                  "description": "<h4>BIO</h4> <p><b>Carrera:</b> Administración de Empresas</p> <p><b>Experto en:</b> Relaciones laborales</p> <p><b>Pasatiempo:</b> Organizar eventos</p>",
+                  "image": "Alba.png",
+                  "actionText": "Ver mas"
+                }
+              ]
+            },
+            {
+              "id": "location",
+              "name": "ubicación",
+              "description": "<p> Av. Río Amazonas y Roca <br /> Edificio Río Amazonas <br /> 3er. Piso, Of. 319 <br /> <b>Quito, Ecuador</b> <br /> (+593) 2 2551 030 </p>"
+            }
+          ]
+        },
+        {
+          "id": "dreams",
+          "description": "<p>Convirtiendo sueños en <span>código.</span> <span>Construyamos</span> tu visión.</p>",
+          "actionText": "Contáctanos!"
+        },
+        {
+          "id": "get-in-touch",
+          "title": "hablemos",
+          "subtitle": "¿Cómo podemos ayudar a tu negocio? ¡Completa el formulario a continuación y cuéntanos!",
+          "formFields": [
+            {
+              "id": "name",
+              "name": "Nombre",
+              "type": "input-text",
+              "required": true
+            },
+            {
+              "id": "email",
+              "name": "Email",
+              "type": "input-text",
+              "inputType": "email",
+              "required": true
+            },
+            {
+              "id": "message",
+              "name": "Mensaje",
+              "type": "textarea",
+              "required": true
+            }
+          ],
+          "catalog": [
+            {
+              "name": "ubicación",
+              "description": "<p> Av. Río Amazonas y Roca <br /> Edificio Río Amazonas <br /> 3er. Piso, Of. 319 <br /> <b>Quito, Ecuador</b> <br /> (+593) 2 2551 030 </p>",
+              "links": [
+                {
+                  "icon": "linkedin.svg",
+                  "link": "https://www.linkedin.com/company/mushroomsoft-it/"
+                },
+                {
+                  "icon": "github.svg",
+                  "link": "https://github.com/mushroomsoft-it"
+                }
+              ]
+            }
+          ],
+          "actionText": "Enviar mensaje",
+          "email": 
+            {
+              "subject": "¡Nueva oportunidad! Alguien te contactó desde el sitio web de Mushroomsoft",
+              "success_message": "¡Gracias por tu interés! Nos pondremos en contacto contigo pronto!",
+              "error_message": "Error al enviar el formulario. Verifica tu conexión o vuelve a intentarlo",
+              "warning_message": "Complete todos los campos obligatorios"
+            }
+        },
+        {
+          "id": "info-footer",
+          "catalog": [
+            {
+              "id": "services",
+              "name": "Servicios",
+              "catalog": [
+                {
+                  "name": "Desarrollo de Software"
+                },
+                {
+                  "name": "Outsourcing de Recursos Tecnológicos"
+                },
+                {
+                  "name": "Nube"
+                },
+                {
+                  "name": "DevOps/MLops"
+                },
+                {
+                  "name": "Desarrollo Low-Code/No-Code"
+                }
+              ]
+            },
+            {
+              "id": "location",
+              "name": "ubicación",
+              "description": "<p> Av. Río Amazonas y Roca <br /> Edificio Río Amazonas <br /> 3er. Piso, Of. 319 <br /> <b>Quito, Ecuador</b> <br /> (+593) 2 2551 030 </p>",
+              "links": [
+                {
+                  "icon": "linkedin.svg",
+                  "link": "https://www.linkedin.com/company/mushroomsoft-it/"
+                },
+                {
+                  "icon": "github.svg",
+                  "link": "https://github.com/mushroomsoft-it"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cookies",
+          "name": "bienvenido",
+          "description": "Lorem ipsum dolor sit amet consectetur. Vulputate sit ullamcorper sodales hendrerit enim. Tristique tincidunt ornare vestibulum laoreet urna nulla congue. Ac ultricies erat adipiscing lacinia rhoncus id a. Elit pellentesque arcu aliquam et in congue mattis.",
+          "actionText": "Aceptar",
+          "secondaryActionText": "Solo cookies necesarios"
+        },
+        {
+          "id": "get-in-touch-nav-link",
+          "actionText": "Contáctanos!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+<section class="m-section m-section--our-team" [id]="ourTeamData.id">
+  <div class="m-crystal m-crystal--our-team"></div>
+  <div class="container d-flex flex-column m-section__body">
+    <h1 class="m-section__title m-section__title--big">
+      {{ ourTeamData.title ?? ourTeamData.name }}
+    </h1>
+
+    <div class="m-section__wrapper">
+      <owl-carousel-o [options]="ourTeamCarouselOptions">
+        <ng-template *ngFor="let item of ourTeamData.catalog" carouselSlide>
+          <div class="p-2 d-flex justify-content-center align-items-center">
+            <div
+              class="d-flex flex-column align-items-center m-section--our-team__item"
+              [ngClass]="{
+                'm-bottom-to-top': !!item.animate
+              }"
+            >
+              <div
+                class="d-flex flex-column align-items-center m-section--our-team__item-wrapper"
+              >
+                <div class="m-section--our-team__img-wrapper">
+                  <img
+                    [src]="item.image"
+                    alt="team member photo"
+                    class="m-section--our-team__img"
+                  />
+
+                  <div class="m-section--our-team__img-link">
+                    <button
+                      class="m-link m-link--primary"
+                      (click)="item.showDescription = true"
+                    >
+                      {{ item.actionText }}
+                      <m-icon [iconName]="'plus.svg'"></m-icon>
+                    </button>
+                  </div>
+
+                  <div
+                    class="m-section--our-team__img-description"
+                    [ngClass]="{
+                      'm-section--our-team__img-description--show':
+                        item.showDescription
+                    }"
+                  >
+                    <button
+                      class="m-section--our-team__close-btn"
+                      (click)="item.showDescription = !item.showDescription"
+                    >
+                      <m-icon [iconName]="'toggler-close.svg'"></m-icon>
+                    </button>
+
+                    <div
+                      class="d-flex flex-column justify-content-center m-section--our-team__description-wrapper"
+                      [innerHTML]="item.description"
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  class="d-flex flex-column align-items-start m-section--our-team__title-wrapper"
+                >
+                  <h3 class="m-section--our-team__title">
+                    {{ item.title }}
+                  </h3>
+
+                  <h4 class="m-section--our-team__subtitle">
+                    {{ item.subtitle }}
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+
+    <h1
+      class="m-section__title m-section__title--big m-section--location__title"
+    >
+      {{ locationData.title ?? locationData.name }}
+    </h1>
+  </div>
+</section>
+
+<section class="m-section m-section--location" [id]="locationData.id">
+  <div class="m-crystal m-crystal--location"></div>
+  <div class="container d-flex flex-column m-section__body">
+    <h1
+      class="m-section__title m-section__title--big m-section--location__title-landscape"
+      [id]="locationData.id"
+    >
+      {{ locationData.title ?? locationData.name }}
+    </h1>
+
+    <div
+      class="m-section__wrapper"
+      [innerHTML]="locationData.description"
+    ></div>
+  </div>
+  <div class="m-section--location__img"></div>
+</section>

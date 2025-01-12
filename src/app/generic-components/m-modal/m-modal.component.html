@@ -1,0 +1,12 @@
+<div class="m-modal" [ngClass]="{ 'm-modal--show': showModal }">
+  <div class="m-modal__container">
+    <div class="m-crystal m-crystal--modal"></div>
+    <button class="m-modal__close-btn" (click)="closeModal()">
+      <m-icon [iconName]="'toggler-close.svg'"></m-icon>
+    </button>
+
+    <div class="m-modal__body">
+      <ng-content />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<section class="m-section m-section--who-trust-us" id="who-trust-us">
+  <div
+    class="container d-flex flex-column justify-content-start align-items-center align-items-md-start m-section__body"
+  >
+    <h1 class="m-section__title m-section__title--big">
+      {{ sectionData.title ?? sectionData.name }}
+    </h1>
+
+    <div class="m-section--who-trust-us__brands">
+      <owl-carousel-o [options]="brandsCarouselOptions">
+        <ng-template carouselSlide>
+          <div class="p-2 d-flex justify-content-center align-items-center">
+            <m-icon [iconName]="'axle.svg'"></m-icon>
+          </div>
+        </ng-template>
+
+        <ng-template carouselSlide>
+          <div class="p-2 d-flex justify-content-center align-items-center">
+            <m-icon [iconName]="'thrizer.svg'"></m-icon>
+          </div>
+        </ng-template>
+
+        <ng-template carouselSlide>
+          <div class="p-2 d-flex justify-content-center align-items-center">
+            <m-icon [iconName]="'caravel.svg'"></m-icon>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

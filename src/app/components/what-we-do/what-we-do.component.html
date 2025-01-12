@@ -1,0 +1,18 @@
+<section class="m-section m-section--what-we-do" [id]="sectionData.id">
+  <div class="m-crystal m-crystal--nth"></div>
+  <div
+    class="container d-flex justify-content-center align-items-start m-section__body"
+  >
+    <div
+      class="d-flex flex-column justify-content-start align-items-center m-section__wrapper m-section__wrapper--50"
+    >
+      <h1 class="m-section__title m-section__title--big">
+        {{ sectionData.title ?? sectionData.name }}
+      </h1>
+      <div
+        class="m-section--what-we-do__description"
+        [innerHTML]="sectionData.description"
+      ></div>
+    </div>
+  </div>
+</section>

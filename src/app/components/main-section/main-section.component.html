@@ -1,0 +1,28 @@
+<main class="m-section" [id]="sectionData.id">
+  <div class="m-crystal"></div>
+  <div
+    class="container d-flex justify-content-center align-items-center justify-content-md-end m-section__body"
+  >
+    <div
+      class="d-flex flex-column align-items-center align-items-md-start m-section__wrapper m-section__wrapper--50"
+    >
+      <h1 class="m-section__title m-right-to-left" #title>
+        {{ sectionData.title }}
+      </h1>
+      <h2
+        class="m-section__subtitle m-right-to-left m-right-to-left__500ms"
+        #subtitle
+      >
+        {{ sectionData.subtitle }}
+      </h2>
+      <button
+        class="m-link m-link--primary m-right-to-left m-right-to-left__750ms"
+        #link
+        (click)="openModal()"
+      >
+        {{ sectionData.actionText }}
+        <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
+      </button>
+    </div>
+  </div>
+</main>

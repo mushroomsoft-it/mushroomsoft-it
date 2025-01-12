@@ -1,0 +1,27 @@
+<section class="m-cookies" [ngClass]="{ 'm-cookies--show': showCookiesBanner }">
+  <div class="m-cookies__container">
+    <div class="container m-cookies__wrapper">
+      <h1 class="m-cookies__title">
+        {{ sectionData.title || sectionData.name }}
+      </h1>
+
+      <div class="m-cookies__body">
+        <div class="m-cookies__description">
+          {{ sectionData.description }}
+        </div>
+
+        <div class="m-cookies__btn-group">
+          <button class="m-link m-link--primary" (click)="acceptAllCookies()">
+            {{ sectionData.actionText }}
+          </button>
+          <button
+            class="m-link m-link--tranparent"
+            (click)="acceptOlyNecessaryCookies()"
+          >
+            {{ sectionData.secondaryActionText }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

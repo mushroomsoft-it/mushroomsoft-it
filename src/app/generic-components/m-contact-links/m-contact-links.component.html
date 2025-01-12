@@ -1,0 +1,8 @@
+<a
+  *ngFor="let item of linkList"
+  [href]="item.link"
+  target="_blank"
+  class="m-contact-network__link"
+>
+  <m-icon [iconName]="item.icon!"></m-icon>
+</a>

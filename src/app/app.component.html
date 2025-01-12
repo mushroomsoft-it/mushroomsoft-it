@@ -1,0 +1,65 @@
+<m-nav-bar [navOptions]="appSections"></m-nav-bar>
+
+<ng-container *ngFor="let section of appSections">
+  <ng-container [ngSwitch]="section.id">
+    <main-section
+      *ngSwitchCase="sectionEnum.Home"
+      [sectionData]="section"
+    ></main-section>
+
+    <what-we-do
+      *ngSwitchCase="sectionEnum.WhatWeDo"
+      [sectionData]="section"
+    ></what-we-do>
+
+    <who-trust-us
+      *ngSwitchCase="sectionEnum.WhoTrustUs"
+      [sectionData]="section"
+    ></who-trust-us>
+
+    <statistics
+      *ngSwitchCase="sectionEnum.Statistics"
+      [sectionData]="section"
+    ></statistics>
+
+    <m-services
+      *ngSwitchCase="sectionEnum.Services"
+      [sectionData]="section"
+    ></m-services>
+
+    <ng-container *ngSwitchCase="sectionEnum.About">
+      <who-we-are
+        [whoWeAreData]="section.catalog![0]"
+        [ourStoryData]="section.catalog![1]"
+      ></who-we-are>
+
+      <our-team
+        [ourTeamData]="section.catalog![2]"
+        [locationData]="section.catalog![3]"
+      ></our-team>
+    </ng-container>
+
+    <dreams *ngSwitchCase="sectionEnum.Dreams" [sectionData]="section"></dreams>
+
+    <info-footer
+      *ngSwitchCase="sectionEnum.InfoFooter"
+      [servicesData]="section.catalog![0]"
+      [locationData]="section.catalog![1]"
+    ></info-footer>
+
+    <ng-container *ngIf="showModal">
+      <m-modal *ngSwitchCase="sectionEnum.GetInTouch">
+        <get-in-touch [sectionData]="section" (formSubmitted)="closeContactFormModal()"></get-in-touch>
+      </m-modal>
+    </ng-container>
+
+    <ng-container *ngIf="showCookiesBanner">
+      <cookies-banner
+        *ngSwitchCase="sectionEnum.Cookies"
+        [sectionData]="section"
+      ></cookies-banner>
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+<m-footer></m-footer>

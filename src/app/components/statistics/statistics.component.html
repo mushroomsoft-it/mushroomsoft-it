@@ -1,0 +1,22 @@
+<section class="m-section m-section--statistics" id="statistics">
+  <div
+    class="container d-flex flex-column justify-content-start align-items-center m-section__body"
+  >
+    <div
+      class="d-flex flex-column justify-content-around align-items-center flex-md-row m-section--statistics__wrapper"
+    >
+      <div
+        *ngFor="let item of sectionData.catalog!"
+        class="d-flex flex-column align-items-center m-section--statistics__numbers"
+      >
+        <h1
+          m-animated-header
+          [numericalTitle]="getNumericalTitle(item.title!)"
+          [unit]="getUnit(item.title!)"
+          [startAnimation]="item.animate!"
+        ></h1>
+        <p>{{ item.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+</section>

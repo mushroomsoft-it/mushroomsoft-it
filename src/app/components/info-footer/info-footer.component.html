@@ -1,0 +1,45 @@
+<section class="m-section m-section--info-footer">
+  <div class="m-crystal m-crystal--info-footer"></div>
+  <div class="container m-section__body">
+    <div class="m-section--info-footer__logo">
+      <img src="svg/m-logo.svg" alt="Mlogo" />
+    </div>
+
+    <div class="m-section--info-footer__container">
+      <div class="d-flex flex-column align-items-start m-section__wrapper">
+        <h3 class="m-section--info-footer__title">
+          {{ servicesData.title ?? servicesData.name }}
+        </h3>
+
+        <div class="m-section--info-footer__services">
+          <p *ngFor="let service of servicesData.catalog">
+            {{ service.name }}
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column align-items-start m-section__wrapper">
+        <h3 class="m-section--info-footer__title">
+          {{ locationData.title ?? locationData.name }}
+        </h3>
+
+        <div
+          class="m-section--info-footer__location"
+          [innerHTML]="locationData.description"
+        ></div>
+
+        <div
+          m-contact-links
+          class="m-contact-network"
+          [linkList]="locationData.links!"
+        ></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="m-section--info-footer__copyright">
+  Mushroomsoft IT
+  <m-icon [iconName]="'copyright.svg'"></m-icon>
+  {{ currentYear }}
+</div>

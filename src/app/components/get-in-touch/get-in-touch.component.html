@@ -1,0 +1,57 @@
+<div class="m-contact">
+  <h1>{{ sectionData.title }}</h1>
+
+  <div class="m-contact__wrapper">
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+      class="m-contact__form">
+      <h2>{{ sectionData.subtitle }}</h2>
+      <ng-container *ngFor="let field of sectionData.formFields">
+        <ng-container [ngSwitch]="field.type">
+          <input
+            *ngSwitchCase="fieldTypes.InputText"
+            [type]="field.inputType"
+            [id]="field.id"
+            [name]="field.id"
+            [formControlName]="field.id"
+            [placeholder]="field.name"
+            class="form-control" />
+
+          <textarea
+            *ngSwitchCase="fieldTypes.Textarea"
+            [id]="field.id"
+            [name]="field.id"
+            [formControlName]="field.id"
+            [placeholder]="field.name"
+            rows="5"
+            class="form-control"
+            ></textarea>
+        </ng-container>
+      </ng-container>
+
+      <div class="m-contact__btn-group">
+        <button class="m-link m-link--primary">
+          {{ sectionData.actionText }}
+        </button>
+      </div>
+    </form>
+
+    <div class="m-contact__location">
+      <p class="m-contact__location-title">
+        {{ sectionData.catalog![0].name }}
+      </p>
+
+      <div
+        class="m-contact__description"
+        [innerHTML]="sectionData.catalog![0].description"
+        ></div>
+
+      <div
+        m-contact-links
+        class="m-contact-network m-contact-network--small"
+        [linkList]="sectionData.catalog![0].links!"
+        ></div>
+    </div>
+  </div>
+</div>

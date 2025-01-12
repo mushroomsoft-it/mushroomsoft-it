@@ -1,0 +1,47 @@
+<section class="m-section m-section--services" [id]="sectionData.id">
+  <div class="m-crystal m-crystal--services"></div>
+
+  <div
+    class="container d-flex flex-column justify-content-start align-items-center m-section__body"
+  >
+    <h1 class="m-section__title m-section__title--big">
+      {{ sectionData.title ?? sectionData.name }}
+    </h1>
+
+    <div class="m-section__wrapper">
+      <owl-carousel-o [options]="servicesCarouselOptions" #servicesCarousel>
+        <ng-template
+          *ngFor="let item of sectionData.catalog; let i = index"
+          carouselSlide
+          [id]="item.id!"
+        >
+          <div class="m-section--services__wrapper">
+            <div
+              [ngClass]="{
+                'm-section--services__item-1': i % 2 == 0,
+                'm-section--services__item-2': i % 2 != 0
+              }"
+            >
+              <div class="m-section--services__item-header">
+                <m-icon [iconName]="getIcon(item.icon!)"></m-icon>
+                <h2 class="m-section--services__item-title">
+                  {{ item.title ?? item.name }}
+                </h2>
+              </div>
+
+              <p class="m-section--services__item-description">
+                {{ item.description }}
+              </p>
+            </div>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+    </div>
+
+    <button class="m-link m-link--primary mt-2 mt-md-5" (click)="openModal()">
+      {{ sectionData.actionText }}
+      <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
+    </button>
+  </div>
+  <div class="m-section--services__elipse"></div>
+</section>

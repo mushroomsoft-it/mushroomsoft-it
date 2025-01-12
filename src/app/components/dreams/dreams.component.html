@@ -1,0 +1,23 @@
+<section class="m-section m-section--dreams" id="dreams">
+  <div class="m-crystal m-crystal--dreams"></div>
+
+  <div class="container d-flex flex-column m-section__body">
+    <div
+      class="d-flex flex-column flex-md-row align-items-center justify-content-between m-section__wrapper"
+    >
+      <div
+        class="m-section--dreams__label"
+        [innerHTML]="sectionData.description"
+      ></div>
+
+      <div class="m-section--dreams__btn_group">
+        <button class="m-link m-link--primary" (click)="openModal()">
+          {{ sectionData.actionText }}
+          <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-section--dreams__placeholder"></div>
+</section>
