@@ -14,6 +14,7 @@ import {
 } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TIMEOUT_MESSAGE } from './constants/email.constants';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -32,5 +33,6 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     importProvidersFrom([BrowserAnimationsModule]),
     importProvidersFrom([CarouselModule]),
+   { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
 };
