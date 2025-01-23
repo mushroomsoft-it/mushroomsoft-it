@@ -51,8 +51,12 @@
 
                     <div
                       class="d-flex flex-column justify-content-center m-section--our-team__description-wrapper"
-                      [innerHTML]="item.description"
-                    ></div>
+                    >
+                      <h4>BIO</h4>
+                      <p><b>Career:</b> {{ item.career }}</p>
+                      <p><b>Expert in:</b> {{ item.expertin }}</p>
+                      <p><b>Hobby:</b> {{ item.hobby }}</p>
+                    </div>
                   </div>
                 </div>
 
@@ -60,11 +64,11 @@
                   class="d-flex flex-column align-items-start m-section--our-team__title-wrapper"
                 >
                   <h3 class="m-section--our-team__title">
-                    {{ item.title }}
+                    {{ item.name }}
                   </h3>
 
                   <h4 class="m-section--our-team__subtitle">
-                    {{ item.subtitle }}
+                    {{ item.rol }}
                   </h4>
                 </div>
               </div>
