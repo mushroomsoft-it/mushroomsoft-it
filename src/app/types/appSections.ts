@@ -17,6 +17,10 @@ export interface Section {
   navLinkFocused?: boolean;
   animate?: boolean;
   email?: EmailDetails;
+  rol?: string;
+  career?: string;
+  hobby?: string;
+  expertin?: string;
 }
 
 interface EmailDetails {

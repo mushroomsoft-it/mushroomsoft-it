@@ -1,11 +1,12 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Section } from '../../types/appSections';
-import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
-import { MIconComponent } from '../../generic-components/m-icon/m-icon.component';
-import { SCROLL_OFFSET_FACTOR } from '../../utils/utils';
-import { NavigationService } from '../../observables/navigation.service';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { Subscription } from 'rxjs';
+import { MIconComponent } from '../../generic-components/m-icon/m-icon.component';
+import { NavigationService } from '../../observables/navigation.service';
+import { MemberService } from '../../services/member.service';
+import { Section } from '../../types/appSections';
+import { Member } from '../../types/member.interface';
 
 const TIMEOUT_STEP_MILLISECONDS = 350;
 
@@ -22,10 +23,15 @@ export class OurTeamComponent implements OnInit, OnDestroy {
   public ourTeamCarouselOptions!: OwlOptions;
   public animationDone = false;
   private subscription!: Subscription;
+  membersList: Member[] = [];
 
-  constructor(private navigationService: NavigationService) {}
+  constructor(
+    private navigationService: NavigationService,
+    private memberService: MemberService
+  ) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    await this.getMembers();
     this.setCarouselOptions();
     this.subscription = this.navigationService.languageObservable.subscribe(
       (language) => {
@@ -89,6 +95,35 @@ export class OurTeamComponent implements OnInit, OnDestroy {
         },
       },
     };
+  }
+
+  async getMembers() {
+    try {
+      const membersResult: any[] =
+        (await this.memberService.getMembers().toPromise()) || [];
+      this.membersList = membersResult;
+
+      for (const member of this.membersList) {
+        if (member.foto) {
+          try {
+            const image: string =
+              (await this.memberService.getImage(member.foto).toPromise()) ||
+              '';
+            member.image = image;
+          } catch (imageError) {
+            console.error(
+              `Error getting image for member with photo ID: ${member.foto}:`,
+              imageError
+            );
+          }
+        } else {
+          console.warn('Member does not have a valid photo ID:', member);
+        }
+      }
+      this.ourTeamData.catalog = this.membersList;
+    } catch (error) {
+      console.error('Error getting members:', error);
+    }
   }
 
   ngOnDestroy(): void {
