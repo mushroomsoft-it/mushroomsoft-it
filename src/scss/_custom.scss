@@ -382,15 +382,10 @@ body {
 }
 
 .m-contact-network {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 1rem;
   margin-top: 0.5rem;
-
-  @media (min-width: 768px) {
-    justify-content: flex-start;
-  }
 
   &--small {
     .m-contact-network__link {
@@ -446,8 +441,6 @@ body {
   &__wrapper {
     gap: 1rem;
     width: 100%;
-    justify-content: center;
-    text-align: center;
 
     &--50 {
       @media (min-width: 768px) {
@@ -461,11 +454,9 @@ body {
     font-weight: 700;
     font-family: $generic-font-family;
     margin: 0;
-    text-align: center;
 
     @media (min-width: 768px) {
       font-size: 35px;
-      text-align: left;
     }
 
     @media (min-width: 992px) {
@@ -532,15 +523,10 @@ body {
       font-size: 16px;
       line-height: 24px;
       color: $m-color-complementary;
-      text-align: center;
       font-family: $generic-font-family;
 
       b {
         color: white;
-      }
-
-      @media (min-width: 768px) {
-        text-align: left;
       }
     }
   }
@@ -639,15 +625,11 @@ body {
     .m-section__body {
       gap: 2rem;
 
-
       .m-section__title {
         width: 100%;
       }
 
       .m-section__wrapper {
-
-
-
         @media (min-width: 576px) {
           padding: 1.5rem;
         }
@@ -711,7 +693,6 @@ body {
 
     &__item-1,
     &__item-2 {
-      height: auto;
       background-color: #233645;
       padding: 32px 24px 32px 24px;
       border-radius: 16px;
@@ -719,7 +700,6 @@ body {
       flex-direction: column;
       justify-content: center;
       gap: 0.5rem;
-
     }
 
     &__item-header {
@@ -759,16 +739,12 @@ body {
       border-top-right-radius: 50%;
       top: 60%;
       left: 50%;
-      transform: translateX(-50%) translateY(5%);
+      transform: translateX(-50%);
 
       @media (orientation: landscape) {
         width: 140vw;
         height: 90vw;
         top: 65%;
-      }
-
-      @media(min-width: 768px) {
-        transform: translateX(-50%) translateY(7.5%);
       }
     }
 
@@ -863,14 +839,9 @@ body {
       display: flex;
       flex-direction: column;
       gap: 0.3rem;
-      text-align: center;
 
       p:last-child {
         margin-bottom: 0;
-      }
-
-      @media(min-width: 768px) {
-        text-align: left;
       }
     }
 
@@ -899,7 +870,7 @@ body {
 
       &--nth {
         transform: translateX(25px);
-        width: 85vw;
+        width: 90vw;
         content: url("../../public/m-soft-group-2.png");
 
         @media (min-width: 576px) {
@@ -910,12 +881,12 @@ body {
 
         @media (min-width: 768px) {
           content: url("../../public/m-soft-group-wide-1.png");
-          width: 70%;
+          width: 40%;
           margin-top: 5.5rem;
         }
 
         @media (min-width: 992px) {
-          width: 60%;
+          width: 35%;
           margin-top: unset;
         }
       }
@@ -1069,7 +1040,6 @@ body {
     &__title,
     &__title-landscape {
       margin-top: 1rem;
-      justify-content: center;
 
       @media (min-width: 768px) {
         margin-top: 2rem;
@@ -1186,11 +1156,6 @@ body {
       font-family: $generic-font-family;
       transform: translateX(-100%);
       opacity: 0;
-      text-align: center;
-
-      @media (min-width: 768px) {
-        text-align: left;
-      }
 
       @media (min-width: 992px) {
         width: 70%;
@@ -1238,11 +1203,11 @@ body {
     &__container {
       display: flex;
       flex-direction: column;
+      width: 100%;
       justify-content: space-between;
       gap: 1.5rem;
 
-      @media (min-width: 768px) {
-        width: 100%;
+      @media (min-width: 576px) {
         flex-direction: row;
       }
     }
@@ -1250,7 +1215,7 @@ body {
     &__logo {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
 
       @media (min-width: 992px) {
         width: 40%;
@@ -1264,32 +1229,16 @@ body {
     }
 
     &__location,
-    &__services {
-
-      text-align: center;
-
-      @media (min-width: 768px) {
-        text-align: left;
-      }
-    }
-
-    &__location,
     &__services,
     &__title {
       font-family: $generic-font-family;
     }
 
     &__title {
-      width: 100%;
       font-size: 16px;
       color: $m-color-primary;
       font-weight: 700;
       margin-bottom: 0;
-      text-align: center;
-
-      @media (min-width: 768px) {
-        text-align: left;
-      }
     }
 
     &__services {
@@ -1313,8 +1262,6 @@ body {
     }
 
     &__location {
-      width: 100%;
-
       p {
         color: $m-color-complementary;
       }
