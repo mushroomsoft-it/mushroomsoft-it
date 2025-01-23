@@ -47,9 +47,9 @@ To run this project, follow these steps:
      - Expert In
      - Hobby
      - Photo
-  - **Enable CORS**
+   - **Enable CORS**
 
-3. Obtain the WordPress access token to interact with the APIs for media and data. You can check the routes in the Enable CORS section.
+3. Obtain the WordPress access token to interact with the APIs for media and data. You can check the routes using the Enable CORS plugin.
    - Media API URL: `http://localhost:8080/wp-json/wp/v2/media/`
    - Member API URL: `http://localhost:8080/wp-json/wp/v2/miembro/`
 
