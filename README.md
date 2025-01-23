@@ -47,6 +47,9 @@ To run this project, follow these steps:
      - Expert In
      - Hobby
      - Photo
+    
+    Before this, please, create a Custom Types with the same name using the rules of the Custom Fields section and enable the API REST features. 
+
    - **Enable CORS**
 
 3. Obtain the WordPress access token to interact with the APIs for media and data. You can check the routes using the Enable CORS plugin.
