@@ -128,6 +128,13 @@
                   "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Employee Relationships </p> <p> <b>Hobby:</b> Event Planning </p>",
                   "image": "Alba.png",
                   "actionText": "See more"
+                },
+                {
+                  "title": "Andrea Gomez",
+                  "subtitle": "USA Country Manager",
+                  "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration & Master of Science in Marketing</p> <p> <b>Expert in:</b> Project Management </p> <p> <b>Hobby:</b> Go to the cinema </p>",
+                  "image": "Andrea.png",
+                  "actionText": "See more"
                 }
               ]
             },
@@ -185,7 +192,7 @@
             }
           ],
           "actionText": "Send message",
-          "email": 
+          "email":
           {
               "subject": "New opportunity! Someone reached out from the Mushroomsoft website",
               "success_message": "Thank you for your interest! We will get in touch with you soon.",
@@ -375,6 +382,13 @@
                   "description": "<h4>BIO</h4> <p><b>Carrera:</b> Administración de Empresas</p> <p><b>Experto en:</b> Relaciones laborales</p> <p><b>Pasatiempo:</b> Organizar eventos</p>",
                   "image": "Alba.png",
                   "actionText": "Ver mas"
+                },
+                {
+                  "title": "Andrea Gomez",
+                  "subtitle": "USA Country Manager",
+                  "description": "<h4>BIO</h4> <p><b>Carrera:</b> Administración de Empresas & Máster en Marketing</p> <p><b>Experto en:</b> Gestión de proyectos</p> <p><b>Pasatiempo:</b> Ir al cine</p>",
+                  "image": "Andrea.png",
+                  "actionText": "Ver mas"
                 }
               ]
             },
@@ -432,7 +446,7 @@
             }
           ],
           "actionText": "Enviar mensaje",
-          "email": 
+          "email":
             {
               "subject": "¡Nueva oportunidad! Alguien te contactó desde el sitio web de Mushroomsoft",
               "success_message": "¡Gracias por tu interés! Nos pondremos en contacto contigo pronto!",
