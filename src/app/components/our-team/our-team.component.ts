@@ -3,9 +3,11 @@ import { Section } from '../../types/appSections';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
 import { MIconComponent } from '../../generic-components/m-icon/m-icon.component';
-import { SCROLL_OFFSET_FACTOR } from '../../utils/utils';
-import { NavigationService } from '../../observables/navigation.service';
 import { Subscription } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { IEmployeesSharepoint } from '../../interfaces/IEmployeesSharepoint.interface';
+import { IEmployee } from '../../interfaces/IEmployee.interface';
+import { environment } from '../../../environments/environment';
 
 const TIMEOUT_STEP_MILLISECONDS = 350;
 
@@ -23,18 +25,37 @@ export class OurTeamComponent implements OnInit, OnDestroy {
   public animationDone = false;
   private subscription!: Subscription;
 
-  constructor(private navigationService: NavigationService) {}
+  public employees : IEmployee[] = [];
+  public isLoading : boolean = true;
+
+  constructor(private readonly httpClient:HttpClient) {}
 
   ngOnInit(): void {
     this.setCarouselOptions();
-    this.subscription = this.navigationService.languageObservable.subscribe(
-      (language) => {
-        if (language) {
-          this.animationDone = false;
-          this.ourTeamData.catalog?.map((item) => {
-            item.animate = false;
-          });
-        }
+
+    this.httpClient.get<IEmployeesSharepoint>(environment.POWERAUTOMATE_API_URL).subscribe(
+      (response) => {
+        response.employeeInfo.map(e => {
+
+          const newEmployee : IEmployee = {
+            title: e.infoContent.name,
+            subtitle: e.infoContent.position,
+            description: `<h4>BIO</h4> <p> <b>Career:</b> ${e.infoContent.carreer}</p> <p> <b>Expert in:</b> ${e.infoContent.expert} </p> <p> <b>Hobby:</b> ${e.infoContent.hobby} </p>`,
+            image: e.attatchmentContent.$content,
+            showDescription: false,
+            animate: true,
+            actionText: 'See more...'
+          }
+
+          this.employees.push(newEmployee);
+        });
+
+        console.log(this.isLoading)
+
+        this.isLoading = false;
+
+        console.log(this.isLoading)
+
       }
     );
 
