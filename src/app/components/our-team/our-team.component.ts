@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { IEmployeesSharepoint } from '../../interfaces/IEmployeesSharepoint.interface';
 import { IEmployee } from '../../interfaces/IEmployee.interface';
-import { environment } from '../../../environments/environment';
+import employessData from '../../config/employees.json';
 
 const TIMEOUT_STEP_MILLISECONDS = 350;
 
@@ -33,31 +33,22 @@ export class OurTeamComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.setCarouselOptions();
 
-    this.httpClient.get<IEmployeesSharepoint>(environment.POWERAUTOMATE_API_URL).subscribe(
-      (response) => {
-        response.employeeInfo.map(e => {
+    employessData.employeeInfo.map(e => {
 
-          const newEmployee : IEmployee = {
-            title: e.infoContent.name,
-            subtitle: e.infoContent.position,
-            description: `<h4>BIO</h4> <p> <b>Career:</b> ${e.infoContent.carreer}</p> <p> <b>Expert in:</b> ${e.infoContent.expert} </p> <p> <b>Hobby:</b> ${e.infoContent.hobby} </p>`,
-            image: e.attatchmentContent.$content,
-            showDescription: false,
-            animate: true,
-            actionText: 'See more...'
-          }
-
-          this.employees.push(newEmployee);
-        });
-
-        console.log(this.isLoading)
-
-        this.isLoading = false;
-
-        console.log(this.isLoading)
-
+      const newEmployee : IEmployee = {
+        title: e.infoContent.name,
+        subtitle: e.infoContent.position,
+        description: `<h4>BIO</h4> <p> <b>Career:</b> ${e.infoContent.carreer}</p> <p> <b>Expert in:</b> ${e.infoContent.expert} </p> <p> <b>Hobby:</b> ${e.infoContent.hobby} </p>`,
+        image: e.attatchmentContent.$content,
+        showDescription: false,
+        animate: true,
+        actionText: 'See more...'
       }
-    );
+
+      this.employees.push(newEmployee);
+    });
+
+    this.isLoading = false;
 
     this.registerScrollEvent();
   }

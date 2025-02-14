@@ -10,7 +10,7 @@ jobs:
   build:
     name: GitHub Actions - Tests
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18.x]
@@ -27,6 +27,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Fetch employees
+        run: node scripts/mushroomsoftEmployeesData.js
 
       - name: Run UI tests
         run: npm run test
