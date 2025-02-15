@@ -1,3 +1,8 @@
+export interface IEmployeeEsEn {
+  en: IEmployee;
+  es: IEmployee;
+}
+
 export interface IEmployee {
   title:string;
   subtitle:string;

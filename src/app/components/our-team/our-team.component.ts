@@ -4,8 +4,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
 import { MIconComponent } from '../../generic-components/m-icon/m-icon.component';
 import { Subscription } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
-import { IEmployeesSharepoint } from '../../interfaces/IEmployeesSharepoint.interface';
+import { NavigationService } from '../../observables/navigation.service';
 import { IEmployee } from '../../interfaces/IEmployee.interface';
 import employessData from '../../config/employees.json';
 
@@ -28,25 +27,16 @@ export class OurTeamComponent implements OnInit, OnDestroy {
   public employees : IEmployee[] = [];
   public isLoading : boolean = true;
 
-  constructor(private readonly httpClient:HttpClient) {}
+  constructor(private navigationService: NavigationService) {}
 
   ngOnInit(): void {
     this.setCarouselOptions();
 
-    employessData.employeeInfo.map(e => {
-
-      const newEmployee : IEmployee = {
-        title: e.infoContent.name,
-        subtitle: e.infoContent.position,
-        description: `<h4>BIO</h4> <p> <b>Career:</b> ${e.infoContent.carreer}</p> <p> <b>Expert in:</b> ${e.infoContent.expert} </p> <p> <b>Hobby:</b> ${e.infoContent.hobby} </p>`,
-        image: e.attatchmentContent.$content,
-        showDescription: false,
-        animate: true,
-        actionText: 'See more...'
+    this.subscription = this.navigationService.languageObservable.subscribe(
+      (language) => {
+        this.employees  = employessData.map(e => e[language ?? 'en']);
       }
-
-      this.employees.push(newEmployee);
-    });
+    );
 
     this.isLoading = false;
 
