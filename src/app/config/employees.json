@@ -1,10 +1,11 @@
 [
   {
+    "id": 9,
     "en": {
       "title": "Leonardo Riofrío",
       "subtitle": "Co-Founder and CTO",
       "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering & Business Administration (MBA)</p> <p> <b>Expert in:</b> Angular, SQL Server </p> <p> <b>Hobby:</b> Squash </p>",
-      "image": "9.png",
+      "image": "employeesProfilePhoto/9.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
@@ -13,18 +14,19 @@
       "title": "Leonardo Riofrío",
       "subtitle": "Co-Fundador y CTO",
       "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software y Administración de Empresas (MBA)</p> <p> <b>Experto en:</b> Angular, SQL Server </p> <p> <b>Hobby:</b> Squash </p>",
-      "image": "9.png",
+      "image": "employeesProfilePhoto/9.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
     }
   },
   {
+    "id": 10,
     "en": {
       "title": "Héctor Falconí",
       "subtitle": "Co-Founder and General Manager",
       "description": "<h4>BIO</h4> <p> <b>Career:</b> Law, Doctorade in Jurisprudence</p> <p> <b>Expert in:</b> Corporate Matters </p> <p> <b>Hobby:</b> Gardering </p>",
-      "image": "10.png",
+      "image": "employeesProfilePhoto/10.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
@@ -33,47 +35,28 @@
       "title": "Héctor Falconí",
       "subtitle": "Co-Fundador y Gerente General",
       "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ley, Doctorado en Jurisprudencia</p> <p> <b>Experto en:</b> Asuntos Corporativos </p> <p> <b>Hobby:</b> Gardening </p>",
-      "image": "10.png",
+      "image": "employeesProfilePhoto/10.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
     }
   },
   {
+    "id": 27,
     "en": {
       "title": "Andrea Garzón",
-      "subtitle": "USA Manage",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> BA</p> <p> <b>Expert in:</b> PM </p> <p> <b>Hobby:</b> Going to the cinema </p>",
-      "image": "20.png",
+      "subtitle": "USA Manager",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Project Manager </p> <p> <b>Hobby:</b> Going to the cinema </p>",
+      "image": "employeesProfilePhoto/27.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
     },
     "es": {
       "title": "Andrea Garzón",
-      "subtitle": "USA Manage",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> BA</p> <p> <b>Experto en:</b> PM </p> <p> <b>Hobby:</b> Ir al cine </p>",
-      "image": "20.png",
-      "showDescription": false,
-      "animate": true,
-      "actionText": "Ver más..."
-    }
-  },
-  {
-    "en": {
-      "title": "Alba Aguirre",
-      "subtitle": "Co-Founder & Office Manager",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Employee Relationships </p> <p> <b>Hobby:</b> Event Planning </p>",
-      "image": "21.png",
-      "showDescription": false,
-      "animate": true,
-      "actionText": "See more..."
-    },
-    "es": {
-      "title": "Alba Aguirre",
-      "subtitle": "Co-Fundador y Gerente de Oficina",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Relaciones Laborales </p> <p> <b>Hobby:</b> Planificación de eventos </p>",
-      "image": "21.png",
+      "subtitle": "USA Manager",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Gerente de Proyecto </p> <p> <b>Hobby:</b> Ir al cine </p>",
+      "image": "employeesProfilePhoto/27.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
