@@ -6,80 +6,73 @@
     </h1>
 
     <div class="m-section__wrapper">
-
-      <div *ngIf="isLoading; else isReady" class="spinner">
-        <span class="loader"></span>
-        <p>Establishing connection with SharePoint<br>Wait a moment</p>
-      </div>
-
-      <ng-template #isReady>
-        <owl-carousel-o [options]="ourTeamCarouselOptions">
-          <ng-template *ngFor="let item of employees" carouselSlide>
-            <div class="p-2 d-flex justify-content-center align-items-center">
+      <owl-carousel-o [options]="ourTeamCarouselOptions">
+        <ng-template *ngFor="let item of employees" carouselSlide>
+          <div class="p-2 d-flex justify-content-center align-items-center">
+            <div
+              class="d-flex flex-column align-items-center m-section--our-team__item"
+              [ngClass]="{
+                'm-bottom-to-top': !!item.animate
+              }"
+            >
               <div
-                class="d-flex flex-column align-items-center m-section--our-team__item"
-                [ngClass]="{
-                  'm-bottom-to-top': !!item.animate
-                }"
+                class="d-flex flex-column align-items-center m-section--our-team__item-wrapper"
               >
-                <div
-                  class="d-flex flex-column align-items-center m-section--our-team__item-wrapper"
-                >
-                  <div class="m-section--our-team__img-wrapper">
-                    <img
-                      [src]="item.image"
-                      alt="team member photo"
-                      class="m-section--our-team__img"
-                    />
+                <div class="m-section--our-team__img-wrapper">
+                  <img
+                    [src]="item.image"
+                    alt="team member photo"
+                    class="m-section--our-team__img"
+                  />
 
-                    <div class="m-section--our-team__img-link">
-                      <button
-                        class="m-link m-link--primary"
-                        (click)="item.showDescription = true"
-                      >
-                        {{ item.actionText }}
-                        <m-icon [iconName]="'plus.svg'"></m-icon>
-                      </button>
-                    </div>
-
-                    <div
-                      class="m-section--our-team__img-description"
-                      [ngClass]="{
-                        'm-section--our-team__img-description--show':
-                          item.showDescription
-                      }"
+                  <div class="m-section--our-team__img-link">
+                    <button
+                      class="m-link m-link--primary"
+                      (click)="item.showDescription = true"
                     >
-                      <button
-                        class="m-section--our-team__close-btn"
-                        (click)="item.showDescription = !item.showDescription"
-                      >
-                        <m-icon [iconName]="'toggler-close.svg'"></m-icon>
-                      </button>
-
-                      <div
-                        class="d-flex flex-column justify-content-center m-section--our-team__description-wrapper"
-                        [innerHTML]="item.description"
-                      ></div>
-                    </div>
+                      {{ item.actionText }}
+                      <m-icon [iconName]="'plus.svg'"></m-icon>
+                    </button>
                   </div>
 
                   <div
-                    class="d-flex flex-column align-items-start m-section--our-team__title-wrapper"
+                    class="m-section--our-team__img-description"
+                    [ngClass]="{
+                      'm-section--our-team__img-description--show':
+                        item.showDescription
+                    }"
                   >
-                    <h3 class="m-section--our-team__title">
-                      {{ item.title }}
-                    </h3>
+                    <button
+                      class="m-section--our-team__close-btn"
+                      (click)="item.showDescription = !item.showDescription"
+                    >
+                      <m-icon [iconName]="'toggler-close.svg'"></m-icon>
+                    </button>
 
-                    <h4 class="m-section--our-team__subtitle">
-                      {{ item.subtitle }}
-                    </h4>
+                    <div
+                      class="d-flex flex-column justify-content-center m-section--our-team__description-wrapper"
+                      [innerHTML]="item.description"
+                    ></div>
                   </div>
+                </div>
+
+                <div
+                  class="d-flex flex-column align-items-start m-section--our-team__title-wrapper"
+                >
+                  <h3 class="m-section--our-team__title">
+                    {{ item.title }}
+                  </h3>
+
+                  <h4 class="m-section--our-team__subtitle">
+                    {{ item.subtitle }}
+                  </h4>
                 </div>
               </div>
             </div>
-          </ng-template>
-        </owl-carousel-o>
-      </ng-template>
+          </div>
+        </ng-template>
+      </owl-carousel-o>
+
 
     </div>
 

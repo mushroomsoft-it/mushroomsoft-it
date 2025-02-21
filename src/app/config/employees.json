@@ -1,62 +1,41 @@
 [
   {
-    "id": 9,
+    "id": 28,
     "en": {
-      "title": "Oscar Leonardo Riofrío",
-      "subtitle": "Co-Founder and Chief Technical Officer",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering & Business Administration (MBA)</p> <p> <b>Expert in:</b> Angular, SQL Server </p> <p> <b>Hobby:</b> Squash </p>",
-      "image": "employeesProfilePhoto/9.png",
+      "title": "Leonardo Riofrío",
+      "subtitle": "CTO",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering</p> <p> <b>Expert in:</b> Developer </p> <p> <b>Hobby:</b> Squash </p>",
+      "image": "employeesProfilePhoto/28.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
     },
     "es": {
-      "title": "Oscar Leonardo Riofrío",
-      "subtitle": "Co-Fundador y Director Técnico",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software y Administración de Empresas (MBA)</p> <p> <b>Experto en:</b> Angular, SQL Server </p> <p> <b>Hobby:</b> Calabaza </p>",
-      "image": "employeesProfilePhoto/9.png",
+      "title": "Leonardo Riofrío",
+      "subtitle": "CTO",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Calabaza </p>",
+      "image": "employeesProfilePhoto/28.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
     }
   },
   {
-    "id": 10,
+    "id": 30,
     "en": {
-      "title": "Héctor Falconí",
-      "subtitle": "Co-Founder and General Manager",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> Law, Doctorade in Jurisprudence</p> <p> <b>Expert in:</b> Corporate Matters </p> <p> <b>Hobby:</b> Gardering </p>",
-      "image": "employeesProfilePhoto/10.png",
+      "title": "Alba Aguirre",
+      "subtitle": "Co-Founder & Office Manager",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Employee Relationships </p> <p> <b>Hobby:</b> Event Planning </p>",
+      "image": "employeesProfilePhoto/30.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
     },
     "es": {
-      "title": "Héctor Falconí",
-      "subtitle": "Co-Fundador y Gerente General",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ley, Doctorado en Jurisprudencia</p> <p> <b>Experto en:</b> Asuntos Corporativos </p> <p> <b>Hobby:</b> Sorry, I can't respond to that request. </p>",
-      "image": "employeesProfilePhoto/10.png",
-      "showDescription": false,
-      "animate": true,
-      "actionText": "Ver más..."
-    }
-  },
-  {
-    "id": 27,
-    "en": {
-      "title": "Andrea Garzón",
-      "subtitle": "USA Manager",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Project Manager </p> <p> <b>Hobby:</b> Going to the cinema </p>",
-      "image": "employeesProfilePhoto/27.png",
-      "showDescription": false,
-      "animate": true,
-      "actionText": "See more..."
-    },
-    "es": {
-      "title": "Andrea Garzón",
-      "subtitle": "USA Manager",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Gerente de Proyecto </p> <p> <b>Hobby:</b> Ir al cine </p>",
-      "image": "employeesProfilePhoto/27.png",
+      "title": "Alba Aguirre",
+      "subtitle": "Co-Fundador y Gerente de Oficina",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Relaciones Laborales </p> <p> <b>Hobby:</b> Planificación de eventos </p>",
+      "image": "employeesProfilePhoto/30.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."

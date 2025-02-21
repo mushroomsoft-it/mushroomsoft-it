@@ -25,7 +25,6 @@ export class OurTeamComponent implements OnInit, OnDestroy {
   private subscription!: Subscription;
 
   public employees : IEmployee[] = [];
-  public isLoading : boolean = true;
 
   constructor(private navigationService: NavigationService) {}
 
@@ -37,8 +36,6 @@ export class OurTeamComponent implements OnInit, OnDestroy {
         this.employees  = employessData.map(e => e[language ?? 'en']);
       }
     );
-
-    this.isLoading = false;
 
     this.registerScrollEvent();
   }
