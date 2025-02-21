@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const { environmentConst } = require('./config/environment');
 
-async function fetchEmployeesDataFromSharePoint(url) {
+async function fetchEmployeesData(url) {
   const response = await fetch(url);
 
   return await response.json();
 }
 
-function processEmployeeDataFromSharePoint(employeeData) {
+function processEmployeeData(employeeData) {
   const processedData = employeeData.employeeInfo.map(e => {
     const extension = e.attatchmentContent["$content-type"].split("/")[1];
     const imageBuffer = Buffer.from(e.attatchmentContent["$content"], "base64");
@@ -101,12 +101,12 @@ async function fetchData(url) {
   console.log("Running mushroomsoftEmployeesData.js");
 
   try {
-    const data = await fetchEmployeesDataFromSharePoint(url);
+    const data = await fetchEmployeesData(url);
 
     console.log("Data fetched sucessfully!");
     console.log("Data process started");
 
-    const employeesAfterUpdate = processEmployeeDataFromSharePoint(data);
+    const employeesAfterUpdate = processEmployeeData(data);
 
     console.log("Data process finished sucessfully!");
     console.log("Delete images started");
