@@ -6,7 +6,7 @@ if (dotenv.error) {
 }
 
 const environmentConst = {
-  powerAutomateUri: process.env.POWER_AUTOMATE,
+  powerAutomateUri: process.env.POWER_AUTOMATE_URL,
   employeesProfilePhotoFolder: "../public/employeesProfilePhoto",
   publicFolder: "../public/",
   configAppProject: "../src/app/config/",
