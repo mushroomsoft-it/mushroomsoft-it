@@ -7,7 +7,7 @@
 
     <div class="m-section__wrapper">
       <owl-carousel-o [options]="ourTeamCarouselOptions">
-        <ng-template *ngFor="let item of ourTeamData.catalog" carouselSlide>
+        <ng-template *ngFor="let item of employees" carouselSlide>
           <div class="p-2 d-flex justify-content-center align-items-center">
             <div
               class="d-flex flex-column align-items-center m-section--our-team__item"
@@ -72,6 +72,8 @@
           </div>
         </ng-template>
       </owl-carousel-o>
+
+
     </div>
 
     <h1

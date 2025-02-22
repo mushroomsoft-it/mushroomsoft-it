@@ -1,0 +1,44 @@
+[
+  {
+    "id": 28,
+    "en": {
+      "title": "Leonardo Riofrío",
+      "subtitle": "CTO",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering</p> <p> <b>Expert in:</b> Developer </p> <p> <b>Hobby:</b> Squash </p>",
+      "image": "employeesProfilePhoto/28.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "See more..."
+    },
+    "es": {
+      "title": "Leonardo Riofrío",
+      "subtitle": "CTO",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Calabaza </p>",
+      "image": "employeesProfilePhoto/28.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "Ver más..."
+    }
+  },
+  {
+    "id": 30,
+    "en": {
+      "title": "Alba Aguirre",
+      "subtitle": "Co-Founder & Office Manager",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Employee Relationships </p> <p> <b>Hobby:</b> Event Planning </p>",
+      "image": "employeesProfilePhoto/30.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "See more..."
+    },
+    "es": {
+      "title": "Alba Aguirre",
+      "subtitle": "Co-Fundador y Gerente de Oficina",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Relaciones Laborales </p> <p> <b>Hobby:</b> Planificación de eventos </p>",
+      "image": "employeesProfilePhoto/30.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "Ver más..."
+    }
+  }
+]

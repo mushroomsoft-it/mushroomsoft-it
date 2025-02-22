@@ -10,7 +10,7 @@ jobs:
   build:
     name: GitHub Actions - Tests
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18.x]

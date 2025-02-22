@@ -3,9 +3,10 @@ import { Section } from '../../types/appSections';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
 import { MIconComponent } from '../../generic-components/m-icon/m-icon.component';
-import { SCROLL_OFFSET_FACTOR } from '../../utils/utils';
-import { NavigationService } from '../../observables/navigation.service';
 import { Subscription } from 'rxjs';
+import { NavigationService } from '../../observables/navigation.service';
+import { IEmployee } from '../../interfaces/IEmployee.interface';
+import employessData from '../../config/employees.json';
 
 const TIMEOUT_STEP_MILLISECONDS = 350;
 
@@ -23,18 +24,16 @@ export class OurTeamComponent implements OnInit, OnDestroy {
   public animationDone = false;
   private subscription!: Subscription;
 
+  public employees : IEmployee[] = [];
+
   constructor(private navigationService: NavigationService) {}
 
   ngOnInit(): void {
     this.setCarouselOptions();
+
     this.subscription = this.navigationService.languageObservable.subscribe(
       (language) => {
-        if (language) {
-          this.animationDone = false;
-          this.ourTeamData.catalog?.map((item) => {
-            item.animate = false;
-          });
-        }
+        this.employees  = employessData.map(e => e[language ?? 'en']);
       }
     );
 
