@@ -29,9 +29,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Fetch employees
-        run: node scripts/mushroomsoftEmployeesData.js
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
