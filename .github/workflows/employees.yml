@@ -19,6 +19,8 @@ jobs:
 
       - name: Checkout Repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MUSHROOMSOFT_TOKEN }}
 
       - name: Setup NodeJs
         uses: actions/setup-node@v4
