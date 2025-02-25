@@ -61,26 +61,5 @@
       "animate": true,
       "actionText": "Ver más..."
     }
-  },
-  {
-    "id": 33,
-    "en": {
-      "title": "Hector Falconí",
-      "subtitle": "Co-Founder and CEO",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> Jurisprudence</p> <p> <b>Expert in:</b> Laws </p> <p> <b>Hobby:</b> Gardening </p>",
-      "image": "employeesProfilePhoto/33.png",
-      "showDescription": false,
-      "animate": true,
-      "actionText": "See more..."
-    },
-    "es": {
-      "title": "Hector Falconí",
-      "subtitle": "Co-Fundador y CEO",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Jurisprudencia</p> <p> <b>Experto en:</b> Leyes </p> <p> <b>Hobby:</b> Jardinería </p>",
-      "image": "employeesProfilePhoto/33.png",
-      "showDescription": false,
-      "animate": true,
-      "actionText": "Ver más..."
-    }
   }
 ]
