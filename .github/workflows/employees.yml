@@ -31,7 +31,7 @@ jobs:
       - name: Running Script
         run: node ./scripts/mushroomsoftEmployeesData.js
         env:
-          POWER_AUTOMATE_URL: ${{env.POWER_AUTOMATE_URL}}
+          POWER_AUTOMATE_URL: ${{secrets.POWER_AUTOMATE_URL}}
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
