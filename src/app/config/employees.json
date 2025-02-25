@@ -40,5 +40,47 @@
       "animate": true,
       "actionText": "Ver más..."
     }
+  },
+  {
+    "id": 31,
+    "en": {
+      "title": "Andrea Garzón",
+      "subtitle": "USA Manager",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Project Manager </p> <p> <b>Hobby:</b> Going to the cinema </p>",
+      "image": "employeesProfilePhoto/31.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "See more..."
+    },
+    "es": {
+      "title": "Andrea Garzón",
+      "subtitle": "USA Manager",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Gerente de Proyecto </p> <p> <b>Hobby:</b> Ir al cine </p>",
+      "image": "employeesProfilePhoto/31.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "Ver más..."
+    }
+  },
+  {
+    "id": 33,
+    "en": {
+      "title": "Hector Falconí",
+      "subtitle": "Co-Founder and CEO",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Jurisprudence</p> <p> <b>Expert in:</b> Laws </p> <p> <b>Hobby:</b> Gardening </p>",
+      "image": "employeesProfilePhoto/33.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "See more..."
+    },
+    "es": {
+      "title": "Hector Falconí",
+      "subtitle": "Co-Fundador y CEO",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Jurisprudencia</p> <p> <b>Experto en:</b> Leyes </p> <p> <b>Hobby:</b> Jardinería </p>",
+      "image": "employeesProfilePhoto/33.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "Ver más..."
+    }
   }
 ]
