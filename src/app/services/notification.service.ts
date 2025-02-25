@@ -13,7 +13,8 @@ export class NotificationService {
     return environment.PUBLIC_ACCESS_KEY;
   }
 
-  sendEmail(formData: any): Observable<any> {
+  sendToMsTeams(formData:any) : Observable<any> {
     return this.http.post(environment.EMAIL_API, formData);
   }
+
 }
