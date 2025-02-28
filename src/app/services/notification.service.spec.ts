@@ -30,7 +30,7 @@ describe('NotificationService', () => {
     });
   });
 
-  describe('sendEmail', () => {
+  describe('sendToMsTeams', () => {
     it('should make a POST request to the email API', () => {
       const mockFormData = {
         subject: "New opportunity! Someone reached out from the Mushroomsoft website",
