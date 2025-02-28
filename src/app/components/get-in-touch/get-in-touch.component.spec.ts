@@ -16,11 +16,11 @@ describe('GetInTouchComponent', () => {
     toastrSpy = jasmine.createSpyObj('ToastrService', ['success', 'error']);
     notificationServiceSpy = jasmine.createSpyObj('NotificationService', [
       'getAccessKey',
-      'sendEmail',
+      'sendToMsTeams',
     ]);
 
     notificationServiceSpy.getAccessKey.and.returnValue('mock-access-key');
-    notificationServiceSpy.sendEmail.and.returnValue(of({}));
+    notificationServiceSpy.sendToMsTeams.and.returnValue(of({}));
 
     await TestBed.configureTestingModule({
       imports: [ReactiveFormsModule, GetInTouchComponent],
@@ -78,7 +78,7 @@ describe('GetInTouchComponent', () => {
         error_message: 'There was a problem sending the form',
       },
     } as Section;
-    notificationServiceSpy.sendEmail.and.returnValue(
+    notificationServiceSpy.sendToMsTeams.and.returnValue(
       throwError(() => new Error('API error'))
     );
 
@@ -105,7 +105,7 @@ describe('GetInTouchComponent', () => {
 
     component.contactForm.setValue(formData);
     component.onSubmit();
-    expect(notificationServiceSpy.sendEmail).toHaveBeenCalledWith(formData);
+    expect(notificationServiceSpy.sendToMsTeams).toHaveBeenCalledWith(formData);
     expect(toastrSpy.success).toHaveBeenCalledWith(
       component.sectionData.email?.success_message
     );
