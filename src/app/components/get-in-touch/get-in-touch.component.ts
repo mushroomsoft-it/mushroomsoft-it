@@ -77,6 +77,7 @@ export class GetInTouchComponent {
 
       this.notificationService.sendToMsTeams(formData).subscribe({
         next: (response) => {
+          console.log(response);
           this.toastrService.success(this.sectionData.email?.success_message);
         },
         error: (error) => {

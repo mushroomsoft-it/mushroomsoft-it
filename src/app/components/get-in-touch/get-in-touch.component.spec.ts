@@ -84,6 +84,7 @@ describe('GetInTouchComponent', () => {
 
     component.contactForm.setValue(formData);
     component.onSubmit();
+
     expect(toastrSpy.error).toHaveBeenCalledWith(
       component.sectionData.email?.error_message
     );
