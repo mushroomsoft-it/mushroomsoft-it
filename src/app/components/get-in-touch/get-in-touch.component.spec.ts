@@ -3,7 +3,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { of, throwError } from 'rxjs';
 import { NotificationService } from '../../services/notification.service';
-import { FieldType, Section } from '../../types/appSections';
+import { FieldType, LanguageEnum, Section } from '../../types/appSections';
 import { GetInTouchComponent } from './get-in-touch.component';
 
 describe('GetInTouchComponent', () => {
@@ -38,7 +38,7 @@ describe('GetInTouchComponent', () => {
       email: ['', []],
       subject: ['', []],
       access_key: [(component as any).notificationService.getAccessKey(), []],
-      language: ['en'],
+      language: [LanguageEnum.En],
     });
   });
 
@@ -74,7 +74,7 @@ describe('GetInTouchComponent', () => {
       email: 'john.doe@example.com',
       subject: component.subject,
       access_key: component.accessKey,
-      language: 'en',
+      language: LanguageEnum.En,
     };
     component.sectionData = {
       email: {
@@ -99,7 +99,7 @@ describe('GetInTouchComponent', () => {
       email: 'john.doe@example.com',
       subject: component.subject,
       access_key: component.accessKey,
-      language: 'en',
+      language: LanguageEnum.En,
     };
 
     component.sectionData = {

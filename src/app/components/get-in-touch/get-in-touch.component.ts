@@ -44,7 +44,7 @@ export class GetInTouchComponent {
     const formGroupConfig: Record<string, any> = {
       subject: [this.subject],
       access_key: [this.accessKey],
-      language: ['en'],
+      language: [LanguageEnum.En],
     };
 
     if (this.sectionData && this.sectionData.formFields) {
