@@ -108,7 +108,7 @@ describe('GetInTouchComponent', () => {
       },
     } as Section;
 
-    component.contactForm.setValue(formData);
+    component.contactForm.patchValue(formData);
     component.onSubmit();
 
     expect(notificationServiceSpy.sendToMsTeams).toHaveBeenCalledWith(formData);
