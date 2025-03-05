@@ -38,7 +38,7 @@ describe('GetInTouchComponent', () => {
       email: ['', []],
       subject: ['', []],
       access_key: [(component as any).notificationService.getAccessKey(), []],
-      language: ['', []],
+      language: ['en'],
     });
   });
 
@@ -65,6 +65,7 @@ describe('GetInTouchComponent', () => {
     expect(component.contactForm.controls['email']).toBeDefined();
     expect(component.contactForm.controls['subject']).toBeDefined();
     expect(component.contactForm.controls['access_key']).toBeDefined();
+    expect(component.contactForm.controls['language']).toBeDefined();
   });
 
   it('should handle the error response from the API call', () => {
