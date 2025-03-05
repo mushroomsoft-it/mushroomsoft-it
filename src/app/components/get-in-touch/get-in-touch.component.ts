@@ -44,7 +44,6 @@ export class GetInTouchComponent {
     const formGroupConfig: Record<string, any> = {
       subject: [this.subject],
       access_key: [this.accessKey],
-      language: [LanguageEnum.En],
     };
 
     if (this.sectionData && this.sectionData.formFields) {
@@ -62,7 +61,7 @@ export class GetInTouchComponent {
         formGroupConfig[field.id] = ['', validators];
       });
     }
-    this.contactForm = this.fb.group({...formGroupConfig, honeypot: ['']});
+    this.contactForm = this.fb.group({...formGroupConfig, honeypot: [''], language: [LanguageEnum.En]});
   }
 
   onSubmit(): void {
