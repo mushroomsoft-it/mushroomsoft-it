@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Section } from '../../types/appSections';
+import { LanguageEnum, Section } from '../../types/appSections';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
 import { MIconComponent } from '../../generic-components/m-icon/m-icon.component';

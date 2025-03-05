@@ -3,7 +3,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { of, throwError } from 'rxjs';
 import { NotificationService } from '../../services/notification.service';
-import { FieldType, Section } from '../../types/appSections';
+import { FieldType, LanguageEnum, Section } from '../../types/appSections';
 import { GetInTouchComponent } from './get-in-touch.component';
 
 describe('GetInTouchComponent', () => {
@@ -16,11 +16,11 @@ describe('GetInTouchComponent', () => {
     toastrSpy = jasmine.createSpyObj('ToastrService', ['success', 'error']);
     notificationServiceSpy = jasmine.createSpyObj('NotificationService', [
       'getAccessKey',
-      'sendEmail',
+      'sendToMsTeams',
     ]);
 
     notificationServiceSpy.getAccessKey.and.returnValue('mock-access-key');
-    notificationServiceSpy.sendEmail.and.returnValue(of({}));
+    notificationServiceSpy.sendToMsTeams.and.returnValue(of({}));
 
     await TestBed.configureTestingModule({
       imports: [ReactiveFormsModule, GetInTouchComponent],
@@ -38,6 +38,7 @@ describe('GetInTouchComponent', () => {
       email: ['', []],
       subject: ['', []],
       access_key: [(component as any).notificationService.getAccessKey(), []],
+      language: [LanguageEnum.En],
     });
   });
 
@@ -64,6 +65,7 @@ describe('GetInTouchComponent', () => {
     expect(component.contactForm.controls['email']).toBeDefined();
     expect(component.contactForm.controls['subject']).toBeDefined();
     expect(component.contactForm.controls['access_key']).toBeDefined();
+    expect(component.contactForm.controls['language']).toBeDefined();
   });
 
   it('should handle the error response from the API call', () => {
@@ -72,18 +74,20 @@ describe('GetInTouchComponent', () => {
       email: 'john.doe@example.com',
       subject: component.subject,
       access_key: component.accessKey,
+      language: 'en',
     };
     component.sectionData = {
       email: {
         error_message: 'There was a problem sending the form',
       },
     } as Section;
-    notificationServiceSpy.sendEmail.and.returnValue(
+    notificationServiceSpy.sendToMsTeams.and.returnValue(
       throwError(() => new Error('API error'))
     );
 
     component.contactForm.setValue(formData);
     component.onSubmit();
+
     expect(toastrSpy.error).toHaveBeenCalledWith(
       component.sectionData.email?.error_message
     );
@@ -95,6 +99,7 @@ describe('GetInTouchComponent', () => {
       email: 'john.doe@example.com',
       subject: component.subject,
       access_key: component.accessKey,
+      language: 'en',
     };
 
     component.sectionData = {
@@ -103,9 +108,10 @@ describe('GetInTouchComponent', () => {
       },
     } as Section;
 
-    component.contactForm.setValue(formData);
+    component.contactForm.patchValue(formData);
     component.onSubmit();
-    expect(notificationServiceSpy.sendEmail).toHaveBeenCalledWith(formData);
+
+    expect(notificationServiceSpy.sendToMsTeams).toHaveBeenCalledWith(formData);
     expect(toastrSpy.success).toHaveBeenCalledWith(
       component.sectionData.email?.success_message
     );
