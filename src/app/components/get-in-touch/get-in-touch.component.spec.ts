@@ -105,6 +105,7 @@ describe('GetInTouchComponent', () => {
 
     component.contactForm.setValue(formData);
     component.onSubmit();
+
     expect(notificationServiceSpy.sendToMsTeams).toHaveBeenCalledWith(formData);
     expect(toastrSpy.success).toHaveBeenCalledWith(
       component.sectionData.email?.success_message
