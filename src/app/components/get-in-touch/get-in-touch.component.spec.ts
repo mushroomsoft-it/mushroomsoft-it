@@ -38,6 +38,7 @@ describe('GetInTouchComponent', () => {
       email: ['', []],
       subject: ['', []],
       access_key: [(component as any).notificationService.getAccessKey(), []],
+      language: ['', []],
     });
   });
 
