@@ -72,6 +72,7 @@ describe('GetInTouchComponent', () => {
       email: 'john.doe@example.com',
       subject: component.subject,
       access_key: component.accessKey,
+      language: 'en',
     };
     component.sectionData = {
       email: {
@@ -96,6 +97,7 @@ describe('GetInTouchComponent', () => {
       email: 'john.doe@example.com',
       subject: component.subject,
       access_key: component.accessKey,
+      language: 'en',
     };
 
     component.sectionData = {
