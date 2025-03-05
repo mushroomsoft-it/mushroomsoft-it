@@ -9,7 +9,8 @@ import {
 import { ToastrService } from 'ngx-toastr';
 import { MContactLinksComponent } from '../../generic-components/m-contact-links/m-contact-links.component';
 import { NotificationService } from '../../services/notification.service';
-import { FieldType, Section } from '../../types/appSections';
+import { FieldType, LanguageEnum, Section } from '../../types/appSections';
+import { NavigationService } from '../../observables/navigation.service';
 
 @Component({
   selector: 'get-in-touch',
@@ -27,10 +28,13 @@ export class GetInTouchComponent {
   public subject: string = '';
   contactForm!: FormGroup;
 
+  private languageUsed! : LanguageEnum | undefined;
+
   constructor(
     private notificationService: NotificationService,
     private toastrService: ToastrService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private navigationService:NavigationService
   ) {
     this.accessKey = this.notificationService.getAccessKey();
   }
@@ -62,11 +66,17 @@ export class GetInTouchComponent {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
-      const formData = this.contactForm.value;
+
+      this.navigationService.languageObservable.subscribe(
+        (language) => {
+          this.languageUsed = language;
+        }
+      );
+
+      const formData = {...this.contactForm.value, language: this.languageUsed};
 
       this.notificationService.sendToMsTeams(formData).subscribe({
         next: (response) => {
-          console.log(response);
           this.toastrService.success(this.sectionData.email?.success_message);
         },
         error: (error) => {
