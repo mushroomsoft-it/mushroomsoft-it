@@ -73,7 +73,7 @@ export class GetInTouchComponent {
         }
       );
 
-      const formData = {...this.contactForm.value, language: this.languageUsed};
+      const formData = {...this.contactForm.value, language: this.languageUsed || LanguageEnum.En};
 
       this.notificationService.sendToMsTeams(formData).subscribe({
         next: (response) => {
