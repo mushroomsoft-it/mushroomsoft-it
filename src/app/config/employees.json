@@ -42,27 +42,6 @@
     }
   },
   {
-    "id": 31,
-    "en": {
-      "title": "Andrea Gomez",
-      "subtitle": "USA Country Manager",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Project Manager </p> <p> <b>Hobby:</b> Going to the cinema </p>",
-      "image": "employeesProfilePhoto/31.png",
-      "showDescription": false,
-      "animate": true,
-      "actionText": "See more..."
-    },
-    "es": {
-      "title": "Andrea Gomez",
-      "subtitle": "USA Country Manager",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Gerente de Proyecto </p> <p> <b>Hobby:</b> Ir al cine </p>",
-      "image": "employeesProfilePhoto/31.png",
-      "showDescription": false,
-      "animate": true,
-      "actionText": "Ver más..."
-    }
-  },
-  {
     "id": 34,
     "en": {
       "title": "Hector H. Falconi",
