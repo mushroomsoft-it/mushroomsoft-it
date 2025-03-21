@@ -4,7 +4,7 @@
     "en": {
       "title": "Leonardo Riofrío",
       "subtitle": "CTO",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering</p> <p> <b>Expert in:</b> Developer </p> <p> <b>Hobby:</b> Squash </p>",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering</p> <p> <b>Expert in:</b> Developer </p> <p> <b>Hobby:</b> Squash, GYM </p>",
       "image": "employeesProfilePhoto/28.png",
       "showDescription": false,
       "animate": true,
@@ -13,7 +13,7 @@
     "es": {
       "title": "Leonardo Riofrío",
       "subtitle": "CTO",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Squash </p>",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Squash, GYM </p>",
       "image": "employeesProfilePhoto/28.png",
       "showDescription": false,
       "animate": true,
@@ -55,7 +55,7 @@
     "es": {
       "title": "Hector H. Falconi",
       "subtitle": "Co-Fundador y Gerente General",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Derecho</p> <p> <b>Experto en:</b> Immigration and corporate matters </p> <p> <b>Hobby:</b> Jardinería </p>",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Derecho</p> <p> <b>Experto en:</b> Asuntos de inmigración y corporativos </p> <p> <b>Hobby:</b> Jardinería </p>",
       "image": "employeesProfilePhoto/34.png",
       "showDescription": false,
       "animate": true,
