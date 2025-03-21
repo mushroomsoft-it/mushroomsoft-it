@@ -4,7 +4,7 @@
     "en": {
       "title": "Leonardo Riofrío",
       "subtitle": "CTO",
-      "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering</p> <p> <b>Expert in:</b> Developer </p> <p> <b>Hobby:</b> Squash </p>",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering</p> <p> <b>Expert in:</b> Developer </p> <p> <b>Hobby:</b> Squash, GYM </p>",
       "image": "employeesProfilePhoto/28.png",
       "showDescription": false,
       "animate": true,
@@ -13,7 +13,7 @@
     "es": {
       "title": "Leonardo Riofrío",
       "subtitle": "CTO",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Calabaza </p>",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Squash, GYM </p>",
       "image": "employeesProfilePhoto/28.png",
       "showDescription": false,
       "animate": true,
@@ -34,7 +34,7 @@
     "es": {
       "title": "Alba Aguirre",
       "subtitle": "Co-Fundador y Gerente de Oficina",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Relaciones Laborales </p> <p> <b>Hobby:</b> Planificación de eventos </p>",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Employee Relationships </p> <p> <b>Hobby:</b> Planificación de Eventos </p>",
       "image": "employeesProfilePhoto/30.png",
       "showDescription": false,
       "animate": true,
@@ -55,7 +55,7 @@
     "es": {
       "title": "Hector H. Falconi",
       "subtitle": "Co-Fundador y Gerente General",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ley, Doctorado en Jurisprudencia</p> <p> <b>Experto en:</b> Inmigración y asuntos corporativos </p> <p> <b>Hobby:</b> Sorry, I can't respond to that request. </p>",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Law, Doctorate in Jurisprudence</p> <p> <b>Experto en:</b> Immigration and corporate matters </p> <p> <b>Hobby:</b> Gardering </p>",
       "image": "employeesProfilePhoto/34.png",
       "showDescription": false,
       "animate": true,
@@ -75,8 +75,8 @@
     },
     "es": {
       "title": "Andrea Gomez",
-      "subtitle": "USA Country Manager",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Gerente de Proyecto </p> <p> <b>Hobby:</b> Ir al cine </p>",
+      "subtitle": "Gerente de País en EE. UU.",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Gerente de Proyecto </p> <p> <b>Hobby:</b> Going to the cinema </p>",
       "image": "employeesProfilePhoto/35.png",
       "showDescription": false,
       "animate": true,
