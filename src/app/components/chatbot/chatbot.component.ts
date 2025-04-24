@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-mushroomsoft-chatbot',
@@ -8,6 +9,8 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
   styleUrl: './chatbot.component.scss',
 })
 export class ChatbotComponent implements OnInit {
+  private readonly copilotUrlToken = environment.COPILOT_URL_TOKEN;
+
   chatOpen = false;
   webchatInitialized = false;
   iconTransitioning = false;
@@ -49,9 +52,7 @@ export class ChatbotComponent implements OnInit {
       return;
     }
 
-    const tokenEndpointURL = new URL(
-      'https://ebeaa4747ee6ee02b26eb819114010.e2.environment.api.powerplatform.com/powervirtualagents/botsbyschema/creeb_mushroomSoftExternalAgent/directline/token?api-version=2022-03-01-preview'
-    );
+    const tokenEndpointURL = new URL(this.copilotUrlToken);
 
     const locale = document.documentElement.lang || 'en';
     const apiVersion = tokenEndpointURL.searchParams.get('api-version');

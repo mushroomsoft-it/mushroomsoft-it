@@ -3,7 +3,7 @@
   bottom: 100px;
   right: 20px;
   width: 400px;
-  height: 500px;
+  height: 88vh;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
@@ -50,8 +50,8 @@
 
 #webchat {
   flex: 1;
-  overflow-y: auto; /* Permite desplazamiento vertical */
-  max-height: 400px; /* Limita la altura para que se active el scroll */
+  overflow-y: auto;
+  max-height: 88vh;
   padding: 10px;
 }
 
