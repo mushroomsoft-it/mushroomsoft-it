@@ -1,5 +1,14 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  Renderer2,
+  inject,
+} from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { ReCaptchaV3Service } from 'ngx-captcha';
+import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-mushroomsoft-chatbot',
@@ -10,6 +19,9 @@ import { environment } from '../../../environments/environment';
 })
 export class ChatbotComponent implements OnInit {
   private readonly copilotUrlToken = environment.COPILOT_URL_TOKEN;
+  public readonly captchaSiteKey = environment.CAPTCHA_SITE_KEY;
+
+  private recaptchaV3Service = inject(ReCaptchaV3Service);
 
   chatOpen = false;
   webchatInitialized = false;
@@ -18,7 +30,12 @@ export class ChatbotComponent implements OnInit {
   openIcon = 'https://cdn-icons-png.flaticon.com/512/6469/6469080.png';
   closedIcon = 'https://cdn-icons-png.flaticon.com/512/1998/1998597.png';
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+    private http: HttpClient,
+    private toastrService: ToastrService
+  ) {}
 
   ngOnInit(): void {
     const script = this.renderer.createElement('script');
@@ -30,19 +47,36 @@ export class ChatbotComponent implements OnInit {
   }
 
   async toggleChat(forceClose: boolean | null = null) {
-    if (forceClose !== null) {
-      this.chatOpen = !forceClose;
-    } else {
-      this.chatOpen = !this.chatOpen;
-    }
+    this.recaptchaV3Service.execute(
+      this.captchaSiteKey,
+      'chat_open',
+      (token: string) => {
+        if (!token) {
+          this.toastrService.error(
+            'System validation failed. Please try again later.'
+          );
+          return;
+        }
 
-    this.iconTransitioning = true;
-    setTimeout(() => (this.iconTransitioning = false), 150);
+        if (forceClose !== null) {
+          this.chatOpen = !forceClose;
+        } else {
+          this.chatOpen = !this.chatOpen;
+        }
 
-    if (this.chatOpen && !this.webchatInitialized) {
-      this.webchatInitialized = true;
-      await this.initializeWebChat();
-    }
+        this.iconTransitioning = true;
+        setTimeout(() => (this.iconTransitioning = false), 150);
+
+        if (this.chatOpen && !this.webchatInitialized) {
+          this.webchatInitialized = true;
+          this.initializeWebChat();
+        }
+      },
+      undefined,
+      (error) => {
+        this.toastrService.error('Validation failed. Please try again later.');
+      }
+    );
   }
 
   private async initializeWebChat() {
