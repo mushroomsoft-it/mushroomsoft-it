@@ -6,6 +6,14 @@
   <div id="webchat" role="main"></div>
 </div>
 
-<button id="chat-toggle-button" aria-label="Toggle chat" (click)="toggleChat()">
-  <img id="chat-icon" [src]="chatOpen ? openIcon : closedIcon" alt="Chat icon" [class.fade-out]="iconTransitioning">
-</button>
+<div class="chat-button-wrapper" #chatButtonWrapper>
+  <div id="chatbot-tooltip" class="chat-tooltip fade-in" *ngIf="showTooltip">
+    {{tooltipText}}
+  </div>
+
+  <button id="chat-toggle-button" aria-label="Toggle chat" (click)="toggleChat()">
+    <img id="chat-icon" [src]="chatOpen ? openIcon : closedIcon" alt="Chat icon" [class.fade-out]="iconTransitioning">
+  </button>
+</div>
+
+

@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   OnInit,
@@ -7,32 +8,38 @@ import {
 } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { ReCaptchaV3Service } from 'ngx-captcha';
-import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { NavigationService } from '../../observables/navigation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-mushroomsoft-chatbot',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './chatbot.component.html',
   styleUrl: './chatbot.component.scss',
 })
-export class ChatbotComponent implements OnInit {
+export class ChatbotComponent implements OnInit, AfterViewInit {
   private readonly copilotUrlToken = environment.COPILOT_URL_TOKEN;
   public readonly captchaSiteKey = environment.CAPTCHA_SITE_KEY;
 
   private recaptchaV3Service = inject(ReCaptchaV3Service);
+  private subscription!: Subscription;
 
   chatOpen = false;
+  showTooltip = true;
   webchatInitialized = false;
   iconTransitioning = false;
 
   openIcon = 'https://cdn-icons-png.flaticon.com/512/6469/6469080.png';
   closedIcon = 'https://cdn-icons-png.flaticon.com/512/1998/1998597.png';
 
+  tooltipText = 'Hey! Ask me something!';
+
   constructor(
     private el: ElementRef,
     private renderer: Renderer2,
-    private http: HttpClient
+    private navigationService: NavigationService
   ) {}
 
   ngOnInit(): void {
@@ -42,6 +49,42 @@ export class ChatbotComponent implements OnInit {
     script.crossOrigin = 'anonymous';
     script.onload = () => console.log('WebChat script loaded.');
     this.renderer.appendChild(document.body, script);
+
+    this.subscription = this.navigationService.languageObservable.subscribe(
+      (language) => {
+        if (language === 'en') {
+          this.tooltipText = 'Hey! Ask me something!';
+        } else if (language === 'es') {
+          this.tooltipText = '¡Hey! ¡Pregúntame algo!';
+        }
+      }
+    );
+  }
+
+  ngAfterViewInit(): void {
+    const chat = this.el.nativeElement.querySelector('#webchat');
+
+    if (!chat) return;
+
+    const observer = new MutationObserver(() => {
+      const bubbles = chat.querySelectorAll('.webchat__bubble__content');
+
+      bubbles.forEach((bubble: HTMLElement) => {
+        const text = bubble.textContent?.trim();
+        if (
+          text?.includes(
+            'Hi, I’m Cheetara, MushroomSoft’s virtual assistant. Feel free to ask me about any of the following topics:'
+          ) ||
+          text?.includes(
+            'Hola, soy Cheetara, el asistente virtual de MushroomSoft. Pregúntame cualquier de los siguientes temas:'
+          )
+        ) {
+          this.renderer.addClass(bubble, 'cheetara-message');
+        }
+      });
+    });
+
+    observer.observe(chat, { childList: true, subtree: true });
   }
 
   async toggleChat(forceClose: boolean | null = null) {
@@ -54,6 +97,12 @@ export class ChatbotComponent implements OnInit {
             this.chatOpen = !forceClose;
           } else {
             this.chatOpen = !this.chatOpen;
+          }
+
+          if (this.chatOpen) {
+            this.showTooltip = false;
+          } else {
+            this.showTooltip = true;
           }
 
           this.iconTransitioning = true;
@@ -119,17 +168,20 @@ export class ChatbotComponent implements OnInit {
     const styleOptions = {
       backgroundColor: 'white',
       accent: '#00809d',
-      botAvatarBackgroundColor: '#FFFFFF',
+      botAvatarBackgroundColor: '#d3e1e9',
       botAvatarImage: this.closedIcon,
       botAvatarInitials: 'BT',
       userAvatarImage: 'https://avatars.githubusercontent.com/u/661465',
       fontWeight: 'normal',
+      bubbleMaxWidth: Infinity,
       bubbleTextStyle: {
         fontWeight: 'normal',
       },
       bubbleFromUserTextStyle: {
         fontWeight: 'normal',
       },
+      bubbleBackground: '#007bff',
+      bubbleTextColor: '#ffffff',
     };
 
     WebChat.renderWebChat(
