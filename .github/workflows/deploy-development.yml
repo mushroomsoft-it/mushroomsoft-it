@@ -10,9 +10,27 @@ permissions:
 
 jobs:
   build:
+    name: GitHub Actions - Deploy to Azure Blob Storage - Development
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20]
+
     steps:
       - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
       - uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
@@ -23,7 +41,11 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch --account-name msoftpublicsite --auth-mode login -d '$web' -s .
+            az storage blob upload-batch \
+            --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
+            --auth-mode key \
+            -d '$web' \
+            -s .
 
       # Azure logout
       - name: Azure CLI logout
