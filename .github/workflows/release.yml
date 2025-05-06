@@ -1,9 +1,8 @@
 name: MushroomSoft Release and Deploy
 
 on:
-  push:
-    branches:
-      - 'master'
+  workflow_dispatch:
+
 jobs:
   build:
     name: GitHub Actions - Tests
