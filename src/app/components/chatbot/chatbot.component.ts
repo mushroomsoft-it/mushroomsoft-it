@@ -7,7 +7,6 @@ import {
   inject,
 } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { ReCaptchaV3Service } from 'ngx-captcha';
 import { CommonModule } from '@angular/common';
 import { NavigationService } from '../../observables/navigation.service';
 import { Subscription } from 'rxjs';
@@ -17,13 +16,11 @@ import { Subscription } from 'rxjs';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './chatbot.component.html',
-  styleUrl: './chatbot.component.scss',
+  styleUrls: ['./chatbot.component.scss'],
 })
 export class ChatbotComponent implements OnInit, AfterViewInit {
   private readonly copilotUrlToken = environment.COPILOT_URL_TOKEN;
-  public readonly captchaSiteKey = environment.CAPTCHA_SITE_KEY;
 
-  private recaptchaV3Service = inject(ReCaptchaV3Service);
   private subscription!: Subscription;
 
   chatOpen = false;
@@ -31,10 +28,10 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
   webchatInitialized = false;
   iconTransitioning = false;
 
-  openIcon = 'https://cdn-icons-png.flaticon.com/512/6469/6469080.png';
-  closedIcon = 'https://cdn-icons-png.flaticon.com/512/1998/1998597.png';
+  openIcon = 'icons/open.png';
+  closedIcon = 'icons/close.png';
 
-  tooltipText = 'Hey! Ask me something!';
+  tooltipText = ''; // Se eliminó el contenido del tooltip
 
   constructor(
     private el: ElementRef,
@@ -47,15 +44,21 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
     script.src =
       'https://cdn.botframework.com/botframework-webchat/latest/webchat.js';
     script.crossOrigin = 'anonymous';
-    script.onload = () => console.log('WebChat script loaded.');
+    script.onload = () => {
+      // El script cargó exitosamente
+      console.log('WebChat script loaded');
+    };
+    script.onerror = () => {
+      console.error('Error loading WebChat script');
+    };
     this.renderer.appendChild(document.body, script);
 
     this.subscription = this.navigationService.languageObservable.subscribe(
       (language) => {
         if (language === 'en') {
-          this.tooltipText = 'Hey! Ask me something!';
+          this.tooltipText = 'Ask me something!';
         } else if (language === 'es') {
-          this.tooltipText = '¡Hey! ¡Pregúntame algo!';
+          this.tooltipText = '¡Pregúntame algo!';
         }
       }
     );
@@ -88,35 +91,21 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
   }
 
   async toggleChat(forceClose: boolean | null = null) {
-    this.recaptchaV3Service.execute(
-      this.captchaSiteKey,
-      'chat_open',
-      (token: string) => {
-        if (token) {
-          if (forceClose !== null) {
-            this.chatOpen = !forceClose;
-          } else {
-            this.chatOpen = !this.chatOpen;
-          }
+    if (forceClose !== null) {
+      this.chatOpen = !forceClose;
+    } else {
+      this.chatOpen = !this.chatOpen;
+    }
 
-          if (this.chatOpen) {
-            this.showTooltip = false;
-          } else {
-            this.showTooltip = true;
-          }
+    this.showTooltip = !this.chatOpen;
 
-          this.iconTransitioning = true;
-          setTimeout(() => (this.iconTransitioning = false), 150);
+    this.iconTransitioning = true;
+    setTimeout(() => (this.iconTransitioning = false), 150);
 
-          if (this.chatOpen && !this.webchatInitialized) {
-            this.webchatInitialized = true;
-            this.initializeWebChat();
-          }
-        } else {
-          console.error('Error.');
-        }
-      }
-    );
+    if (this.chatOpen && !this.webchatInitialized) {
+      this.webchatInitialized = true;
+      this.initializeWebChat();
+    }
   }
 
   private async initializeWebChat() {
@@ -126,24 +115,28 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
       return;
     }
 
-    const tokenEndpointURL = new URL(this.copilotUrlToken);
+    let directLineURL, token;
+    try {
+      const tokenEndpointURL = new URL(this.copilotUrlToken);
+      const locale = document.documentElement.lang || 'en';
+      const apiVersion = tokenEndpointURL.searchParams.get('api-version');
 
-    const locale = document.documentElement.lang || 'en';
-    const apiVersion = tokenEndpointURL.searchParams.get('api-version');
+      const [directLineResponse, tokenResponse] = await Promise.all([
+        fetch(
+          new URL(
+            `/powervirtualagents/regionalchannelsettings?api-version=${apiVersion}`,
+            tokenEndpointURL
+          )
+        ).then((response) => response.json()),
+        fetch(tokenEndpointURL).then((response) => response.json()),
+      ]);
 
-    const [directLineURL, token] = await Promise.all([
-      fetch(
-        new URL(
-          `/powervirtualagents/regionalchannelsettings?api-version=${apiVersion}`,
-          tokenEndpointURL
-        )
-      )
-        .then((response) => response.json())
-        .then(({ channelUrlsById: { directline } }) => directline),
-      fetch(tokenEndpointURL)
-        .then((response) => response.json())
-        .then(({ token }) => token),
-    ]);
+      directLineURL = directLineResponse.channelUrlsById.directline;
+      token = tokenResponse.token;
+    } catch (error) {
+      console.error('Error fetching DirectLine URL or token:', error);
+      return;
+    }
 
     const directLine = WebChat.createDirectLine({
       domain: new URL('v3/directline', directLineURL).toString(),
@@ -156,7 +149,7 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
           directLine
             .postActivity({
               localTimezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-              locale,
+              locale: document.documentElement.lang || 'en',
               name: 'startConversation',
               type: 'event',
             })
@@ -185,7 +178,11 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
     };
 
     WebChat.renderWebChat(
-      { directLine, locale, styleOptions },
+      {
+        directLine,
+        locale: document.documentElement.lang || 'en',
+        styleOptions,
+      },
       this.el.nativeElement.querySelector('#webchat')
     );
   }

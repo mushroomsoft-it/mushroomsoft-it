@@ -78,27 +78,6 @@ $font-stack: 'Segoe UI', sans-serif;
   align-items: center;
   transform: translateX(5%);
 
-  .chat-tooltip {
-    position: absolute;
-    bottom: 100%;
-    margin-bottom: 8px;
-    background-color: $primary-color;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 12px;
-    font-size: 16px;
-    white-space: nowrap;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
-
-    &.fade-in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
   #chat-toggle-button {
     width: 70px;
     height: 70px;
@@ -112,6 +91,8 @@ $font-stack: 'Segoe UI', sans-serif;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
+
+    animation: heartbeat 3s infinite;
 
     &:hover {
       transform: scale(1.05);
@@ -149,6 +130,25 @@ $font-stack: 'Segoe UI', sans-serif;
   }
 }
 
+// Animación de latido
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
 // Media queries
 @media (max-width: 896px) {
   #chat-container {
@@ -178,10 +178,6 @@ $font-stack: 'Segoe UI', sans-serif;
     width: 70px;
     height: 70px;
   }
-
-  .chat-tooltip {
-    padding: 5px 10px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -194,10 +190,6 @@ $font-stack: 'Segoe UI', sans-serif;
   #chat-toggle-button {
     width: 70px;
     height: 70px;
-  }
-
-  .chat-tooltip {
-    padding: 4px 8px;
   }
 
   #banner {
