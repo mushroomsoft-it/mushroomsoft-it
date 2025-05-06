@@ -30,16 +30,19 @@ describe('NotificationService', () => {
     });
   });
 
-  describe('sendEmail', () => {
+  describe('sendToMsTeams', () => {
     it('should make a POST request to the email API', () => {
       const mockFormData = {
+        subject: "New opportunity! Someone reached out from the Mushroomsoft website",
+        accessKey: "86b6ef65-80c4-4482-967b-655337afa9e1",
         name: 'John Doe',
         email: 'john@example.com',
         message: 'Hello!',
+        honeypot: ''
       };
       const mockResponse = { success: true };
 
-      service.sendEmail(mockFormData).subscribe((response) => {
+      service.sendToMsTeams(mockFormData).subscribe((response) => {
         expect(response).toEqual(mockResponse);
       });
 
