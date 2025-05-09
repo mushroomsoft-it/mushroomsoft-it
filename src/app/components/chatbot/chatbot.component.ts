@@ -27,9 +27,10 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
   showTooltip = true;
   webchatInitialized = false;
   iconTransitioning = false;
+  isVisible = false;
 
-  openIcon = 'icons/open.png';
-  closedIcon = 'icons/close.png';
+  openIcon = 'icons/6.png';
+  closedIcon = 'icons/2.png';
 
   tooltipText = ''; // Se eliminó el contenido del tooltip
 
@@ -40,26 +41,31 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    const script = this.renderer.createElement('script');
-    script.src =
-      'https://cdn.botframework.com/botframework-webchat/latest/webchat.js';
-    script.crossOrigin = 'anonymous';
-    script.onload = () => {
-      // El script cargó exitosamente
-      console.log('WebChat script loaded');
-    };
-    script.onerror = () => {
-      console.error('Error loading WebChat script');
-    };
-    this.renderer.appendChild(document.body, script);
+    const scriptAlreadyLoaded = document.querySelector(
+      'script[src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"]'
+    );
+
+    if (!scriptAlreadyLoaded) {
+      const script = this.renderer.createElement('script');
+      script.src =
+        'https://cdn.botframework.com/botframework-webchat/latest/webchat.js';
+      script.crossOrigin = 'anonymous';
+      script.onload = () => {
+        this.isVisible = true;
+      };
+      script.onerror = () => {
+        console.error('Error loading WebChat script');
+      };
+      this.renderer.appendChild(document.body, script);
+    } else {
+      this.isVisible = true;
+      console.log('WebChat script already loaded');
+    }
 
     this.subscription = this.navigationService.languageObservable.subscribe(
       (language) => {
-        if (language === 'en') {
-          this.tooltipText = 'Ask me something!';
-        } else if (language === 'es') {
-          this.tooltipText = '¡Pregúntame algo!';
-        }
+        this.tooltipText =
+          language === 'en' ? 'Ask me something!' : '¡Pregúntame algo!';
       }
     );
   }
@@ -175,6 +181,7 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
       },
       bubbleBackground: '#007bff',
       bubbleTextColor: '#ffffff',
+      hideUploadButton: true,
     };
 
     WebChat.renderWebChat(
