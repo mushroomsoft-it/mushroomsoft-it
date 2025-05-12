@@ -4,7 +4,6 @@ import {
   ElementRef,
   OnInit,
   Renderer2,
-  inject,
 } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { CommonModule } from '@angular/common';
@@ -29,8 +28,8 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
   iconTransitioning = false;
   isVisible = false;
 
-  openIcon = 'icons/6.png';
-  closedIcon = 'icons/2.png';
+  openIcon = 'icons/2.png';
+  closedIcon = 'icons/6.png';
 
   tooltipText = ''; // Se eliminó el contenido del tooltip
 
