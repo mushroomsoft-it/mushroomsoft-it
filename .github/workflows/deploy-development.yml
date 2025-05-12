@@ -45,7 +45,7 @@ jobs:
             --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
             --auth-mode login \
             -d '$web' \
-            -s .
+            -s dist/browser
 
       # Azure logout
       - name: Azure CLI logout
