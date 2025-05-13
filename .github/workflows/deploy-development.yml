@@ -45,9 +45,9 @@ jobs:
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: |
           echo "Publish release"
-          npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - uses: azure/login@v2
         with:
