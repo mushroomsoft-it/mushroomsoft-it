@@ -1,13 +1,8 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  Renderer2,
-} from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { ChatbotService } from '../../services/chatbot.service';
+import data from '../../config/sections.json';
 
 @Component({
   selector: 'app-mushroomsoft-chatbot',
@@ -16,7 +11,7 @@ import { ChatbotService } from '../../services/chatbot.service';
   templateUrl: './chatbot.component.html',
   styleUrls: ['./chatbot.component.scss'],
 })
-export class ChatbotComponent implements OnInit, AfterViewInit {
+export class ChatbotComponent implements OnInit {
   private subscription!: Subscription;
 
   chatOpen = false;
@@ -25,46 +20,16 @@ export class ChatbotComponent implements OnInit, AfterViewInit {
   iconTransitioning = false;
   isVisible = false;
 
-  openIcon = 'icons/2.png';
-  closedIcon = 'icons/6.png';
+  openIcon = 'icons/4.png';
+  closedIcon = 'icons/3.png';
 
-  constructor(
-    private el: ElementRef,
-    private renderer: Renderer2,
-    private chatbotService: ChatbotService
-  ) {}
+  constructor(private el: ElementRef, private chatbotService: ChatbotService) {}
 
   ngOnInit(): void {
     this.chatbotService
       .loadWebChatScript()
       .then(() => (this.isVisible = true))
       .catch((err) => console.error('Error loading WebChat script:', err));
-  }
-
-  ngAfterViewInit(): void {
-    const chat = this.el.nativeElement.querySelector('#webchat');
-
-    if (!chat) return;
-
-    const observer = new MutationObserver(() => {
-      const bubbles = chat.querySelectorAll('.webchat__bubble__content');
-
-      bubbles.forEach((bubble: HTMLElement) => {
-        const text = bubble.textContent?.trim();
-        if (
-          text?.includes(
-            'Hi, I’m Cheetara, MushroomSoft’s virtual assistant. Feel free to ask me about any of the following topics:'
-          ) ||
-          text?.includes(
-            'Hola, soy Cheetara, el asistente virtual de MushroomSoft. Pregúntame cualquier de los siguientes temas:'
-          )
-        ) {
-          this.renderer.addClass(bubble, 'cheetara-message');
-        }
-      });
-    });
-
-    observer.observe(chat, { childList: true, subtree: true });
   }
 
   async toggleChat(forceClose: boolean | null = null) {
