@@ -110,10 +110,12 @@ describe('ChatbotService', () => {
     });
 
     it('should throw error if WebChat is not loaded', async () => {
+      const originalWebChat = (window as any).WebChat;
       delete (window as any).WebChat;
       await expectAsync(service.getDirectLine()).toBeRejectedWithError(
         'WebChat is not loaded'
       );
+      (window as any).WebChat = originalWebChat;
     });
   });
 
