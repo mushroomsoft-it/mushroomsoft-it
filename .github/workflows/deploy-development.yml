@@ -31,6 +31,24 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Create and Publish versions
+        id: changesets
+        uses: changesets/action@v1.4.1
+        with:
+          commit: "chore: update versions"
+          title: "chore: update versions"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release Changesets
+        id: release-changesets
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: |
+          echo "Publish release"
+          npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: azure/login@v2
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
