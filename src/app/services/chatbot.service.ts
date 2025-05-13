@@ -41,23 +41,27 @@ export class ChatbotService {
     const apiVersion = tokenEndpointURL.searchParams.get('api-version') || '';
     const locale = document.documentElement.lang || 'en';
 
-    const [directLineResponse, tokenResponse] = await Promise.all([
-      fetch(
-        new URL(
-          `/powervirtualagents/regionalchannelsettings?api-version=${apiVersion}`,
-          tokenEndpointURL
-        )
-      ).then((res) => res.json()),
-      fetch(tokenEndpointURL).then((res) => res.json()),
-    ]);
+    try {
+      const [directLineResponse, tokenResponse] = await Promise.all([
+        fetch(
+          new URL(
+            `/powervirtualagents/regionalchannelsettings?api-version=${apiVersion}`,
+            tokenEndpointURL
+          )
+        ).then((res) => res.json()),
+        fetch(tokenEndpointURL).then((res) => res.json()),
+      ]);
 
-    const directLineURL = directLineResponse.channelUrlsById.directline;
-    const token = tokenResponse.token;
+      const directLineURL = directLineResponse.channelUrlsById.directline;
+      const token = tokenResponse.token;
 
-    return WebChat.createDirectLine({
-      domain: new URL('v3/directline', directLineURL).toString(),
-      token,
-    });
+      return WebChat.createDirectLine({
+        domain: new URL('v3/directline', directLineURL).toString(),
+        token,
+      });
+    } catch (error) {
+      throw new Error('Failed to fetch DirectLine token');
+    }
   }
 
   getStyleOptions(closedIcon: string) {

@@ -39,10 +39,11 @@ describe('ChatbotService', () => {
       spyOn(document, 'querySelector').and.returnValue(
         document.createElement('script')
       );
+
       await expectAsync(service.loadWebChatScript()).toBeResolved();
     });
 
-    it('should append script if not already loaded and resolve on load', async () => {
+    it('should append script and resolve on load', async () => {
       spyOn(document, 'querySelector').and.returnValue(null);
 
       const mockScript: any = {};
@@ -91,12 +92,14 @@ describe('ChatbotService', () => {
           } as Response);
         } else {
           return Promise.resolve({
-            json: () =>
-              Promise.resolve({
-                token: 'mock-token',
-              }),
+            json: () => Promise.resolve({ token: 'mock-token' }),
           } as Response);
         }
+      });
+
+      Object.defineProperty(document, 'documentElement', {
+        value: { lang: 'es' },
+        configurable: true,
       });
     });
 
@@ -109,20 +112,32 @@ describe('ChatbotService', () => {
       expect(result).toBe('mockDirectLine');
     });
 
-    it('should throw error if WebChat is not loaded', async () => {
+    it('should throw if WebChat is not loaded', async () => {
       delete (window as any).WebChat;
       await expectAsync(service.getDirectLine()).toBeRejectedWithError(
         'WebChat is not loaded'
       );
     });
+
+    it('should throw if fetch fails', async () => {
+      spyOn(window, 'fetch').and.returnValue(
+        Promise.reject('fetch failed') as any
+      );
+      await expectAsync(service.getDirectLine()).toBeRejectedWithError(
+        'Failed to fetch DirectLine token'
+      );
+    });
   });
 
   describe('getStyleOptions', () => {
-    it('should return style options with given icon', () => {
-      const iconUrl = 'https://example.com/icon.png';
-      const options = service.getStyleOptions(iconUrl);
-      expect(options.botAvatarImage).toBe(iconUrl);
-      expect(options.backgroundColor).toBe('white');
+    it('should return expected style options', () => {
+      const icon = 'https://example.com/icon.png';
+      const styleOptions = service.getStyleOptions(icon);
+
+      expect(styleOptions.backgroundColor).toBe('white');
+      expect(styleOptions.botAvatarImage).toBe(icon);
+      expect(styleOptions.botAvatarInitials).toBe('BT');
+      expect(styleOptions.hideUploadButton).toBeTrue();
     });
   });
 });
