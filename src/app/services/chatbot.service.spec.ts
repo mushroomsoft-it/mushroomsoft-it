@@ -48,10 +48,6 @@ describe('ChatbotService', () => {
       const mockScript: any = {};
       renderer.createElement.and.returnValue(mockScript);
 
-      setTimeout(() => {
-        mockScript.onload();
-      }, 0);
-
       const promise = service.loadWebChatScript();
       mockScript.onload();
       await expectAsync(promise).toBeResolved();
