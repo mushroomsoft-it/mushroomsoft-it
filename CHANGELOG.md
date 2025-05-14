@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.3
+
+### Patch Changes
+
+- bbebc18: update publish artifacts
+
 ## 2.1.2
 
 ### Patch Changes
