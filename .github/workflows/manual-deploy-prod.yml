@@ -1,6 +1,6 @@
 name: Manual Deploy Web App - Production
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       version:
         description: "Version of the app to deploy"
