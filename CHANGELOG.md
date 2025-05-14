@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.1
+
+### Patch Changes
+
+- 741f9e1: enable publish
+
 ## 2.1.0
 
 ### Minor Changes
