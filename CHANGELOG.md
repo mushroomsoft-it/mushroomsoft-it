@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.5
+
+### Patch Changes
+
+- bcfd898: Update unzip to deploy
+
 ## 2.1.4
 
 ### Patch Changes
