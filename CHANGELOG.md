@@ -1,5 +1,16 @@
 # mushroomsoft-app
 
+## 2.1.9
+
+### Patch Changes
+
+- 4a02c90: feat(chatbot): chatbot added
+  Integrated a chatbot developed using Copilot Studio to provide automated responses to frequently asked questions and basic navigation guidance within the application.
+  Includes:
+
+  - chatbot component
+  - chatbot service
+
 ## 2.1.8
 
 ### Patch Changes
