@@ -116,7 +116,7 @@ jobs:
       # Download the specific release artifact
       - name: Download Release Asset
         id: download-asset
-        uses: dsaltares/fetch-gh-release-asset@master
+        uses: dsaltares/fetch-gh-release-asset@v1.2.3
         with:
           version: ${{ steps.prepare-version.outputs.RELEASE_TAG }}
           file: ${{ steps.prepare-version.outputs.ZIP_FILENAME }}
