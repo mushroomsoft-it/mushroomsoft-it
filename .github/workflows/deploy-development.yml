@@ -72,7 +72,7 @@ jobs:
 
       # Save the zip as a GitHub artifact
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mushroomsoft-app-${{ needs.build.outputs.version }}
           path: mushroomsoft-app-${{ needs.build.outputs.version }}.zip
@@ -85,6 +85,55 @@ jobs:
           name: Release v${{ needs.build.outputs.version }}
           files: mushroomsoft-app-${{ needs.build.outputs.version }}.zip
           generate_release_notes: true
+
+    outputs:
+      version: ${{ needs.build.outputs.version }}
+
+  deploy-specific-version:
+    name: Deploy Specific Version
+    needs: publish-artifacts
+    if: needs.publish-artifacts.outputs.version != ''
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare Version
+        id: prepare-version
+        run: |
+          VERSION="${{ needs.publish-artifacts.outputs.version }}"
+          # Remove 'v' prefix if present
+          VERSION="${VERSION#v}"
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+
+          RELEASE_TAG="v$VERSION"
+          echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_OUTPUT
+
+          # Set zip filename
+          ZIP_FILENAME="mushroomsoft-app-$VERSION.zip"
+          echo "ZIP_FILENAME=$ZIP_FILENAME" >> $GITHUB_OUTPUT
+
+          echo "Preparing to deploy version $VERSION (release tag: $RELEASE_TAG)"
+
+      # Download the specific release artifact
+      - name: Download Release Asset
+        id: download-asset
+        uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          version: ${{ steps.prepare-version.outputs.RELEASE_TAG }}
+          file: ${{ steps.prepare-version.outputs.ZIP_FILENAME }}
+          target: ${{ steps.prepare-version.outputs.ZIP_FILENAME }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Install unzip if needed
+      - name: Install Unzip
+        run: sudo apt-get install -y unzip
+
+      # Extract the zip file
+      - name: Extract Release Package
+        run: |
+          mkdir -p ./deploy-content
+          unzip ${{ steps.prepare-version.outputs.ZIP_FILENAME }} -d ./deploy-content
+          echo "Contents of extracted package:"
+          ls -la ./deploy-content
 
       - uses: azure/login@v2
         with:
@@ -100,7 +149,7 @@ jobs:
             --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
             --auth-mode login \
             -d '$web' \
-            -s dist/browser
+            -s ./deploy-content
 
       # Azure logout
       - name: Azure CLI logout
