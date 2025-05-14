@@ -36,19 +36,55 @@ jobs:
         id: changesets
         uses: changesets/action@v1.4.1
         with:
+          version: npm run version-packages
           commit: "chore: update versions"
           title: "chore: update versions"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Release Changesets
-        id: release-changesets
+      # Extract version for tagging and naming artifacts
+      - name: Extract Version
+        id: extract-version
         if: steps.changesets.outputs.hasChangesets == 'false'
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+    outputs:
+      version: ${{ steps.extract-version.outputs.VERSION }}
+
+  publish-artifacts:
+    needs: build
+    if: needs.build.outputs.version != ''
+    runs-on: ubuntu-latest
+    steps:
+      # Create tag for the new version
+      - name: Create Git Tag
         run: |
-          echo "Publish release"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          git tag -a v${{ needs.build.outputs.version }} -m "Release v${{needs.build.outputs.version }}"
+          git push origin v${{ needs.build.outputs.version }}
+
+      # Zip the build output with version in filename
+      - name: Create Deployment Package
+        run: |
+          cd dist/browser
+          # Create a zip file with the version number
+          zip -r ../../mushroomsoft-app-${{ needs.build.outputs.version }}.zip ./*
+          cd ../..
+
+      # Save the zip as a GitHub artifact
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mushroomsoft-app-${{ needs.build.outputs.version }}
+          path: mushroomsoft-app-${{ needs.build.outputs.version }}.zip
+
+      # Create GitHub release with the zip file
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ needs.build.outputs.version }}
+          name: Release v${{ needs.build.outputs.version }}
+          files: mushroomsoft-app-${{ needs.build.outputs.version }}.zip
+          generate_release_notes: true
 
       - uses: azure/login@v2
         with:
