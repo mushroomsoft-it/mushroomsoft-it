@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.4
+
+### Patch Changes
+
+- c88e7a6: update build project
+
 ## 2.1.3
 
 ### Patch Changes
