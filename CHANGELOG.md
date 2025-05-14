@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.2
+
+### Patch Changes
+
+- 048b8aa: update deploy process
+
 ## 2.1.1
 
 ### Patch Changes
