@@ -6,7 +6,8 @@ on:
 
 permissions:
   id-token: write
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
@@ -31,23 +32,75 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - uses: azure/login@v2
+      - name: Create and Publish versions
+        id: changesets
+        uses: changesets/action@v1.4.1
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          version: npm run version-packages
+          commit: "chore: update versions"
+          title: "chore: update versions"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload to blob storage
-        uses: azure/CLI@v1
+      # Extract version for tagging and naming artifacts
+      - name: Extract Version
+        id: extract-version
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+    outputs:
+      version: ${{ steps.extract-version.outputs.VERSION }}
+
+  publish-artifacts:
+    needs: build
+    if: needs.build.outputs.version != ''
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          inlineScript: |
-            az storage blob upload-batch \
-            --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
-            --auth-mode login \
-            -d '$web' \
-            -s dist/browser
+          node-version: ${{ matrix.node-version }}
 
-      # Azure logout
-      - name: Azure CLI logout
-        run: az logout
-        if: always()
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+      - name: Create Deployment Package
+        run: |
+          cd dist/browser
+          zip -r ../../mushroomsoft-app-${{ needs.build.outputs.version }}.zip ./*
+          cd ../..
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mushroomsoft-app-${{ needs.build.outputs.version }}
+          path: mushroomsoft-app-${{ needs.build.outputs.version }}.zip
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ needs.build.outputs.version }}
+          name: Release v${{ needs.build.outputs.version }}
+          files: mushroomsoft-app-${{ needs.build.outputs.version }}.zip
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    outputs:
+      version: ${{ needs.build.outputs.version }}
+
+  deploy-specific-version:
+    name: Deploy Specific Version
+    needs: publish-artifacts
+    if: needs.publish-artifacts.outputs.version != ''
+    uses: ./.github/workflows/deploy-app-azure.yml
+    with:
+      version: ${{ needs.publish-artifacts.outputs.version }}
+    secrets: inherit
