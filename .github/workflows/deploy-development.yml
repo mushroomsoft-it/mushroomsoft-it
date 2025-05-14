@@ -100,58 +100,7 @@ jobs:
     name: Deploy Specific Version
     needs: publish-artifacts
     if: needs.publish-artifacts.outputs.version != ''
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Prepare Version
-        id: prepare-version
-        run: |
-          VERSION="${{ needs.publish-artifacts.outputs.version }}"
-          VERSION="${VERSION#v}"
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-
-          RELEASE_TAG="v$VERSION"
-          echo "release_tag=$RELEASE_TAG" >> $GITHUB_OUTPUT
-
-          ZIP_FILENAME="mushroomsoft-app-$VERSION.zip"
-          echo "zip_filename=$ZIP_FILENAME" >> $GITHUB_OUTPUT
-
-          echo "Preparing to deploy version $VERSION (release tag: $RELEASE_TAG)"
-
-      - name: Download Release Asset
-        id: download-asset
-        uses: dsaltares/fetch-gh-release-asset@master
-        with:
-          version: tags/${{ steps.prepare-version.outputs.release_tag }}
-          file: ${{ steps.prepare-version.outputs.zip_filename }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verify ZIP exists
-        run: test -f ${{ steps.prepare-version.outputs.zip_filename }}
-
-      - name: Extract Release Package
-        run: |
-          mkdir -p ./deploy-content
-          unzip ${{ steps.prepare-version.outputs.zip_filename }} -d ./deploy-content
-          echo "Contents of extracted package:"
-          ls -la ./deploy-content
-
-      - uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-
-      - name: Upload to blob storage
-        uses: azure/CLI@v1
-        with:
-          inlineScript: |
-            az storage blob upload-batch \
-              --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
-              --auth-mode login \
-              -d '$web' \
-              -s ./deploy-content
-
-      - name: Azure CLI logout
-        run: az logout
-        if: always()
+    uses: ./.github/workflows/deploy-app-azure.yml
+    with:
+      version: ${{ needs.publish-artifacts.outputs.version }}
+    secrets: inherit
