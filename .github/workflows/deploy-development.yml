@@ -122,9 +122,8 @@ jobs:
         id: download-asset
         uses: dsaltares/fetch-gh-release-asset@master
         with:
-          version: ${{ steps.prepare-version.outputs.release_tag }}
+          version: tags/${{ steps.prepare-version.outputs.release_tag }}
           file: ${{ steps.prepare-version.outputs.zip_filename }}
-          target: ${{ steps.prepare-version.outputs.zip_filename }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Verify ZIP exists
