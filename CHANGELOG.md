@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.6
+
+### Patch Changes
+
+- d2368bf: update package
+
 ## 2.1.5
 
 ### Patch Changes
