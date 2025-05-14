@@ -75,7 +75,7 @@ export class ChatbotService {
       bubbleMaxWidth: Infinity,
       bubbleTextStyle: { fontWeight: 'normal' },
       bubbleFromUserTextStyle: { fontWeight: 'normal' },
-      bubbleBackground: '#007bff',
+      bubbleBackground: '#1e273a',
       bubbleTextColor: '#ffffff',
       hideUploadButton: true,
     };
