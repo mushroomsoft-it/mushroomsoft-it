@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.7
+
+### Patch Changes
+
+- c774681: update download package
+
 ## 2.1.6
 
 ### Patch Changes
