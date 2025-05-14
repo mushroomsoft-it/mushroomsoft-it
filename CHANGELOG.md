@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.8
+
+### Patch Changes
+
+- 6fd1884: enable manual deploy
+
 ## 2.1.7
 
 ### Patch Changes
