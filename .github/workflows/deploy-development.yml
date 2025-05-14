@@ -56,33 +56,21 @@ jobs:
     if: needs.build.outputs.version != ''
     runs-on: ubuntu-latest
     steps:
-      # Checkout is REQUIRED to use git
-      - uses: actions/checkout@v3.5.0
-        with:
-          fetch-depth: 0
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # Create tag for the new version
-      - name: Create Git Tag
-        run: |
-          git tag -a v${{ needs.build.outputs.version }} -m "Release v${{needs.build.outputs.version }}"
-          git push origin v${{ needs.build.outputs.version }}
-
-      # Zip the build output with version in filename
       - name: Create Deployment Package
         run: |
           cd dist/browser
-          # Create a zip file with the version number
           zip -r ../../mushroomsoft-app-${{ needs.build.outputs.version }}.zip ./*
           cd ../..
 
-      # Save the zip as a GitHub artifact
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: mushroomsoft-app-${{ needs.build.outputs.version }}
           path: mushroomsoft-app-${{ needs.build.outputs.version }}.zip
 
-      # Create GitHub release with the zip file
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
@@ -90,6 +78,8 @@ jobs:
           name: Release v${{ needs.build.outputs.version }}
           files: mushroomsoft-app-${{ needs.build.outputs.version }}.zip
           generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     outputs:
       version: ${{ needs.build.outputs.version }}
