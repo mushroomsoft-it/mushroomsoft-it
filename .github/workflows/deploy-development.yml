@@ -56,6 +56,11 @@ jobs:
     if: needs.build.outputs.version != ''
     runs-on: ubuntu-latest
     steps:
+      # Checkout is REQUIRED to use git
+      - uses: actions/checkout@v3.5.0
+        with:
+          fetch-depth: 0
+
       # Create tag for the new version
       - name: Create Git Tag
         run: |
