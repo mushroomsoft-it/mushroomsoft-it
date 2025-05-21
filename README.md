@@ -48,6 +48,14 @@ npm install -g pnpm
 
 ---
 
+## Changeset
+
+Setup the version change info. Run changeset in the root.
+
+```sh
+npx changeset
+```
+
 ## Environments
 
 The project has the following environments:
@@ -210,6 +218,14 @@ Este proyecto utiliza [pnpm](https://pnpm.io/) como gestor de paquetes. Instála
 
 ```bash
 npm install -g pnpm
+```
+
+## Changeset
+
+Configure la información de versionamiento. Para ello debes correr changeset en la carpeta fuente del proyecto.
+
+```sh
+npx changeset
 ```
 
 ---
