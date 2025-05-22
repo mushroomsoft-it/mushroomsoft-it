@@ -46,6 +46,10 @@ This project uses [pnpm](https://pnpm.io/) as the package manager. Install it if
 npm install -g pnpm
 ```
 
+# Changeset
+
+- Run: `npm changeset` in the root - Setup the version change info.
+
 ---
 
 ## Environments
@@ -211,6 +215,10 @@ Este proyecto utiliza [pnpm](https://pnpm.io/) como gestor de paquetes. Instála
 ```bash
 npm install -g pnpm
 ```
+
+# Changeset
+
+- Run: `npm changeset` en la raíz del proyecto para configurar la información de versionamiento.
 
 ---
 
