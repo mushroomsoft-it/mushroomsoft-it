@@ -1,4 +1,7 @@
-name: MushroomSoft Release and Deploy
+name: MushroomSoft Release and Deploy Production
+description: |
+  This workflow builds the project and deploys it to GitHub Pages.
+  It is triggered on push to the main branch and can also be manually triggered.
 
 on:
   workflow_dispatch:
@@ -11,6 +14,8 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
+    env:
+      COPILOT_URL_TOKEN: ${{ secrets.PRO_COPILOT_URL_TOKEN }}
 
     steps:
       - uses: actions/checkout@v2
@@ -25,14 +30,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Crear archivo .env
+        run: |
+          echo "COPILOT_URL_TOKEN=$COPILOT_URL_TOKEN" > .env
+
       - name: Build
         run: npm run build
-        env:
-          COPILOT_URL_TOKEN: ${{ secrets.COPILOT_URL_TOKEN }}
+
+      - name: Eliminar archivo .env
+        run: rm .env
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN_KEY }}
-          branch: gh-pages
+          branch: gh-pages-prod
           folder: dist/browser

@@ -17,6 +17,8 @@ jobs:
     strategy:
       matrix:
         node-version: [20]
+    env:
+      COPILOT_URL_TOKEN: ${{ secrets.COPILOT_URL_TOKEN }}
 
     steps:
       - uses: actions/checkout@v3
@@ -29,10 +31,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Crear archivo .env
+        run: |
+          echo "COPILOT_URL_TOKEN=$COPILOT_URL_TOKEN" > .env
+
       - name: Build project
         run: npm run build
-        env:
-          COPILOT_URL_TOKEN: ${{ secrets.COPILOT_URL_TOKEN }}
+
+      - name: Eliminar archivo .env
+        run: rm .env
 
       - name: Create and Publish versions
         id: changesets
