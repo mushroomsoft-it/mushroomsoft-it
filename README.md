@@ -228,7 +228,7 @@ npm install -g pnpm
 
 # Changeset
 
-- Run: `npm changeset` en la raíz del proyecto para configurar la información de versionamiento.
+- Ejecute el comando: `npm changeset` en la raíz del proyecto para configurar la información de versionamiento.
 
 ---
 
