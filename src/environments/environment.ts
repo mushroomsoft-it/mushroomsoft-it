@@ -3,6 +3,5 @@ export const environment = {
   EMAIL_API: 'https://api.web3forms.com/submit',
   BOT_FRAMEWORK_URL:
     'https://cdn.botframework.com/botframework-webchat/latest/webchat.js',
-  COPILOT_URL_TOKEN:
-    'https://f89e62113c78eb1187ab195f47a527.e6.environment.api.powerplatform.com/powervirtualagents/botsbyschema/creeb_mushroomSoftExternalAgent/directline/token?api-version=2022-03-01-preview',
+  COPILOT_URL_TOKEN: process.env['COPILOT_URL_TOKEN'],
 };

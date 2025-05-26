@@ -27,6 +27,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          COPILOT_URL_TOKEN: ${{ secrets.COPILOT_URL_TOKEN }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
