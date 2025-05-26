@@ -86,7 +86,7 @@
           "builder": "@angular-builders/custom-webpack:karma",
           "options": {
             "customWebpackConfig": {
-              "path": ".src/custom-webpack.config.ts"
+              "path": "src/custom-webpack.config.ts"
             },
             "codeCoverage": true,
             "polyfills": [
