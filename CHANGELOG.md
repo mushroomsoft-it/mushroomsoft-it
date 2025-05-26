@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.10
+
+### Patch Changes
+
+- f293211: test deploy
+
 ## 2.1.9
 
 ### Patch Changes
