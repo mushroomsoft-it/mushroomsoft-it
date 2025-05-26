@@ -7,7 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class NotificationService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    console.log(process.env['POWER_AUTOMATE_URL']);
+  }
 
   getAccessKey(): string {
     return environment.PUBLIC_ACCESS_KEY;

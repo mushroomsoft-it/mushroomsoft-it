@@ -37,6 +37,10 @@ export class ChatbotService {
     const WebChat = (window as any).WebChat;
     if (!WebChat) throw new Error('WebChat is not loaded');
 
+    if (!this.copilotUrlToken) {
+      throw new Error('Copilot URL token is not defined');
+    }
+
     const tokenEndpointURL = new URL(this.copilotUrlToken);
     const apiVersion = tokenEndpointURL.searchParams.get('api-version') || '';
     const locale = document.documentElement.lang || 'en';

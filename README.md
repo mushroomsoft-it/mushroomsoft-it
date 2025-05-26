@@ -50,6 +50,16 @@ npm install -g pnpm
 
 - Run: `npm changeset` in the root - Setup the version change info.
 
+# Environment variables (.env file)
+
+This project need an env var file to be executed. Please, follow these instructions:
+
+1. Duplicate the .env.template file in the same root folder.
+2. Change the name of the env var file copy to '.env'.
+3. Change the env var's value (this value will be provided by the site's administrator).
+
+In case you need to add or change env vars values, please contact the site's administrator and refer this values in the '.env.template' file.
+
 ---
 
 ## Environments
@@ -221,6 +231,16 @@ npm install -g pnpm
 - Run: `npm changeset` en la raíz del proyecto para configurar la información de versionamiento.
 
 ---
+
+# Variables de entorno (Archivo .env)
+
+Este proyecto para ser ejecutado en desarrollo, QA o Producción necesita de variables de entorno. Por favor, siga los siguientes pasos:
+
+1. Duplique el archivo '.env.template' en la misma carpeta raíz del proyecto.
+2. Cambie el nombre del archivo duplicado a '.env'.
+3. Cambie los valores de las variables de entorno (estos valores serán dados por el administrador del sitio).
+
+En el caso que necesite cambiar o añadir variables de entorno, por favor, notifique esto al administrador del sitio y haga referencia a la existencia de estos en el archivo '.env.template'.
 
 ## Entornos
 
