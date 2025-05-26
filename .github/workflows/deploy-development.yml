@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build:qa
+        run: npm run build
         env:
           COPILOT_URL_TOKEN: ${{ secrets.COPILOT_URL_TOKEN }}
 
