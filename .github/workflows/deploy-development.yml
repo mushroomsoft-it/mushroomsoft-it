@@ -32,6 +32,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
+          ENVIRONMENT: qa
           COPILOT_URL_TOKEN: ${{ secrets.COPILOT_URL_TOKEN }}
 
       - name: Create and Publish versions
@@ -74,6 +75,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
+          ENVIRONMENT: qa
           COPILOT_URL_TOKEN: ${{ secrets.COPILOT_URL_TOKEN }}
 
       - name: Create Deployment Package
