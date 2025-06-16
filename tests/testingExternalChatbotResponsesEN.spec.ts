@@ -1,6 +1,5 @@
 import { test, expect, type Page } from '@playwright/test';
 import { PageManager } from '../page-objects/pageManager';
-import { IntroductoryAndFinalActionsPage } from '../page-objects/introductoryAndFinalActionsPage';
 
 let desiredLanguage = "English"
 test.describe('External chatbot automated tests', () => { 
@@ -35,7 +34,7 @@ test.describe('External chatbot automated tests', () => {
   test('First actions verification', async ({page}) => {
     const pm = new PageManager(page);
     const firstActions = ['Our Services', 'Pricing', 'Contact & Location', 'Our Team', 'Who we are', 'Our History'];
-    await pm.introductoryAndFinalActionsVerify().verifySuggestedActionsLists(firstActions)
+    await pm.introductoryAndFinalActionsVerifyEN().verifySuggestedActionsListsEN(firstActions)
   });
 
   test('Our Services verification', async ({page}) => {
@@ -45,7 +44,7 @@ test.describe('External chatbot automated tests', () => {
     await suggestedActionButton.click();
     await page.waitForTimeout(5000);
     const ourServices = ['Software Development', 'Cloud', 'Outsourcing', 'Artificial Intelligence & Data Analysis', 'DevOps/MLops', 'Low-Code/No-Code'];
-    await pm.introductoryAndFinalActionsVerify().verifySuggestedActionsLists(ourServices)
+    await pm.introductoryAndFinalActionsVerifyEN().verifySuggestedActionsListsEN(ourServices)
   });
 
   test('Pricing interaction and contacts verification', async ({page}) => {
@@ -57,9 +56,9 @@ test.describe('External chatbot automated tests', () => {
     const pricingMessage = await page.locator('.webchat__bubble__content p').filter({hasText:"information"})
     expect(pricingMessage).toContainText('(+593) 99 512 1992')
     expect(pricingMessage).toContainText('info@mushroomsoft-it.com')
-    pm.introductoryAndFinalActionsVerify().verifyNewRequestMessage()
+    pm.introductoryAndFinalActionsVerifyEN().verifyNewRequestMessageEN()
     const firstActions = ['Our Services', 'Pricing', 'Contact & Location', 'Our Team', 'Who we are', 'Our History'];
-    await pm.introductoryAndFinalActionsVerify().verifySuggestedActionsLists(firstActions)
+    await pm.introductoryAndFinalActionsVerifyEN().verifySuggestedActionsListsEN(firstActions)
   });
 
   test('Contact & Location interaction and validating information', async ({page}) => {
@@ -81,9 +80,9 @@ test.describe('External chatbot automated tests', () => {
     pricingMessages.forEach(text => {
       expect(pricingMessage).toContainText(text)
     })
-    pm.introductoryAndFinalActionsVerify().verifyNewRequestMessage()
+    pm.introductoryAndFinalActionsVerifyEN().verifyNewRequestMessageEN()
     const firstActions = ['Our Services', 'Pricing', 'Contact & Location', 'Our Team', 'Who we are', 'Our History'];
-    await pm.introductoryAndFinalActionsVerify().verifySuggestedActionsLists(firstActions)
+    await pm.introductoryAndFinalActionsVerifyEN().verifySuggestedActionsListsEN(firstActions)
   });
 
   test('Our Team actions verification', async ({page}) => {
@@ -93,7 +92,7 @@ test.describe('External chatbot automated tests', () => {
     await suggestedActionButton.click();
     await page.waitForTimeout(5000);
     const teamMembers = ['CTO', 'General Manager', 'Office Manager', 'USA Manager', 'Human Resources', 'Invoices', 'General Information'];
-    await pm.introductoryAndFinalActionsVerify().verifySuggestedActionsLists(teamMembers)
+    await pm.introductoryAndFinalActionsVerifyEN().verifySuggestedActionsListsEN(teamMembers)
   });
 
    test('Who we are interaction', async ({page}) => {
@@ -112,28 +111,29 @@ test.describe('External chatbot automated tests', () => {
       const whoWeAreMessageP3 = await page.locator('.webchat__bubble__content p').filter({hasText:"technology"})
       expect(whoWeAreMessageP3).toContainText('solutions')
 
-      pm.introductoryAndFinalActionsVerify().verifyNewRequestMessage()
+      pm.introductoryAndFinalActionsVerifyEN().verifyNewRequestMessageEN()
       const firstActions = ['Our Services', 'Pricing', 'Contact & Location', 'Our Team', 'Who we are', 'Our History'];
-      await pm.introductoryAndFinalActionsVerify().verifySuggestedActionsLists(firstActions)
+      await pm.introductoryAndFinalActionsVerifyEN().verifySuggestedActionsListsEN(firstActions)
     });
 
      test('Our History', async ({page}) => {
       const pm = new PageManager(page);
-      const suggestedAction = 'Who we are';
+      const suggestedAction = 'Our history';
       const suggestedActionButton = page.locator('.react-film__filmstrip .webchat__suggested-actions__item-box').getByText(suggestedAction);
       await suggestedActionButton.click();
 
       await page.waitForTimeout(5000);
       const whoWeAreMessageP1 = await page.locator('.webchat__bubble__content p').filter({hasText:"Ecuador"})
-      expect(whoWeAreMessageP1).toContainText('engineers')
+      expect(whoWeAreMessageP1).toContainText('vision')
 
-      const whoWeAreMessageP2 = await page.locator('.webchat__bubble__content p').filter({hasText:"software development"})
-      expect(whoWeAreMessageP2).toContainText('horizontal structure')
+      const whoWeAreMessageP2 = await page.locator('.webchat__bubble__content p').filter({hasText:"pandemic"})
+      expect(whoWeAreMessageP2).toContainText('challenges')
 
-      const whoWeAreMessageP3 = await page.locator('.webchat__bubble__content p').filter({hasText:"technology"})
-      expect(whoWeAreMessageP3).toContainText('solutions')
-      pm.introductoryAndFinalActionsVerify().verifyNewRequestMessage()
+      const whoWeAreMessageP3 = await page.locator('.webchat__bubble__content p').filter({hasText:"horizontal"})
+      expect(whoWeAreMessageP3).toContainText('environment')
+      
+      pm.introductoryAndFinalActionsVerifyEN().verifyNewRequestMessageEN()
       const firstActions = ['Our Services', 'Pricing', 'Contact & Location', 'Our Team', 'Who we are', 'Our History'];
-      await pm.introductoryAndFinalActionsVerify().verifySuggestedActionsLists(firstActions)
+      await pm.introductoryAndFinalActionsVerifyEN().verifySuggestedActionsListsEN(firstActions)
     });
 })
