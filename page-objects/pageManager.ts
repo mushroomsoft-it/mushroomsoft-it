@@ -1,6 +1,6 @@
 import { Page, expect } from '@playwright/test';
-import { IntroductoryAndFinalActionsPageEN } from '../../../../../TestingExternalChatbot/page-objects/introductoryAndFinalActionsPageEN';
-import { IntroductoryAndFinalActionsPageES } from '../../../../../TestingExternalChatbot/page-objects/introductoryAndFinalActionsPageES';
+import { IntroductoryAndFinalActionsPageEN } from '../page-objects/introductoryAndFinalActionsPageEN';
+import { IntroductoryAndFinalActionsPageES } from '../page-objects/introductoryAndFinalActionsPageES';
 
 
 export class PageManager{
