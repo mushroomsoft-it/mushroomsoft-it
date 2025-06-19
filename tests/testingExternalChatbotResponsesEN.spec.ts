@@ -1,9 +1,8 @@
-import { test, expect, type Page } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { PageManager } from '../page-objects/pageManager';
 
 let desiredLanguage = "English"
 test.describe('External chatbot automated tests', () => { 
-
   test.beforeEach(async ({ page }) => {
     await page.goto('https://msoftpublicsite.z13.web.core.windows.net/#/home');
     await page.locator('button #chat-icon').click()
