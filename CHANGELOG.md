@@ -1,5 +1,12 @@
 # mushroomsoft-app
 
+## 2.1.11
+
+### Patch Changes
+
+- 6613750: feat: new services in the services - info-footer section
+  1. Added "Artificial Intelligence" and "Data Analysis" service categories (with Spanish equivalents) to service listings and footer sections.
+
 ## 2.1.10
 
 ### Patch Changes
