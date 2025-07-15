@@ -1,32 +1,32 @@
 [
   {
-    "id": 28,
+    "id": 2,
     "en": {
       "title": "Leonardo Riofrío",
-      "subtitle": "CTO",
+      "subtitle": "CTO & Co-Founder",
       "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering</p> <p> <b>Expert in:</b> Developer </p> <p> <b>Hobby:</b> Squash, GYM </p>",
-      "image": "employeesProfilePhoto/28.png",
+      "image": "employeesProfilePhoto/2.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
     },
     "es": {
       "title": "Leonardo Riofrío",
-      "subtitle": "CTO",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Squash, GYM </p>",
-      "image": "employeesProfilePhoto/28.png",
+      "subtitle": "CTO y Co-Fundador",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Squash, Gimnasio </p>",
+      "image": "employeesProfilePhoto/2.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
     }
   },
   {
-    "id": 30,
+    "id": 3,
     "en": {
       "title": "Alba Aguirre",
       "subtitle": "Co-Founder & Office Manager",
       "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Employee Relationships </p> <p> <b>Hobby:</b> Event Planning </p>",
-      "image": "employeesProfilePhoto/30.png",
+      "image": "employeesProfilePhoto/3.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
@@ -34,20 +34,20 @@
     "es": {
       "title": "Alba Aguirre",
       "subtitle": "Co-Fundador y Gerente de Oficina",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Relaciones Laborales </p> <p> <b>Hobby:</b> Planificación de Eventos </p>",
-      "image": "employeesProfilePhoto/30.png",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Relaciones Laborales </p> <p> <b>Hobby:</b> Planificación de eventos </p>",
+      "image": "employeesProfilePhoto/3.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
     }
   },
   {
-    "id": 34,
+    "id": 4,
     "en": {
       "title": "Hector H. Falconi",
       "subtitle": "Co-Founder & General Manager",
       "description": "<h4>BIO</h4> <p> <b>Career:</b> Law, Doctorate in Jurisprudence</p> <p> <b>Expert in:</b> Immigration and Corporate matters </p> <p> <b>Hobby:</b> Gardering </p>",
-      "image": "employeesProfilePhoto/34.png",
+      "image": "employeesProfilePhoto/4.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
@@ -55,29 +55,29 @@
     "es": {
       "title": "Hector H. Falconi",
       "subtitle": "Co-Fundador y Gerente General",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Derecho</p> <p> <b>Experto en:</b> Inmigración y asuntos corporativos </p> <p> <b>Hobby:</b> Jardinería </p>",
-      "image": "employeesProfilePhoto/34.png",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Derecho</p> <p> <b>Experto en:</b> Inmigración y Asuntos Corporativos </p> <p> <b>Hobby:</b> Jardinería </p>",
+      "image": "employeesProfilePhoto/4.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
     }
   },
   {
-    "id": 35,
+    "id": 5,
     "en": {
       "title": "Andrea Gomez",
       "subtitle": "USA Country Manager",
       "description": "<h4>BIO</h4> <p> <b>Career:</b> Business Administration</p> <p> <b>Expert in:</b> Project Manager </p> <p> <b>Hobby:</b> Going to the cinema </p>",
-      "image": "employeesProfilePhoto/35.png",
+      "image": "employeesProfilePhoto/5.png",
       "showDescription": false,
       "animate": true,
       "actionText": "See more..."
     },
     "es": {
       "title": "Andrea Gomez",
-      "subtitle": "Gerente de País en EE. UU.",
+      "subtitle": "Gerente de País USA",
       "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Gerente de Proyecto </p> <p> <b>Hobby:</b> Ir al cine </p>",
-      "image": "employeesProfilePhoto/35.png",
+      "image": "employeesProfilePhoto/5.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
