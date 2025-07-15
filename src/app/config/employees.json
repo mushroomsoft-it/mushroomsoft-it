@@ -3,7 +3,7 @@
     "id": 2,
     "en": {
       "title": "Leonardo Riofrío",
-      "subtitle": "CTO & Co-Founder",
+      "subtitle": "Co-Founder & CTO",
       "description": "<h4>BIO</h4> <p> <b>Career:</b> Software Engineering</p> <p> <b>Expert in:</b> Developer </p> <p> <b>Hobby:</b> Squash, GYM </p>",
       "image": "employeesProfilePhoto/2.png",
       "showDescription": false,
@@ -12,7 +12,7 @@
     },
     "es": {
       "title": "Leonardo Riofrío",
-      "subtitle": "CTO y Co-Fundador",
+      "subtitle": "Cofundador y CTO",
       "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería de Software</p> <p> <b>Experto en:</b> Desarrollador </p> <p> <b>Hobby:</b> Squash, Gimnasio </p>",
       "image": "employeesProfilePhoto/2.png",
       "showDescription": false,
