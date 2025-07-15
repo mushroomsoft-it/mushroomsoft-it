@@ -1,5 +1,12 @@
 # mushroomsoft-app
 
+## 2.1.12
+
+### Patch Changes
+
+- 9800ea2: fix: typo fixed in footer
+  1. "Artificial Intelligence" and "Data Analysis" x ""Artificial Intelligence and Data Analysis"
+
 ## 2.1.11
 
 ### Patch Changes
