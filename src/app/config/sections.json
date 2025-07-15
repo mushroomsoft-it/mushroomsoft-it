@@ -221,6 +221,12 @@
                 },
                 {
                   "name": "Low-Code/No-Code"
+                },
+                {
+                  "name": "Artificial Intelligence"
+                },
+                {
+                  "name": "Data Analysis"
                 }
               ]
             },
@@ -475,6 +481,12 @@
                 },
                 {
                   "name": "Desarrollo Low-Code/No-Code"
+                },
+                {
+                  "name": "Inteligencia Artificial"
+                },
+                {
+                  "name": "Análisis de Datos"
                 }
               ]
             },
