@@ -1701,4 +1701,25 @@ body {
   }
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  .whatsapp-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 

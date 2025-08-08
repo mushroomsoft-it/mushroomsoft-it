@@ -1,6 +1,7 @@
 <m-nav-bar [navOptions]="appSections"></m-nav-bar>
 
 <app-mushroomsoft-chatbot></app-mushroomsoft-chatbot>
+<app-whatsapp [navOptions]="appSections"></app-whatsapp>
 
 <ng-container *ngFor="let section of appSections">
   <ng-container [ngSwitch]="section.id">

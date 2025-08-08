@@ -17,6 +17,7 @@ export interface Section {
   navLinkFocused?: boolean;
   animate?: boolean;
   email?: EmailDetails;
+  phoneNumber?: String;
 }
 
 interface EmailDetails {
@@ -66,6 +67,7 @@ export enum SectionEnum {
   InfoFooter = 'info-footer',
   Cookies = 'cookies',
   GetInTouchNavLink = 'get-in-touch-nav-link',
+  WhatsAppNavLink = 'whatsapp-nav-link',
 }
 
 export enum LanguageEnum {

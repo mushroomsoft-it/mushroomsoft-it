@@ -254,6 +254,11 @@
         {
           "id": "get-in-touch-nav-link",
           "actionText": "Get in touch!"
+        },
+        {
+          "id": "whatsapp-nav-link",
+          "actionText": "WhatsApp",
+          "phoneNumber": "593995121992"
         }
       ]
     },
@@ -511,6 +516,11 @@
         {
           "id": "get-in-touch-nav-link",
           "actionText": "Contáctanos!"
+        },
+        {
+          "id": "whatsapp-nav-link",
+          "actionText": "WhatsApp",
+          "phoneNumber": "593995121992"
         }
       ]
     }
