@@ -6,9 +6,7 @@ import { MIconComponent } from '../../generic-components/m-icon/m-icon.component
 @Component({
   selector: 'app-whatsapp',
   standalone: true,
-  imports: [
-    MIconComponent
-  ],
+  imports: [],
   templateUrl: './whatsapp.component.html',
   styleUrl: './whatsapp.component.scss'
 })
@@ -16,7 +14,7 @@ export class WhatsappComponent {
   @Input() navOptions!: Section[];
   public pickedLanguage: LanguageEnum | undefined;
 
-  constructor(private navigationService: NavigationService) {}
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit(): void {
     this.navigationService.languageObservable.subscribe((language) => {
