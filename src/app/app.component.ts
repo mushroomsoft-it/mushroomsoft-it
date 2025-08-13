@@ -23,6 +23,7 @@ import { InfoFooterComponent } from './components/info-footer/info-footer.compon
 import { CookiesBannerComponent } from './components/cookies-banner/cookies-banner.component';
 import { Subscription } from 'rxjs';
 import { ChatbotComponent } from './components/chatbot/chatbot.component';
+import { WhatsappComponent } from './components/whatsapp/whatsapp.component';
 
 @Component({
   selector: 'app-root',
@@ -47,6 +48,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot.component';
     InfoFooterComponent,
     CookiesBannerComponent,
     ChatbotComponent,
+    WhatsappComponent,
   ],
   providers: [HttpClient],
   templateUrl: './app.component.html',

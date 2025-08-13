@@ -38,10 +38,12 @@
       </owl-carousel-o>
     </div>
 
-    <button class="m-link m-link--primary mt-2 mt-md-5" (click)="openModal()">
-      {{ sectionData.actionText }}
-      <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
-    </button>
+    <div class="d-flex">
+      <button class="m-link m-link--primary mt-2 mt-md-5" (click)="openModal()">
+        {{ sectionData.actionText }}
+        <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
+      </button>
+    </div>
   </div>
   <div class="m-section--services__elipse"></div>
 </section>
