@@ -1,5 +1,16 @@
 # mushroomsoft-app
 
+## 2.1.13
+
+### Patch Changes
+
+- 9b4b0bb: feat: whatsapp button added
+  - button added as component
+  - styles added in custom scss file
+  - it doesn't need testing
+  - sections.json file added
+  - image added in public/icons folder
+
 ## 2.1.12
 
 ### Patch Changes
