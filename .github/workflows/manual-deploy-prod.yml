@@ -50,6 +50,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: ./deploy-content
