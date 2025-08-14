@@ -48,8 +48,7 @@ jobs:
           ls -la ./deploy-content
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: ./deploy-content
+           publish_dir: ./deploy-content
