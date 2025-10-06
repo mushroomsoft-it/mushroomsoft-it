@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -60,8 +60,18 @@ export class AppComponent implements OnInit {
   public showModal = false;
   public showCookiesBanner = false;
   private subscription: Subscription = new Subscription();
+  public isBrochureRoute: boolean = false;
 
-  constructor(private navigationService: NavigationService) {}
+  constructor(
+    private navigationService: NavigationService,
+    private router: Router
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.isBrochureRoute = event.url === '/brochure';
+      }
+    });
+  }
 
   ngOnInit(): void {
     this.subscription.add(

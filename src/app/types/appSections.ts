@@ -68,6 +68,7 @@ export enum SectionEnum {
   Cookies = 'cookies',
   GetInTouchNavLink = 'get-in-touch-nav-link',
   WhatsAppNavLink = 'whatsapp-nav-link',
+  Brochure = 'brochure',
 }
 
 export enum LanguageEnum {
