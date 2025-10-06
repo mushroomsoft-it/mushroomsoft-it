@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.14
+
+### Patch Changes
+
+- 94ee67a: Add brochure link
+
 ## 2.1.13
 
 ### Patch Changes
