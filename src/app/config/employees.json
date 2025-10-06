@@ -55,7 +55,7 @@
     "es": {
       "title": "Hector H. Falconi",
       "subtitle": "Co-Fundador y Gerente General",
-      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Derecho</p> <p> <b>Experto en:</b> Inmigración y Asuntos Corporativos </p> <p> <b>Hobby:</b> Jardinería </p>",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Derecho</p> <p> <b>Experto en:</b> Asuntos de inmigración y corporativos </p> <p> <b>Hobby:</b> Jardinería </p>",
       "image": "employeesProfilePhoto/4.png",
       "showDescription": false,
       "animate": true,
@@ -78,6 +78,27 @@
       "subtitle": "Gerente de País USA",
       "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Administración de Empresas</p> <p> <b>Experto en:</b> Gerencia de Proyectos </p> <p> <b>Hobby:</b> Ir al cine </p>",
       "image": "employeesProfilePhoto/5.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "Ver más..."
+    }
+  },
+  {
+    "id": 6,
+    "en": {
+      "title": "Cristina Oleas",
+      "subtitle": "HR Specialist",
+      "description": "<h4>BIO</h4> <p> <b>Career:</b> Commercial Engineering, Concentration: International Business and HR</p> <p> <b>Expert in:</b> Organizational Development </p> <p> <b>Hobby:</b> Spending time with her dogs </p>",
+      "image": "employeesProfilePhoto/6.png",
+      "showDescription": false,
+      "animate": true,
+      "actionText": "See more..."
+    },
+    "es": {
+      "title": "Cristina Oleas",
+      "subtitle": "Especialista en Recursos Humanos",
+      "description": "<h4>BIOGRAFÍA</h4> <p> <b>Carrera:</b> Ingeniería Comercial, Concentración: Negocios Internacionales y Recursos Humanos</p> <p> <b>Experto en:</b> Desarrollo Organizacional </p> <p> <b>Hobby:</b> Pasar tiempo con sus perros </p>",
+      "image": "employeesProfilePhoto/6.png",
       "showDescription": false,
       "animate": true,
       "actionText": "Ver más..."
