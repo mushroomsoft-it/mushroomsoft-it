@@ -68,7 +68,6 @@ export class AppComponent implements OnInit {
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        console.log('NavigationEnd event:', event);
         this.isBrochureRoute = event.url === '/brochure';
       }
     });
