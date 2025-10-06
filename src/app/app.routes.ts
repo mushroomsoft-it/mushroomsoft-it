@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { navigationGuard } from './navigation.guard';
 import { SectionEnum } from './types/appSections';
+import { BrochureComponent } from './components/brochure/brochure.component';
 
 export const routes: Routes = [
   {
@@ -38,6 +39,10 @@ export const routes: Routes = [
     path: SectionEnum.Location,
     component: AppComponent,
     canActivate: [navigationGuard],
+  },
+  {
+    path: SectionEnum.Brochure,
+    component: BrochureComponent,
   },
   {
     path: '',

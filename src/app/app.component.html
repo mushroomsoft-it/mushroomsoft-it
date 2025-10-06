@@ -1,3 +1,5 @@
+
+<ng-container *ngIf="!isBrochureRoute">
 <m-nav-bar [navOptions]="appSections"></m-nav-bar>
 
 <app-mushroomsoft-chatbot></app-mushroomsoft-chatbot>
@@ -68,3 +70,6 @@
 </ng-container>
 
 <m-footer></m-footer>
+</ng-container>
+
+<router-outlet></router-outlet>
