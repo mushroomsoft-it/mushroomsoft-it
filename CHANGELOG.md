@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.15
+
+### Patch Changes
+
+- 715d30e: msoft-016: fix: chatbot hide
+
 ## 2.1.14
 
 ### Patch Changes
