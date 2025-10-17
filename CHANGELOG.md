@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.18
+
+### Patch Changes
+
+- 2b27aab: Add join us button
+
 ## 2.1.17
 
 ### Patch Changes
