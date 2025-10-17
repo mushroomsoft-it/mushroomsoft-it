@@ -1,2 +1,2 @@
 export const JOINUS_EXTERNAL_URL =
-  'https://docs.google.com/forms/d/1b-3OU9eOUkAENq4yhJssoVdnCEzjWcbRXjZlsKgs1kU/viewform?edit_requested=true';
+  'https://docs.google.com/forms/d/e/1FAIpQLScByzateJTqFvrE5zX80fwkYkDcWN05AV819O7cWyadcNZ91Q/viewform';
