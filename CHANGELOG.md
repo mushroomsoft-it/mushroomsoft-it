@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.17
+
+### Patch Changes
+
+- ed91302: Update link with embedded=true
+
 ## 2.1.16
 
 ### Patch Changes
