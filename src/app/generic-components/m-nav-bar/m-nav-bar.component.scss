@@ -1,0 +1,17 @@
+.mr-2 {
+  margin-right: 0.6rem;
+}
+
+// responsive styles
+
+@media (max-width: 768px) {
+  .mr-2 {
+   margin-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mr-2 {
+    margin-bottom: 0.6rem;
+  }
+}

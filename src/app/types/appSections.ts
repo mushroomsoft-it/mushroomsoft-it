@@ -70,6 +70,7 @@ export enum SectionEnum {
   WhatsAppNavLink = 'whatsapp-nav-link',
   Brochure = 'brochure',
   JoinUs = 'join-us',
+  JoinUsLink = 'join-us-link',
 }
 
 export enum LanguageEnum {

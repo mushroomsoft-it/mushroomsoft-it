@@ -259,6 +259,10 @@
           "id": "whatsapp-nav-link",
           "actionText": "WhatsApp",
           "phoneNumber": "593995121992"
+        },
+        {
+          "id": "join-us-link",
+          "name": "Join Us"
         }
       ]
     },
@@ -521,6 +525,10 @@
           "id": "whatsapp-nav-link",
           "actionText": "WhatsApp",
           "phoneNumber": "593995121992"
+        },
+        {
+          "id": "join-us-link",
+          "name": "Unete al Equipo"
         }
       ]
     }

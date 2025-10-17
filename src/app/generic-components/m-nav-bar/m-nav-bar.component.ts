@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { LanguageEnum, Section, SectionEnum } from '../../types/appSections';
 import sections from '../../config/sections.json';
 import { NavigationService } from '../../observables/navigation.service';
+import { JOINUS_EXTERNAL_URL } from '../../constants/joinus.constants';
 
 @Component({
   selector: 'm-nav-bar',
@@ -49,7 +50,15 @@ export class MNavBarComponent implements OnInit {
     return this.navOptions?.find((n) => n.id == SectionEnum.GetInTouchNavLink);
   }
 
+  public get getJoinUsLink() {
+    return this.navOptions?.find((n) => n.id == SectionEnum.JoinUsLink);
+  }
+
   public openModal() {
     this.navigationService.showHideModal(true);
+  }
+
+  public openJoinUs() {
+    window.open(JOINUS_EXTERNAL_URL, '_blank');
   }
 }
