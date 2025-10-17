@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { navigationGuard } from './navigation.guard';
 import { SectionEnum } from './types/appSections';
 import { BrochureComponent } from './components/brochure/brochure.component';
+import { JoinusComponent } from './components/joinus/joinus.component';
 
 export const routes: Routes = [
   {
@@ -43,6 +44,10 @@ export const routes: Routes = [
   {
     path: SectionEnum.Brochure,
     component: BrochureComponent,
+  },
+  {
+    path: SectionEnum.JoinUs,
+    component: JoinusComponent,
   },
   {
     path: '',

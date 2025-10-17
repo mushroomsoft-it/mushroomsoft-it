@@ -29,20 +29,22 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright test
-        run: |
-          echo "Running test: ${{ matrix.script }}"
-          npx playwright test ${{ matrix.script }}
+      # Comment this code until enable chatbot app  in the public site
 
-      - name: Sanitize artifact name
-        id: sanitize
-        run: |
-          sanitized=$(echo "report-${{ matrix.script }}" | sed 's|/|_|g')
-          echo "name=$sanitized" >> $GITHUB_OUTPUT
+      # - name: Run Playwright test
+      #  run: |
+      #    echo "Running test: ${{ matrix.script }}"
+      #    npx playwright test ${{ matrix.script }}
 
-      - uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
-        with:
-          name: ${{ steps.sanitize.outputs.name }}
-          path: playwright-report/
-          retention-days: 30
+      #- name: Sanitize artifact name
+      #  id: sanitize
+      #  run: |
+      #    sanitized=$(echo "report-${{ matrix.script }}" | sed 's|/|_|g')
+      #    echo "name=$sanitized" >> $GITHUB_OUTPUT
+
+      #- uses: actions/upload-artifact@v4
+      #  if: ${{ !cancelled() }}
+      #  with:
+      #    name: ${{ steps.sanitize.outputs.name }}
+      #    path: playwright-report/
+      #    retention-days: 30

@@ -60,7 +60,9 @@ export class AppComponent implements OnInit {
   public showModal = false;
   public showCookiesBanner = false;
   private subscription: Subscription = new Subscription();
-  public isBrochureRoute: boolean = false;
+  public isExternalRoute: boolean = false;
+
+  private readonly externalUrls = [SectionEnum.Brochure, SectionEnum.JoinUs];
 
   constructor(
     private navigationService: NavigationService,
@@ -68,7 +70,9 @@ export class AppComponent implements OnInit {
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isBrochureRoute = event.url === '/brochure';
+        this.isExternalRoute = this.externalUrls.some(
+          (url) => event.url === `/${url}`
+        );
       }
     });
   }
