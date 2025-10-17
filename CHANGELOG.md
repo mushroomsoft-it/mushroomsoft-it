@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.16
+
+### Patch Changes
+
+- 0ee24fc: Add join us link
+
 ## 2.1.15
 
 ### Patch Changes
