@@ -1728,7 +1728,7 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 3.5rem; /* subidos */
+  bottom: 3.5rem; 
   z-index: 99999;
   pointer-events: auto;
   display: flex;
@@ -1738,7 +1738,6 @@ body {
   padding: 0;
 }
 
-/* Fallback global si Owl injecta fuera del scope */
 ::ng-deep .owl-dots {
   display: flex !important;
   position: absolute !important;
@@ -1748,7 +1747,6 @@ body {
   z-index: 99999 !important;
 }
 
-/* estilo de los bullets (mantener look que ya tenías) */
 ::ng-deep .m-section--fullscreen-carousel .owl-dot,
 ::ng-deep .owl-dot {
   display: inline-block !important;
@@ -1771,18 +1769,12 @@ body {
   transform: scale(1.05) !important;
 }
 
-/* ---------------------- MAIN (basado en tu código) ---------------------- */
+/* ---------------------- MAIN ---------------------- */
 .m-section--fullscreen-carousel {
   width: 100vw;
   height: calc(95vh - $m-navbar-height);
-  overflow: visible; /* cambiar a visible para que los dots no se recorten */
+  overflow: visible; 
   position: relative;
-
-  /* Si usas el wrapper .dots-wrapper, colócalo en el HTML dentro del section */
-  .dots-wrapper {
-    /* opcional: fondo / padding para legibilidad */
-    /* background: rgba(0,0,0,0.06); padding: 6px 10px; border-radius: 999px; */
-  }
 
   .carousel-slide {
     width: 100vw;
@@ -1814,7 +1806,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     gap: 2rem;
-    height: calc(95vh - $m-navbar-height); /* mantiene coherencia */
+    height: calc(95vh - $m-navbar-height); 
     box-sizing: border-box;
   }
 
@@ -1827,7 +1819,7 @@ body {
     height: calc(95vh - $m-navbar-height);
     box-sizing: border-box;
     padding: 0.5rem;
-    flex-direction: column; /* imagen arriba, botón abajo (funciona desktop y mobile) */
+    flex-direction: column; 
 
     .slide-left-image {
       width: 100%;
@@ -1902,20 +1894,18 @@ body {
     .slide-image-container {
       max-width: 360px;
       flex: 0 0 36%;
-      height: 83vh; /* si prefieres usar min-height, cámbialo */
+      height: 83vh; 
     }
 
     .slide-content {
       padding: 0 0.75rem;
     }
 
-    /* ajustar dots ligeramente */
     .dots-wrapper { bottom: 3rem; }
     ::ng-deep .owl-dots { bottom: 3rem !important; }
   }
 
   @media (max-width: 768px) {
-    /* móvil: stack, centrar texto, imagen arriba, botón abajo */
     height: auto !important;
     .carousel-slide {
       height: auto;
@@ -1937,7 +1927,6 @@ body {
       padding: 0 1rem;
     }
 
-    /* Imagen arriba (mostramos si existe) */
     .slide-image-container {
       display: flex !important;
       flex-direction: column;
@@ -1961,7 +1950,6 @@ body {
       box-shadow: 0 8px 24px rgba(0,0,0,0.28) !important;
     }
 
-    /* Texto centrado y debajo de la imagen */
     .slide-content {
       order: 1;
       display: flex !important;
@@ -1983,10 +1971,8 @@ body {
       button { padding: 0.6rem 1.2rem !important; }
     }
 
-    /* Evitar duplicados si usas slide-content--mobile */
     .slide-content--mobile { display: none !important; }
 
-    /* subir bullets un poco en mobile para que no queden pegados */
     .dots-wrapper { bottom: 2.2rem !important; }
     ::ng-deep .owl-dots { bottom: 2.2rem !important; }
   }

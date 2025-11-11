@@ -51,7 +51,7 @@ export class MainSectionComponent {
     this.navigationService.showHideModal(true);
   }
 
-  public handleCatalogClick(item: any): void {
+  public handleCatalogClick(item: Section): void {
     if (!item) return;
 
     if (item.id === 'get-in-touch') {
@@ -72,7 +72,7 @@ export class MainSectionComponent {
     return icon;
   }
 
-  trackById(index: number, item: any) {
+  trackById(index: number, item: Section): string | number {
     return item.id ?? index;
   }
 }

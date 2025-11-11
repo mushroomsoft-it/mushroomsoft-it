@@ -13,7 +13,7 @@
         <div *ngIf="!isMobile" class="slide-inner d-flex align-items-center justify-content-between w-100">
           
           <div class="slide-image-container">
-            <img *ngIf="item.bannerImgUrl" [src]="item.bannerImgUrl" alt="Imagen estática" class="slide-left-image" />
+            <img *ngIf="item.bannerImgUrl" [src]="item.bannerImgUrl" [alt]="item.title || 'Banner image'" class="slide-left-image" />
           </div>
 
           <div class="slide-content">
@@ -39,7 +39,7 @@
         <div *ngIf="isMobile" class="slide-inner d-flex align-items-center justify-content-between w-100">
           
           <div *ngIf="item.bannerImgUrl" class="slide-image-container">
-            <img [src]="item.bannerImgUrl" alt="Imagen estática" class="slide-left-image" />
+            <img [src]="item.bannerImgUrl" [alt]="item.title || 'Banner image'" class="slide-left-image" />
             <div class="cta-button">
               <button
                 class="m-link m-link--primary m-right-to-left m-right-to-left__750ms mt-1"
