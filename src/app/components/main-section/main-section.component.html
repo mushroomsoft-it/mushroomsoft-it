@@ -1,28 +1,78 @@
-<main class="m-section" [id]="sectionData.id">
-  <div class="m-crystal"></div>
-  <div
-    class="container d-flex justify-content-center align-items-center justify-content-md-end m-section__body"
-  >
-    <div
-      class="d-flex flex-column align-items-center align-items-md-start m-section__wrapper m-section__wrapper--50"
+<section class="m-section--fullscreen-carousel" [id]="sectionData.id">
+  <owl-carousel-o [options]="fullScreenCarouselOptions" #fullScreenCarousel>
+    <ng-template
+      *ngFor="let item of sectionData.catalog; let i = index; trackBy: trackById"
+      carouselSlide
     >
-      <h1 class="m-section__title m-right-to-left" #title>
-        {{ sectionData.title }}
-      </h1>
-      <h2
-        class="m-section__subtitle m-right-to-left m-right-to-left__500ms"
-        #subtitle
+      <div
+        class="carousel-slide d-flex align-items-center"
+        [style.background-image]="'url(' + item.imageBgUrl + ')'"
       >
-        {{ sectionData.subtitle }}
-      </h2>
-      <button
-        class="m-link m-link--primary m-right-to-left m-right-to-left__750ms"
-        #link
-        (click)="openModal()"
-      >
-        {{ sectionData.actionText }}
-        <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
-      </button>
-    </div>
-  </div>
-</main>
+        <div class="slide-overlay"></div>
+
+        <div *ngIf="!isMobile" class="slide-inner d-flex align-items-center justify-content-between w-100">
+          
+          <div class="slide-image-container">
+            <img *ngIf="item.bannerImgUrl" [src]="item.bannerImgUrl" [alt]="item.title || 'Banner image'" class="slide-left-image" />
+          </div>
+
+          <div class="slide-content">
+            <h1 class="m-section__title m-right-to-left">{{ item.title }}</h1>
+            <h2 class="m-section__subtitle m-right-to-left m-right-to-left__500ms mt-3">
+              {{ item.description }}
+            </h2>
+
+            <div class="cta-button">
+              <button
+                class="m-link m-link--primary m-right-to-left m-right-to-left__750ms mt-1"
+                type="button"
+                (click)="handleCatalogClick(item)"
+              >
+                {{ item.actionText }}
+                <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div *ngIf="isMobile" class="slide-inner d-flex align-items-center justify-content-between w-100">
+          
+          <div *ngIf="item.bannerImgUrl" class="slide-image-container">
+            <img [src]="item.bannerImgUrl" [alt]="item.title || 'Banner image'" class="slide-left-image" />
+            <div class="cta-button">
+              <button
+                class="m-link m-link--primary m-right-to-left m-right-to-left__750ms mt-1"
+                type="button"
+                (click)="handleCatalogClick(item)"
+              >
+                {{ item.actionText }}
+                <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
+              </button>
+            </div>
+          </div>
+
+          <div *ngIf="!item.bannerImgUrl" class="slide-content">
+            <h1 class="m-section__title m-right-to-left">{{ item.title }}</h1>
+            <h2 class="m-section__subtitle m-right-to-left m-right-to-left__500ms mt-3">
+              {{ item.description }}
+            </h2>
+
+            <div class="cta-button">
+              <button
+                class="m-link m-link--primary m-right-to-left m-right-to-left__750ms mt-1"
+                type="button"
+                (click)="handleCatalogClick(item)"
+              >
+                {{ item.actionText }}
+                <m-icon [iconName]="'tabler_arrow-up.svg'"></m-icon>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</section>

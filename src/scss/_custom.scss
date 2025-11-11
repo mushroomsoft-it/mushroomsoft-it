@@ -1723,3 +1723,257 @@ body {
   }
 }
 
+/** CARRUSEL **/
+.dots-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3.5rem; 
+  z-index: 99999;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: 0;
+}
+
+::ng-deep .owl-dots {
+  display: flex !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  bottom: 3.5rem !important;
+  z-index: 99999 !important;
+}
+
+::ng-deep .m-section--fullscreen-carousel .owl-dot,
+::ng-deep .owl-dot {
+  display: inline-block !important;
+  margin: 0 6px !important;
+}
+
+::ng-deep .m-section--fullscreen-carousel .owl-dot span,
+::ng-deep .owl-dot span {
+  width: 12px !important;
+  height: 12px !important;
+  background: #fff !important;
+  opacity: 0.5 !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+}
+
+::ng-deep .m-section--fullscreen-carousel .owl-dot.active span,
+::ng-deep .owl-dot.active span {
+  opacity: 1 !important;
+  transform: scale(1.05) !important;
+}
+
+/* ---------------------- MAIN ---------------------- */
+.m-section--fullscreen-carousel {
+  width: 100vw;
+  height: calc(95vh - $m-navbar-height);
+  overflow: visible; 
+  position: relative;
+
+  .carousel-slide {
+    width: 100vw;
+    height: calc(95vh - $m-navbar-height);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+  }
+
+  .slide-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    height: calc(95vh - $m-navbar-height); 
+    box-sizing: border-box;
+  }
+
+  .slide-image-container {
+    flex: 0 0 40%;
+    max-width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(95vh - $m-navbar-height);
+    box-sizing: border-box;
+    padding: 0.5rem;
+    flex-direction: column; 
+
+    .slide-left-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .cta-button {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      button {
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  }
+
+  .slide-content {
+    flex: 1;
+    color: white;
+    text-align: right;
+    max-width: 800px;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 99999;
+
+    .owl-dot span {
+      width: 12px;
+      height: 12px;
+      background: white;
+      opacity: 0.5;
+      border-radius: 50%;
+      margin: 0 4px;
+      transition: opacity 0.3s, transform 0.2s;
+    }
+
+    .owl-dot.active span {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+
+  /* CTA button base */
+  .cta-button {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+  }
+
+  /* ---------------------- RESPONSIVE ---------------------- */
+  @media (max-width: 1024px) {
+    .slide-inner {
+      gap: 1.25rem;
+    }
+
+    .slide-image-container {
+      max-width: 360px;
+      flex: 0 0 36%;
+      height: 83vh; 
+    }
+
+    .slide-content {
+      padding: 0 0.75rem;
+    }
+
+    .dots-wrapper { bottom: 3rem; }
+    ::ng-deep .owl-dots { bottom: 3rem !important; }
+  }
+
+  @media (max-width: 768px) {
+    height: auto !important;
+    .carousel-slide {
+      height: auto;
+      min-height: calc(95vh - $m-navbar-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 0;
+    }
+
+    .slide-inner {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: auto;
+      min-height: calc(95vh - $m-navbar-height);
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+
+    .slide-image-container {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      order: 0;
+      width: 100% !important;
+      max-width: 420px !important;
+      height: auto !important;
+      padding: 0;
+      margin: auto;
+    }
+
+    .slide-image-container .slide-left-image {
+      width: 100% !important;
+      max-width: 360px !important;
+      height: auto !important;
+      margin: 0 0 0.75rem !important;
+      object-fit: contain !important;
+      border-radius: 8px !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.28) !important;
+    }
+
+    .slide-content {
+      order: 1;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      width: 100% !important;
+      max-width: 95% !important;
+      padding: 0.75rem 0 !important;
+    }
+
+    /* Botón centrado y visible debajo */
+    .cta-button {
+      order: 2;
+      justify-content: center !important;
+      width: 100% !important;
+      margin-top: 0.5rem !important;
+      button { padding: 0.6rem 1.2rem !important; }
+    }
+
+    .slide-content--mobile { display: none !important; }
+
+    .dots-wrapper { bottom: 2.2rem !important; }
+    ::ng-deep .owl-dots { bottom: 2.2rem !important; }
+  }
+}
