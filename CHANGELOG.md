@@ -1,5 +1,13 @@
 # mushroomsoft-app
 
+## 2.1.19
+
+### Patch Changes
+
+- 12c9f0e: feat: replace static section with dynamic carousel component
+
+  1. refactor(UI): replace static content at the main-section section for a carousel that displays multiple items with animation and navigation (including a webinar).
+
 ## 2.1.18
 
 ### Patch Changes
