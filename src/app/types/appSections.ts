@@ -18,6 +18,9 @@ export interface Section {
   animate?: boolean;
   email?: EmailDetails;
   phoneNumber?: String;
+  imageBgUrl?: string;
+  bannerImgUrl?: string;
+
 }
 
 interface EmailDetails {

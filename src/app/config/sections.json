@@ -6,9 +6,38 @@
         {
           "id": "home",
           "name": "home",
-          "title": "Delivering tech expertise and transformative solutions for your business.",
-          "subtitle": "Solutions Beyond Code",
-          "actionText": "Get in touch!",
+
+          "catalog": [
+            {
+              "id": "power-platform-webminar",
+              "title": "You can't miss this webinar",
+              "description": "Join us for our PowerPlatform webinar and discover, alongside Leonardo Riofrio, our CTO, how to automate tasks, connect data, and create solutions without the hassle. 🚀 An experience designed to simplify your processes and save you time!",
+              "actionText": "Register now!",
+              "imageBgUrl": "/main-bg.png",
+              "bannerImgUrl": "/post-webinar-en.jpeg",
+              "links": [
+                {
+                  "icon": "",
+                  "link": "https://forms.gle/dpA63STgawXf5mkZ8"
+                }
+              ]
+            },
+            {
+              "id": "get-in-touch",
+              "title": "Delivering tech expertise and transformative solutions for your business.",
+              "description": "Solutions Beyond Code",
+              "actionText": "Get In Touch",
+              "imageBgUrl": "/main-bg.png",
+              "bannerImgUrl": "",
+              "links": [
+                {
+                  "icon": "",
+                  "link": ""
+                }
+              ]
+            }
+          ],
+
           "isMenu": true
         },
         {
@@ -272,9 +301,39 @@
         {
           "id": "home",
           "name": "inicio",
-          "title": "Ofrecemos soluciones tecnológicas de vanguardia para transformar tu negocio.",
-          "subtitle": "Soluciones Más Allá del Código",
-          "actionText": "Contáctanos!",
+
+          "catalog": [
+            {
+              "id": "power-platform-webminar", 
+              "title": "No te pierdas este webinar",
+              "description": "Te invitamos a nuestro webinar sobre Power Platform y descubre junto a Leonardo Riofrio, nuestro CTO, cómo automatizar tareas, conectar datos y crear soluciones sin complicarte.🚀 ¡Una experiencia diseñada para simplificar tus procesos y ahorrarte tiempo!",
+              "actionText": "Registrarme!",
+              "imageBgUrl": "/what-we-do-desktop.png",
+              "bannerImgUrl": "/post-webinar.png",
+              "links": [
+                {
+                  "icon": "",
+                  "link": "https://forms.gle/dpA63STgawXf5mkZ8"
+                }
+              ]
+            },
+            {
+              "id": "get-in-touch",
+              "title": "Ofrecemos soluciones tecnológicas de vanguardia para transformar tu negocio.",
+              "description": "Soluciones Más Allá del Código",
+              "actionText": "Contáctanos!",
+              "imageBgUrl": "/main-bg.png",
+              "bannerImgUrl": "",
+              "links": [
+                {
+                  "icon": "",
+                  "link": ""
+                }
+              ]
+            }
+          ],
+
+
           "isMenu": true
         },
         {
