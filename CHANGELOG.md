@@ -1,5 +1,13 @@
 # mushroomsoft-app
 
+## 2.1.20
+
+### Patch Changes
+
+- 2da5b1a: refactor(ui): text changed - webinar
+
+  1. Text changed in carousel - webinar
+
 ## 2.1.19
 
 ### Patch Changes
