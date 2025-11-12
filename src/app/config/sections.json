@@ -10,8 +10,8 @@
           "catalog": [
             {
               "id": "power-platform-webminar",
-              "title": "You can't miss this webinar",
-              "description": "Join us for our PowerPlatform webinar and discover, alongside Leonardo Riofrio, our CTO, how to automate tasks, connect data, and create solutions without the hassle. 🚀 An experience designed to simplify your processes and save you time!",
+              "title": "Automate, connect, and create effortlessly",
+              "description": "Join Leonardo Riofrío in our Power Platform webinar — an experience designed to streamline your processes and save you time!",
               "actionText": "Register now!",
               "imageBgUrl": "/main-bg.png",
               "bannerImgUrl": "/post-webinar-en.jpeg",
@@ -305,10 +305,10 @@
           "catalog": [
             {
               "id": "power-platform-webminar", 
-              "title": "No te pierdas este webinar",
-              "description": "Te invitamos a nuestro webinar sobre Power Platform y descubre junto a Leonardo Riofrio, nuestro CTO, cómo automatizar tareas, conectar datos y crear soluciones sin complicarte.🚀 ¡Una experiencia diseñada para simplificar tus procesos y ahorrarte tiempo!",
+              "title": "Automatiza, conecta y crea sin complicarte",
+              "description": "Acompaña a Leonardo Riofrio en nuestro webinar sobre Power Platform. ¡Una experiencia diseñada para simplificar tus procesos y ahorrarte tiempo!",
               "actionText": "Registrarme!",
-              "imageBgUrl": "/what-we-do-desktop.png",
+              "imageBgUrl": "/main-bg.png",
               "bannerImgUrl": "/post-webinar.png",
               "links": [
                 {
