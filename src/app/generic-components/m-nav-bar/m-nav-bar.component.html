@@ -27,7 +27,7 @@
             [ngClass]="{ dropdown: !!menu.catalog }"
           >
             <a
-              *ngIf="!menu.catalog; else dropDownLink"
+              *ngIf="!menu.catalog || menu.name == 'home' || menu.name == 'inicio'; else dropDownLink"
               class="nav-link m-navbar__link"
               [routerLinkActive]="'active'"
               aria-current="page"
