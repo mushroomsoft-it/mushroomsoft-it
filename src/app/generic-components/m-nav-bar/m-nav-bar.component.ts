@@ -6,6 +6,7 @@ import { LanguageEnum, Section, SectionEnum } from '../../types/appSections';
 import sections from '../../config/sections.json';
 import { NavigationService } from '../../observables/navigation.service';
 import { JOINUS_EXTERNAL_URL } from '../../constants/joinus.constants';
+import { GETINTOUCH_EXTERNAL_URL } from '../../constants/getintouch.constants';
 
 @Component({
   selector: 'm-nav-bar',
@@ -54,11 +55,11 @@ export class MNavBarComponent implements OnInit {
     return this.navOptions?.find((n) => n.id == SectionEnum.JoinUsLink);
   }
 
-  public openModal() {
-    this.navigationService.showHideModal(true);
-  }
-
   public openJoinUs() {
     window.open(JOINUS_EXTERNAL_URL, '_blank');
+  }
+
+  public openGetInTouch() {
+    window.open(GETINTOUCH_EXTERNAL_URL, '_blank');
   }
 }
