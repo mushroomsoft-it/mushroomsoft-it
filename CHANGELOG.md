@@ -1,5 +1,12 @@
 # mushroomsoft-app
 
+## 2.1.21
+
+### Patch Changes
+
+- f4d98c3: fix(ui): home link dropdown edited
+- 6a4cf59: fix(ui): webinar banner deleted from carrousel
+
 ## 2.1.20
 
 ### Patch Changes
