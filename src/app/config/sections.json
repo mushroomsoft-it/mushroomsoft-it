@@ -9,20 +9,6 @@
           "isMenu": true,
           "catalog": [
             {
-              "id": "power-platform-webminar",
-              "title": "Automate, connect, and create effortlessly",
-              "description": "Join Leonardo Riofrío in our Power Platform webinar — an experience designed to streamline your processes and save you time!",
-              "actionText": "Register now!",
-              "imageBgUrl": "/main-bg.png",
-              "bannerImgUrl": "/post-webinar-en.jpeg",
-              "links": [
-                {
-                  "icon": "",
-                  "link": "https://forms.gle/dpA63STgawXf5mkZ8"
-                }
-              ]
-            },
-            {
               "id": "get-in-touch",
               "title": "Delivering tech expertise and transformative solutions for your business.",
               "name": "home",
@@ -303,20 +289,6 @@
           "name": "inicio",
 
           "catalog": [
-            {
-              "id": "power-platform-webminar", 
-              "title": "Automatiza, conecta y crea sin complicarte",
-              "description": "Acompaña a Leonardo Riofrio en nuestro webinar sobre Power Platform. ¡Una experiencia diseñada para simplificar tus procesos y ahorrarte tiempo!",
-              "actionText": "Registrarme!",
-              "imageBgUrl": "/main-bg.png",
-              "bannerImgUrl": "/post-webinar.png",
-              "links": [
-                {
-                  "icon": "",
-                  "link": "https://forms.gle/dpA63STgawXf5mkZ8"
-                }
-              ]
-            },
             {
               "id": "get-in-touch",
               "title": "Ofrecemos soluciones tecnológicas de vanguardia para transformar tu negocio.",
