@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.22
+
+### Patch Changes
+
+- a3891b0: refac(ui): new Get In Touch prop -link to Bookings-
+
 ## 2.1.21
 
 ### Patch Changes
