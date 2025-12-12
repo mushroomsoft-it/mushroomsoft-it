@@ -9,6 +9,21 @@
           "isMenu": true,
           "catalog": [
             {
+              "id": "join-us",
+              "title": "Join our team!",
+              "name": "Join Us",
+              "description": "New positions available in our portal",
+              "actionText": "Apply now!",
+              "imageBgUrl": "/main-bg.png",
+              "bannerImgUrl": "/hiring_en.png",
+              "links": [
+                {
+                  "icon": "",
+                  "link": "https://docs.google.com/forms/d/e/1FAIpQLScByzateJTqFvrE5zX80fwkYkDcWN05AV819O7cWyadcNZ91Q/viewform"
+                }
+              ]
+            },
+            {
               "id": "get-in-touch",
               "title": "Delivering tech expertise and transformative solutions for your business.",
               "name": "home",
@@ -22,22 +37,7 @@
                   "link": ""
                 }
               ]
-            },
-            {
-              "id": "join-us",
-              "title": "Join our team!",
-              "name": "Join Us",
-              "description": "New positions available in our portal",
-              "actionText": "Apply now!",
-              "imageBgUrl": "/main-bg.png",
-              "bannerImgUrl": "/hiring_en_2.png",
-              "links": [
-                {
-                  "icon": "",
-                  "link": "https://docs.google.com/forms/d/e/1FAIpQLScByzateJTqFvrE5zX80fwkYkDcWN05AV819O7cWyadcNZ91Q/viewform"
-                }
-              ]
-            } 
+            }
           ]
 
         },
@@ -305,6 +305,21 @@
 
           "catalog": [
             {
+              "id": "join-us",
+              "title": "¡Únete a nuestro equipo!",
+              "name": "Unete a nuestro equipo",
+              "description": "Nuevas posiciones disponibles en nuestro portal",
+              "actionText": "¡Aplica ahora!",
+              "imageBgUrl": "/main-bg.png",
+              "bannerImgUrl": "/hiring_es.png",
+              "links": [
+                {
+                  "icon": "",
+                  "link": "https://docs.google.com/forms/d/e/1FAIpQLScByzateJTqFvrE5zX80fwkYkDcWN05AV819O7cWyadcNZ91Q/viewform"
+                }
+              ]
+            },
+            {
               "id": "get-in-touch",
               "title": "Ofrecemos soluciones tecnológicas de vanguardia para transformar tu negocio.",
               "description": "Soluciones Más Allá del Código",
@@ -315,21 +330,6 @@
                 {
                   "icon": "",
                   "link": ""
-                }
-              ]
-            },
-            {
-              "id": "join-us",
-              "title": "¡Únete a nuestro equipo!",
-              "name": "Join Us",
-              "description": "Nuevas posiciones disponibles en nuestro portal",
-              "actionText": "¡Aplicar!",
-              "imageBgUrl": "/main-bg.png",
-              "bannerImgUrl": "/hiring_es_2.png",
-              "links": [
-                {
-                  "icon": "",
-                  "link": "https://docs.google.com/forms/d/e/1FAIpQLScByzateJTqFvrE5zX80fwkYkDcWN05AV819O7cWyadcNZ91Q/viewform"
                 }
               ]
             }
