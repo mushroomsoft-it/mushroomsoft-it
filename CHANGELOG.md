@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.23
+
+### Patch Changes
+
+- 19d4583: refact(link): new get in touch link added
+
 ## 2.1.22
 
 ### Patch Changes
