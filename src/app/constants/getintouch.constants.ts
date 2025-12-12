@@ -1,1 +1,1 @@
-export const GET_IN_TOUCH_EXTERNAL_URL = 'https://outlook.office.com/book/GetInTouchWithUs@mushroomsoft-it.com/s/YlQRhVJVT0iVoPYQaaHxsQ2';
+export const GET_IN_TOUCH_EXTERNAL_URL = 'https://outlook.office.com/bookwithme/user/c0db32897ef24ba2b4e421afe623113c%40mushroomsoft-it.com';
