@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.24
+
+### Patch Changes
+
+- 6715323: fix(link): join us link changed
+
 ## 2.1.23
 
 ### Patch Changes
