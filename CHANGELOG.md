@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.25
+
+### Patch Changes
+
+- 2e50c8b: feat(ui): new item added in carousel
+
 ## 2.1.24
 
 ### Patch Changes
