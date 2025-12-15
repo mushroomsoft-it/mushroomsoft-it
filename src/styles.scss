@@ -11,8 +11,14 @@
     color: white
   }
 
-  
-:root {
+#n8n-chat {
+
+  max-width: calc(100vw - 16px);
+  position: fixed !important;
+  bottom: 24px;
+  right: 36px;
+  z-index: 99999; // clave
+
   --chat--header--background: #f15d2a;
   --chat--header--color: #ffffff;
   --chat--color--primary: #f15d2a;
@@ -26,4 +32,53 @@
   --chat--header-height: 7vh;
 
   --chat--message--user--background: #0e2332;
+
+  &::after {
+    content: 'Tssss! Click me! / Haz click aquí!';
+    position: absolute;
+    right: 64px;
+    bottom: 100%;
+    margin-bottom: 8px;
+    background: #f15d2a;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+    animation: tooltip-pulse 1.6s ease-in-out infinite;
+
+    // desaparecer
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+}
+
+@keyframes tooltip-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#n8n-chat.hide-tooltip::after {
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  animation: none;
+}
+
+@media (max-width: 1023px) {
+  #n8n-chat::after {
+    display: none;
+  }
 }
