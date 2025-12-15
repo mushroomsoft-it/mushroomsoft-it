@@ -24,7 +24,7 @@
               ]
             },
             {
-              "id": "get-in-touch",
+              "id": "get-in-touch-new",
               "title": "Delivering tech expertise and transformative solutions for your business.",
               "name": "home",
               "description": "Solutions Beyond Code",
@@ -34,7 +34,7 @@
               "links": [
                 {
                   "icon": "",
-                  "link": ""
+                  "link": "https://outlook.office.com/bookwithme/user/c0db32897ef24ba2b4e421afe623113c@mushroomsoft-it.com?anonymous&ismsaljsauthenabled&ep=pcard"
                 }
               ]
             }
@@ -320,7 +320,7 @@
               ]
             },
             {
-              "id": "get-in-touch",
+              "id": "get-in-touch-new",
               "title": "Ofrecemos soluciones tecnológicas de vanguardia para transformar tu negocio.",
               "description": "Soluciones Más Allá del Código",
               "actionText": "Contáctanos!",
@@ -329,7 +329,7 @@
               "links": [
                 {
                   "icon": "",
-                  "link": ""
+                  "link": "https://outlook.office.com/bookwithme/user/c0db32897ef24ba2b4e421afe623113c@mushroomsoft-it.com?anonymous&ismsaljsauthenabled&ep=pcard"
                 }
               ]
             }
