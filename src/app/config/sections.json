@@ -9,7 +9,22 @@
           "isMenu": true,
           "catalog": [
             {
-              "id": "get-in-touch",
+              "id": "join-us",
+              "title": "Join our team!",
+              "name": "Join Us",
+              "description": "New positions available in our portal",
+              "actionText": "Apply now!",
+              "imageBgUrl": "/main-bg.png",
+              "bannerImgUrl": "/hiring_en.png",
+              "links": [
+                {
+                  "icon": "",
+                  "link": "https://docs.google.com/forms/d/e/1FAIpQLScByzateJTqFvrE5zX80fwkYkDcWN05AV819O7cWyadcNZ91Q/viewform"
+                }
+              ]
+            },
+            {
+              "id": "get-in-touch-new",
               "title": "Delivering tech expertise and transformative solutions for your business.",
               "name": "home",
               "description": "Solutions Beyond Code",
@@ -19,7 +34,7 @@
               "links": [
                 {
                   "icon": "",
-                  "link": ""
+                  "link": "https://outlook.office.com/bookwithme/user/c0db32897ef24ba2b4e421afe623113c@mushroomsoft-it.com?anonymous&ismsaljsauthenabled&ep=pcard"
                 }
               ]
             }
@@ -290,7 +305,22 @@
 
           "catalog": [
             {
-              "id": "get-in-touch",
+              "id": "join-us",
+              "title": "¡Únete a nuestro equipo!",
+              "name": "Únete a nuestro equipo",
+              "description": "Nuevas posiciones disponibles en nuestro portal",
+              "actionText": "¡Aplica ahora!",
+              "imageBgUrl": "/main-bg.png",
+              "bannerImgUrl": "/hiring_es.png",
+              "links": [
+                {
+                  "icon": "",
+                  "link": "https://docs.google.com/forms/d/e/1FAIpQLScByzateJTqFvrE5zX80fwkYkDcWN05AV819O7cWyadcNZ91Q/viewform"
+                }
+              ]
+            },
+            {
+              "id": "get-in-touch-new",
               "title": "Ofrecemos soluciones tecnológicas de vanguardia para transformar tu negocio.",
               "description": "Soluciones Más Allá del Código",
               "actionText": "Contáctanos!",
@@ -299,7 +329,7 @@
               "links": [
                 {
                   "icon": "",
-                  "link": ""
+                  "link": "https://outlook.office.com/bookwithme/user/c0db32897ef24ba2b4e421afe623113c@mushroomsoft-it.com?anonymous&ismsaljsauthenabled&ep=pcard"
                 }
               ]
             }
@@ -559,7 +589,7 @@
         },
         {
           "id": "join-us-link",
-          "name": "Unete al Equipo"
+          "name": "Únete al Equipo"
         }
       ]
     }
