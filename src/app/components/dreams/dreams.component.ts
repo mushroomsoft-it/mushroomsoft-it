@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Section } from '../../types/appSections';
 import { MIconComponent } from '../../generic-components/m-icon/m-icon.component';
 import { NavigationService } from '../../observables/navigation.service';
+import { GET_IN_TOUCH_EXTERNAL_URL } from '../../constants/getintouch.constants';
 
 @Component({
   selector: 'dreams',
@@ -42,7 +43,8 @@ export class DreamsComponent implements OnInit {
     });
   }
 
-  public openModal() {
-    this.navigationService.showHideModal(true);
+  public openGetInTouch() {
+    window.open(GET_IN_TOUCH_EXTERNAL_URL, '_blank', 'noopener,noreferrer');
   }
+  
 }

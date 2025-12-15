@@ -16,6 +16,7 @@ import { Section } from '../../types/appSections';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { NavigationService } from '../../observables/navigation.service';
+import { GET_IN_TOUCH_EXTERNAL_URL } from '../../constants/getintouch.constants';
 
 @Component({
   selector: 'm-services',
@@ -93,6 +94,10 @@ export class MServicesComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public openModal() {
     this.navigationService.showHideModal(true);
+  }
+
+  public openGetInTouch() {
+    window.open(GET_IN_TOUCH_EXTERNAL_URL, '_blank', 'noopener,noreferrer');
   }
 
   ngOnDestroy(): void {
