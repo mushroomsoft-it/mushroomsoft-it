@@ -307,7 +307,7 @@
             {
               "id": "join-us",
               "title": "¡Únete a nuestro equipo!",
-              "name": "Unete a nuestro equipo",
+              "name": "Únete a nuestro equipo",
               "description": "Nuevas posiciones disponibles en nuestro portal",
               "actionText": "¡Aplica ahora!",
               "imageBgUrl": "/main-bg.png",
@@ -589,7 +589,7 @@
         },
         {
           "id": "join-us-link",
-          "name": "Unete al Equipo"
+          "name": "Únete al Equipo"
         }
       ]
     }
