@@ -10,3 +10,20 @@
     padding:  1.25em;
     color: white
   }
+
+  
+:root {
+  --chat--header--background: #f15d2a;
+  --chat--header--color: #ffffff;
+  --chat--color--primary: #f15d2a;
+  --chat--toggle--background: #f15d2a;
+  --chat--toggle--hover--background: #d95125;
+  --chat--toggle--active--background: #c74921;
+
+  --chat--window--width: 88vw;   
+  --chat--window--height: 70vh; 
+
+  --chat--header-height: 7vh;
+
+  --chat--message--user--background: #0e2332;
+}
