@@ -26,7 +26,7 @@
   <app-root></app-root>
 </body>
 
-<script type="module">
+<script src="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js" integrity="sha384-JYp/ph0M24NOUvAiweWBEVIZT7WP/X6eXH8Kt0qU+POg5kz8lkwL+exdsgTlu7+m" crossorigin="anonymous">
     import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
     createChat({
@@ -47,7 +47,7 @@
         enableStreaming: false,
     });
 
-  (function () {
+ (function () {
     const chat = document.getElementById('n8n-chat');
     if (!chat) return;
 
@@ -56,7 +56,7 @@
         chat.classList.add('hide-tooltip');
       }
     });
-  })();
+ })();
 
 </script>
 
