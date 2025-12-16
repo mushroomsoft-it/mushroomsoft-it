@@ -26,7 +26,9 @@
   <app-root></app-root>
 </body>
 
-<script src="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js" integrity="sha384-JYp/ph0M24NOUvAiweWBEVIZT7WP/X6eXH8Kt0qU+POg5kz8lkwL+exdsgTlu7+m" crossorigin="anonymous">
+<script type="module">
+    // Aquí es donde se hace la importación del recurso externo.
+    // El navegador lo gestiona de forma similar a un 'src', pero permite el código inline.
     import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
     createChat({
