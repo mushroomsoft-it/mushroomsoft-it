@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.26
+
+### Patch Changes
+
+- 0bd5904: feat(ui): new external chat added
+
 ## 2.1.25
 
 ### Patch Changes
