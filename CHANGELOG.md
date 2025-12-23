@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.27
+
+### Patch Changes
+
+- ca9a77c: feat(meta): meta description added
+
 ## 2.1.26
 
 ### Patch Changes
