@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.28
+
+### Patch Changes
+
+- 40076e3: feat(meta): meta description added/chatbot removed
+
 ## 2.1.27
 
 ### Patch Changes
