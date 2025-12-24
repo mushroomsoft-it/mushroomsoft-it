@@ -11,10 +11,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
+  <!-- Meta decription / Warning: all changes for this section must be reviewed with Andrea and Melissa -->
   <meta name="description" content="Software development and IT outsourcing for companies looking to scale and optimize processes. Schedule a call and get expert advice.">
-
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ5D6JE977"></script>
@@ -27,5 +27,40 @@
 </script>
 <body>
   <app-root></app-root>
+
+  <script type="module">
+      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+      createChat({
+          webhookUrl: 'https://n8nmushroomsoft-it.com/webhook/5692f63f-bc81-44a0-b5b9-3990f6d7441a/chat',
+          initialMessages: [
+              'Salúdame en cualquier idioma 👋',
+              'Greet me in any language 👋'
+          ],
+          target: '#n8n-chat',
+          i18n: {
+            en: {
+              title: "",
+              subtitle: "MushroomSoft Chatbot",
+              getStarted: 'New Conversation',
+              inputPlaceholder: 'Type your question.../Escribe tu pregunta...',
+            },
+          },
+          enableStreaming: false,
+      });
+
+  (function () {
+      const chat = document.getElementById('n8n-chat');
+      if (!chat) return;
+
+      document.addEventListener('click', (e) => {
+        if (e.target.closest('#n8n-chat .chat-window-toggle')) {
+          chat.classList.add('hide-tooltip');
+        }
+      });
+  })();
+
+  </script>
+
+
 </body>
 </html>
