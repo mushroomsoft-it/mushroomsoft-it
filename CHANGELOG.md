@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.29
+
+### Patch Changes
+
+- c95ce7c: feat(ui): n8n chatbot added
+
 ## 2.1.28
 
 ### Patch Changes
