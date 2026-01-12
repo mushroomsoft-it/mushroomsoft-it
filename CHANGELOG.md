@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.30
+
+### Patch Changes
+
+- 6c1cebc: feat(ui): new positions img added
+
 ## 2.1.29
 
 ### Patch Changes
