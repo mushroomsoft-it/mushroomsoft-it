@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.32
+
+### Patch Changes
+
+- 62dbe3b: zeeus-012: refact(ui): chatbot added
+
 ## 2.1.31
 
 ### Patch Changes
