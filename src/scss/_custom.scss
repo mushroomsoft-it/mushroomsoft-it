@@ -1978,7 +1978,7 @@ body {
   }
 }
 
-
+// Chat
 
 #n8n-chat {
 
@@ -1986,7 +1986,7 @@ body {
   position: fixed !important;
   bottom: 24px;
   right: 36px;
-  z-index: 99999; // clave
+  z-index: 99999; 
 
   --chat--header--background: #f15d2a;
   --chat--header--color: #ffffff;
@@ -1995,7 +1995,7 @@ body {
   --chat--toggle--hover--background: #d95125;
   --chat--toggle--active--background: #c74921;
 
-  --chat--window--width: 88vw;   
+  --chat--window--width: 50vw;   
   --chat--window--height: 70vh; 
 
   --chat--header-height: 7vh;
@@ -2003,7 +2003,7 @@ body {
   --chat--message--user--background: #0e2332;
 
   &::after {
-    content: 'Tssss! Click me! / Haz click aquí!';
+    content: "Let's chat / Conversemos";
     position: absolute;
     right: 64px;
     bottom: 100%;
@@ -2047,6 +2047,11 @@ body {
 }
 
 @media (max-width: 1023px) {
+
+  #n8n-chat {
+      --chat--window--width: 88vw;   
+  }
+
   #n8n-chat::after {
     display: none;
   }
