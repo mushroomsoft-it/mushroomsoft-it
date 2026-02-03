@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.33
+
+### Patch Changes
+
+- cdfb1f6: refact(ui): hiring imgs removed
+
 ## 2.1.32
 
 ### Patch Changes
