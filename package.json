@@ -1,6 +1,6 @@
 {
   "name": "mushroomsoft-app",
-  "version": "2.1.33",
+  "version": "2.1.34",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
