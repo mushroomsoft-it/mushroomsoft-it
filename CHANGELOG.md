@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.34
+
+### Patch Changes
+
+- 5518315: feat(ui): chatbot changes requested done
+
 ## 2.1.33
 
 ### Patch Changes
