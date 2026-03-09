@@ -203,13 +203,14 @@ body {
   gap: 0.5rem;
   text-decoration: none;
   color: white;
-  width: 170px;
+  width: 225px;
   height: 40px;
   padding: 0px 16px 0px 16px;
   border-radius: 32px;
   border: none;
   font-weight: 700;
   font-family: $primary-font-family;
+  text-align: center;
 
   &::before {
     width: 0;
@@ -412,6 +413,7 @@ body {
     .m-icon svg {
       width: 2em;
       height: 2em;
+      color: white;
     }
   }
 }
