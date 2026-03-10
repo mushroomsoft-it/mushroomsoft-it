@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.35
+
+### Patch Changes
+
+- 456520f: feat(ui): 2026 Website Optimization
+
 ## 2.1.34
 
 ### Patch Changes
