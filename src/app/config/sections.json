@@ -29,7 +29,7 @@
         {
           "id": "what-we-do",
           "name": "what we do",
-          "description": "<p>At MushroomSoft, we specialize in <strong>IT Talent Outsourcing</strong>, helping companies scale their engineering capabilities with trusted, high-performing teams.</br></br>We also deliver <strong>Custom Software Development</strong> and <strong>AI & Process Automation</strong> solutions, using modern technologies to turn ideas into reliable, scalable products.</br></br>Our differentiation lies in our people—committed engineers, aligned with our clients' teams and objectives.</p>",
+          "description": "<p>At MushroomSoft, we specialize in <b>IT Talent Outsourcing</b>, helping companies scale their engineering capabilities with trusted, high-performing teams.</br></br>We also deliver <b>Custom Software Development</b> and <b>AI & Process Automation</b> solutions, using modern technologies to turn ideas into reliable, scalable products.</br></br>Our differentiation lies in our people—committed engineers, aligned with our clients' teams and objectives.</p>",
           "isMenu": true
         },
         {
@@ -63,7 +63,7 @@
             {
               "id": "outsourcing",
               "icon": "outsourcing.svg",
-              "name": "Tech Talent Outsourcing",
+              "name": "Outsourcing & Staff Augmentation",
               "description": "We provide highly skilled tech talent to support your projects, ensuring efficiency, quality, and seamless integration with your team. ",
               "isQueryParam": true
             },
@@ -206,7 +206,7 @@
               "name": "Services",
               "catalog": [
                 {
-                  "name": "Tech Talent Outsourcing"
+                  "name": "Outsourcing & Staff Augmentation"
                 },
                 {
                   "name": "Custom Software Development"
@@ -289,7 +289,7 @@
         {
           "id": "what-we-do",
           "name": "lo que hacemos",
-          "description": "<p>En MushroomSoft nos especializamos en el <strong>Outsourcing de Talento IT</strong>, ayudando a las empresas a escalar sus capacidades de ingeniería con equipos confiables y de alto desempeño.</br></br>Además, ofrecemos <strong>Desarrollo de Software a la Medida</strong> y soluciones de <strong>IA y Automatización de procesos</strong>, utilizando tecnologías modernas para transformar ideas en productos confiables, escalables y sostenibles.</br></br>Nuestro principal diferenciador es nuestra gente: ingenieros comprometidos, alineados con los equipos y objetivos de nuestros clientes.</p>",
+          "description": "<p>En MushroomSoft nos especializamos en el <b>Outsourcing de Talento IT</b>, ayudando a las empresas a escalar sus capacidades de ingeniería con equipos confiables y de alto desempeño.</br></br>Además, ofrecemos <b>Desarrollo de Software a la Medida</b> y soluciones de <b>IA y Automatización de procesos</b>, utilizando tecnologías modernas para transformar ideas en productos confiables, escalables y sostenibles.</br></br>Nuestro principal diferenciador es nuestra gente: ingenieros comprometidos, alineados con los equipos y objetivos de nuestros clientes.</p>",
           "isMenu": true
         },
         {
@@ -323,7 +323,7 @@
             {
               "id": "outsourcing",
               "icon": "outsourcing.svg",
-              "name": "Outsourcing de Talento Tecnológico",
+              "name": "Outsourcing y Staff Augmentation",
               "description": "Proveemos talento tecnológico altamente especializado para impulsar sus proyectos, garantizando eficiencia, calidad e integración fluida con su equipo.",
               "isQueryParam": true
             },
@@ -466,7 +466,7 @@
               "name": "Servicios",
               "catalog": [
                 {
-                  "name": "Outsourcing de Talento Tecnológico"
+                  "name": "Outsourcing y Staff Augmentation"
                 },
                 {
                   "name": "Desarrollo de Software a la Medida"
