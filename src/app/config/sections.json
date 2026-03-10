@@ -10,10 +10,10 @@
           "catalog": [
             {
               "id": "get-in-touch-new",
-              "title": "Delivering tech expertise and transformative solutions for your business.",
+              "title": "Tech Talent Outsourcing for Growing Companies.",
               "name": "home",
-              "description": "Solutions Beyond Code",
-              "actionText": "Get In Touch",
+              "description": "Strengthen your tech team with specialized talent from LATAM",
+              "actionText": "Schedule a meeting!",
               "imageBgUrl": "/main-bg.png",
               "bannerImgUrl": "",
               "links": [
@@ -29,7 +29,7 @@
         {
           "id": "what-we-do",
           "name": "what we do",
-          "description": "<p> At <b>MushroomSoft</b>, we specialize in providing cutting-edge solutions that drive businesses forward. Our true distinction lies in our ability to harness the potential of advanced technologies.</p> <p> Whether it's the agility of <b>Node.js</b>, the robustness of <b>Angular</b>, the efficiency of <b>Nx</b>, or the transformative power of <b>DevOps</b>, we are fully equipped to tackle any challenge and deliver exceptional results.</p>",
+          "description": "<p>At MushroomSoft, we specialize in <b>IT Talent Outsourcing</b>, helping companies scale their engineering capabilities with trusted, high-performing teams.</br></br>We also deliver <b>Custom Software Development</b> and <b>AI & Process Automation</b> solutions, using modern technologies to turn ideas into reliable, scalable products.</br></br>Our differentiation lies in our people—committed engineers, aligned with our clients' teams and objectives.</p>",
           "isMenu": true
         },
         {
@@ -57,49 +57,28 @@
         {
           "id": "services",
           "name": "services",
-          "actionText": "Get in touch!",
+          "actionText": "Schedule a meeting!",
           "isMenu": true,
           "catalog": [
             {
-              "id": "software-development",
-              "icon": "software.svg",
-              "name": "Software Development",
-              "description": "We offer customized software development solutions tailored to meet your business's specific needs, utilizing the latest technologies and agile methodologies.",
-              "isQueryParam": true
-            },
-            {
               "id": "outsourcing",
               "icon": "outsourcing.svg",
-              "name": "Technological Resource Outsourcing",
-              "description": "We offer customized software development solutions tailored to meet your business's specific needs, utilizing the latest technologies and agile methodologies.",
+              "name": "Outsourcing & Staff Augmentation",
+              "description": "We provide highly skilled tech talent to support your projects, ensuring efficiency, quality, and seamless integration with your team. ",
               "isQueryParam": true
             },
             {
-              "id": "cloud",
-              "icon": "cloud.svg",
-              "name": "Cloud",
-              "description": "We implement and manage cloud solutions that guarantee scalability, security, and availability, optimizing the performance of your applications and data.",
-              "isQueryParam": true
-            },
-            {
-              "id": "devops",
-              "icon": "dev-ops.svg",
-              "name": "DevOps/MLops",
-              "description": "We integrate DevOps and MLops practices to automate and optimize the software development lifecycle and machine learning models, accelerating value delivery.",
+              "id": "software-development",
+              "icon": "software.svg",
+              "name": "Custom Software Development",
+              "description": "We design and develop custom, scalable software solutions aligned with your business goals.",
               "isQueryParam": true
             },
             {
               "id": "ai",
               "icon": "ai.svg",
-              "name": "Artificial Intelligence and Data Analysis",
-              "description": "We develop and implement AI and data analysis solutions that provide valuable insights and enhance decision-making in your business.",
-              "isQueryParam": true
-            },
-            {
-              "id": "low-codes",
-              "icon": "low-code.svg",
-              "name": "Low-Code/No-Code",
-              "description": "We offer low-code/no-code development platforms that enable rapid and efficient application creation, reducing development time and cost.",
+              "name": "AI & Process Automation",
+              "description": "We combine AI and automation tools to build intelligent solutions, automate processes, and accelerate development at lower cost.",
               "isQueryParam": true
             }
           ]
@@ -163,7 +142,7 @@
         {
           "id": "dreams",
           "description": "<p>Turning dreams into <span>code.</span> Let's <span>build</span> your vision.</p>",
-          "actionText": "Get in touch!"
+          "actionText": "Schedule a meeting!"
         },
         {
           "id": "get-in-touch",
@@ -202,6 +181,10 @@
                 {
                   "icon": "github.svg",
                   "link": "https://github.com/mushroomsoft-it"
+                },
+                {
+                  "icon": "instagram.svg",
+                  "link": "https://www.instagram.com/mushroomsoft_it"
                 }
               ]
             }
@@ -223,22 +206,13 @@
               "name": "Services",
               "catalog": [
                 {
-                  "name": "Software Development"
+                  "name": "Outsourcing & Staff Augmentation"
                 },
                 {
-                  "name": "Technological Resource Outsourcing"
+                  "name": "Custom Software Development"
                 },
                 {
-                  "name": "Cloud"
-                },
-                {
-                  "name": "DevOps/MLops"
-                },
-                {
-                  "name": "Low-Code/No-Code"
-                },
-                {
-                  "name": "Artificial Intelligence and Data Analysis"
+                  "name": "AI & Process Automation"
                 }
               ]
             },
@@ -254,6 +228,10 @@
                 {
                   "icon": "github.svg",
                   "link": "https://github.com/mushroomsoft-it"
+                },
+                {
+                  "icon": "instagram.svg",
+                  "link": "https://www.instagram.com/mushroomsoft_it"
                 }
               ]
             }
@@ -268,7 +246,7 @@
         },
         {
           "id": "get-in-touch-nav-link",
-          "actionText": "Get in touch!"
+          "actionText": "Schedule a meeting!"
         },
         {
           "id": "whatsapp-nav-link",
@@ -291,9 +269,9 @@
           "catalog": [
             {
               "id": "get-in-touch-new",
-              "title": "Ofrecemos soluciones tecnológicas de vanguardia para transformar tu negocio.",
-              "description": "Soluciones Más Allá del Código",
-              "actionText": "Contáctanos!",
+              "title": "Outsourcing de Talento Tecnológico para Empresas en Crecimiento.",
+              "description": "Fortalece tu equipo tech con talento especializado de LATAM",
+              "actionText": "¡Agenda una reunión!",
               "imageBgUrl": "/main-bg.png",
               "bannerImgUrl": "",
               "links": [
@@ -311,7 +289,7 @@
         {
           "id": "what-we-do",
           "name": "lo que hacemos",
-          "description": "<p> En <b>MushroomSoft</b>, nos especializamos en proporcionar soluciones innovadoras que impulsan a las empresas hacia adelante. Nuestra verdadera distinción radica en nuestra capacidad para aprovechar el potencial de tecnologías avanzadas. </p> <p> Ya sea la agilidad de <b>Node.js</b>, la solidez de <b>Angular</b>, la eficiencia de <b>Nx</b> o el poder transformador de <b>DevOps</b>, estamos totalmente equipados para enfrentar cualquier desafío y ofrecer resultados excepcionales. </p>",
+          "description": "<p>En MushroomSoft nos especializamos en el <b>Outsourcing de Talento IT</b>, ayudando a las empresas a escalar sus capacidades de ingeniería con equipos confiables y de alto desempeño.</br></br>Además, ofrecemos <b>Desarrollo de Software a la Medida</b> y soluciones de <b>IA y Automatización de procesos</b>, utilizando tecnologías modernas para transformar ideas en productos confiables, escalables y sostenibles.</br></br>Nuestro principal diferenciador es nuestra gente: ingenieros comprometidos, alineados con los equipos y objetivos de nuestros clientes.</p>",
           "isMenu": true
         },
         {
@@ -339,49 +317,28 @@
         {
           "id": "services",
           "name": "servicios",
-          "actionText": "Contáctanos!",
+          "actionText": "¡Agenda una reunión!",
           "isMenu": true,
           "catalog": [
             {
-              "id": "software-development",
-              "icon": "software.svg",
-              "name": "Desarrollo de Software",
-              "description": "Ofrecemos soluciones de desarrollo de software personalizadas para satisfacer las necesidades específicas de tu negocio, utilizando las últimas tecnologías y metodologías ágiles.",
-              "isQueryParam": true
-            },
-            {
               "id": "outsourcing",
               "icon": "outsourcing.svg",
-              "name": "Outsourcing de Recursos Tecnológicos",
-              "description": "Proveemos talento tecnológico especializado para impulsar tus proyectos, garantizando eficiencia y calidad en cada etapa del desarrollo.",
+              "name": "Outsourcing y Staff Augmentation",
+              "description": "Proveemos talento tecnológico altamente especializado para impulsar sus proyectos, garantizando eficiencia, calidad e integración fluida con su equipo.",
               "isQueryParam": true
             },
             {
-              "id": "cloud",
-              "icon": "cloud.svg",
-              "name": "Nube",
-              "description": "Implementamos y gestionamos soluciones en la nube que garantizan escalabilidad, seguridad y disponibilidad, optimizando el rendimiento de tus aplicaciones y datos.",
-              "isQueryParam": true
-            },
-            {
-              "id": "devops",
-              "icon": "dev-ops.svg",
-              "name": "DevOps/MLops",
-              "description": "Integramos prácticas de DevOps y MLops para automatizar y optimizar el ciclo de vida del desarrollo de software y modelos de aprendizaje automático, acelerando la entregade valor.",
+              "id": "software-development",
+              "icon": "software.svg",
+              "name": "Desarrollo de Software a la Medida",
+              "description": "Diseñamos y desarrollamos soluciones de software personalizadas, escalables y alineadas a los objetivos de tu negocio.",
               "isQueryParam": true
             },
             {
               "id": "ai",
               "icon": "ai.svg",
-              "name": "Inteligencia Artificial y Análisis de Datos",
-              "description": "Desarrollamos e implementamos soluciones de inteligencia artificial y análisis de datos que brindan información valiosa y mejoran la toma de decisiones en tu empresa.",
-              "isQueryParam": true
-            },
-            {
-              "id": "low-codes",
-              "icon": "low-code.svg",
-              "name": "Desarrollo Low-Code/No-Code",
-              "description": "Ofrecemos plataformas de desarrollo low-code/no-code que permiten la creación rápida y eficiente de aplicaciones, reduciendo el tiempo y costo de desarrollo.",
+              "name": "IA & Automatización de Procesos",
+              "description": "Combinamos IA y herramientas de automatización para crear soluciones inteligentes, automatizar procesos y acelerar el desarrollo con menor costo.",
               "isQueryParam": true
             }
           ]
@@ -445,7 +402,7 @@
         {
           "id": "dreams",
           "description": "<p>Convirtiendo sueños en <span>código.</span> <span>Construyamos</span> tu visión.</p>",
-          "actionText": "Contáctanos!"
+          "actionText": "¡Agenda una reunión!"
         },
         {
           "id": "get-in-touch",
@@ -484,6 +441,10 @@
                 {
                   "icon": "github.svg",
                   "link": "https://github.com/mushroomsoft-it"
+                },
+                {
+                  "icon": "instagram.svg",
+                  "link": "https://www.instagram.com/mushroomsoft_it"
                 }
               ]
             }
@@ -505,22 +466,13 @@
               "name": "Servicios",
               "catalog": [
                 {
-                  "name": "Desarrollo de Software"
+                  "name": "Outsourcing y Staff Augmentation"
                 },
                 {
-                  "name": "Outsourcing de Recursos Tecnológicos"
+                  "name": "Desarrollo de Software a la Medida"
                 },
                 {
-                  "name": "Nube"
-                },
-                {
-                  "name": "DevOps/MLops"
-                },
-                {
-                  "name": "Desarrollo Low-Code/No-Code"
-                },
-                {
-                  "name": "Inteligencia Artificial y Análisis de Datos"
+                  "name": "IA & Automatización de Procesos"
                 }
               ]
             },
@@ -536,6 +488,10 @@
                 {
                   "icon": "github.svg",
                   "link": "https://github.com/mushroomsoft-it"
+                },
+                {
+                  "icon": "instagram.svg",
+                  "link": "https://www.instagram.com/mushroomsoft_it"
                 }
               ]
             }
@@ -550,7 +506,7 @@
         },
         {
           "id": "get-in-touch-nav-link",
-          "actionText": "Contáctanos!"
+          "actionText": "¡Agenda una reunión!"
         },
         {
           "id": "whatsapp-nav-link",
