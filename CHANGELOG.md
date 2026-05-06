@@ -1,5 +1,11 @@
 # mushroomsoft-app
 
+## 2.1.36
+
+### Patch Changes
+
+- a8c8f59: Update brochure
+
 ## 2.1.35
 
 ### Patch Changes
